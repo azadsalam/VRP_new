@@ -6,13 +6,13 @@ public class Individual
 {
 	boolean periodAssignment[][];
 	int permutation[][];
-	int routePartition[];
+	int routePartition[][];
 	double cost;
 	
 	double costWithPenalty;
 //	Utility utility;
 	boolean isFeasible;
-//	boolean feasibilitySet;
+	boolean feasibilitySet;
 
 	double loadViolation[][];
 	double totalLoadViolation;
@@ -28,8 +28,8 @@ public class Individual
 	{
 		cost = -1;
 		costWithPenalty = -1;
-		//feasibilitySet = false;
-		//isFeasible = false;	
+		feasibilitySet = false;
+		isFeasible = false;	
 	}
 	
 	
@@ -80,7 +80,6 @@ public class Individual
 			for( i = problemInstance.customerCount -1 ;i>0 ;i-- )
 			{
 				j = Utility.randomIntInclusive(i);
-
 				
 				if(i==j)continue;
 
@@ -97,17 +96,20 @@ public class Individual
 		// given that routePartition[i-1]+1 <= routePartition[i]
 
 		//bool found;
-		allocated = 0;
-		while(allocated != problemInstance.vehicleCount-1)
+		for(int period=0;period<problemInstance.periodCount;period++)
 		{
-			random = Utility.randomIntInclusive(problemInstance.customerCount-1);
-
-			routePartition[allocated]=random;
-			sort(random,allocated);
-			allocated++;
+			allocated = 0;
+			while(allocated != problemInstance.vehicleCount-1)
+			{
+				random = Utility.randomIntInclusive(problemInstance.customerCount-1);
+	
+				routePartition[period][allocated]=random;
+				sort(period,random,allocated);
+				allocated++;
+			}
+			routePartition[period][problemInstance.vehicleCount-1] = problemInstance.customerCount-1;
 		}
-		routePartition[problemInstance.vehicleCount-1] = problemInstance.customerCount-1;
-
+		
 		calculateCost();
 
 	}
@@ -124,7 +126,7 @@ public class Individual
 		
 		
 		//allocating routeAllocation
-		routePartition = new int[problemInstance.vehicleCount];
+		routePartition = new int[problemInstance.periodCount][problemInstance.vehicleCount];
 
 		loadViolation = new double[problemInstance.periodCount][problemInstance.vehicleCount];
 	}
@@ -158,11 +160,15 @@ public class Individual
 		}
 
 
-		routePartition = new int[problemInstance.vehicleCount];
-		for( i=0;i<problemInstance.vehicleCount;i++)
+		routePartition = new int[problemInstance.periodCount][problemInstance.vehicleCount];
+		for( i=0;i<problemInstance.periodCount;i++)
 		{
-			routePartition[i]=original.routePartition[i];
+			for( j=0;j<problemInstance.vehicleCount;j++)
+			{
+				routePartition[i][j] = original.routePartition[i][j];
+			}
 		}
+		
 
 		cost = original.cost;
 		costWithPenalty = original.costWithPenalty;
@@ -201,6 +207,7 @@ public class Individual
 		}
 		else isFeasible = true;
 
+		feasibilitySet = true;
 		
 		//costWithPenalty = cost + totalLoadViolation + totalRouteTimeViolation;
 		
@@ -218,9 +225,9 @@ public class Individual
 		int start,end; // marks the first and last position of corresponding route for the array permutation
 
 		if(vehicle == 0) start = 0;
-		else start = routePartition[vehicle-1]+1;
+		else start = routePartition[period][vehicle-1]+1;
 
-		end = routePartition[vehicle];
+		end = routePartition[period][vehicle];
 
 		if(end<start) return 0;
 
@@ -277,16 +284,16 @@ public class Individual
 	// sorts the array routePartition in increasing order
 	// input -> routePartition array [0, upperbound ], with,n inserted at the last in the array
 	// output -> sorted array [0, upperbound]
-	void sort(int n,int upperbound)
+	void sort(int period,int n,int upperbound)
 	{
 		int tmp;
-		for(int i = upperbound-1;i>=0;i--)
+		for(int v = upperbound-1;v>=0;v--)
 		{
-			if(routePartition[i]>routePartition[i+1])
+			if(routePartition[period][v]>routePartition[period][v+1])
 			{
-				tmp = routePartition[i];
-				routePartition[i] = routePartition[i+1];
-				routePartition[i+1] = tmp;
+				tmp = routePartition[period][v];
+				routePartition[period][v] = routePartition[period][v+1];
+				routePartition[period][v+1] = tmp;
 			}
 			else
 				break;
@@ -414,7 +421,7 @@ public class Individual
 	
 	//moves some red line
 	//no effect if only one vehicle
-	void mutateRoutePartition()
+	void mutateRoutePartition(int period)
 	{
 		//nothing to do if only one vehicle
 		if(problemInstance.vehicleCount == 1) return ;
@@ -431,23 +438,23 @@ public class Individual
 			int dir = Utility.randomIntInclusive(1); // 0-> left , 1-> right
 			if(dir==0)//move the seperator left
 			{
-				if(seperatorIndex==0) distance = routePartition[0] ;
-				else distance = routePartition[seperatorIndex] - routePartition[seperatorIndex-1];
+				if(seperatorIndex==0) distance = routePartition[period][0] ;
+				else distance = routePartition[period][seperatorIndex] - routePartition[period][seperatorIndex-1];
 				// if the line can not merge with the previous one ,
 				// difference = routePartition[seperatorIndex] - 1 - routePartition[seperatorIndex-1]
 
 				// increment should be in [1,distance]
 				if(distance==0)continue;
 				increment = 1 + Utility.randomIntInclusive(distance-1);
-				routePartition[seperatorIndex] -= increment;
+				routePartition[period][seperatorIndex] -= increment;
 				return;
 			}
 			else	//move the seperator right
 			{
-				distance = routePartition[seperatorIndex+1] - routePartition[seperatorIndex] ;
+				distance = routePartition[period][seperatorIndex+1] - routePartition[period][seperatorIndex] ;
 				if(distance==0)continue;
 				increment = 1 + Utility.randomIntInclusive(distance-1);
-				routePartition[seperatorIndex] += increment;
+				routePartition[period][seperatorIndex] += increment;
 				return;
 			}
 		}
@@ -512,29 +519,31 @@ public class Individual
 		
 		// crossover route partition
 		
-		int temp[] = new int[problemInstance.vehicleCount*2];
-		int i;
-		for(i=0;i<problemInstance.vehicleCount;i++) temp[i] = parent1.routePartition[i];
-		for(i=0;i<problemInstance.vehicleCount;i++) temp[i+problemInstance.vehicleCount] = parent2.routePartition[i];
-		
-		
-		for(i=0;i<problemInstance.vehicleCount*2;i++)
+		for(int period=0;period<problemInstance.periodCount;period++)
 		{
-			for(int j=i+1;j<problemInstance.vehicleCount*2;j++)
+			int temp[] = new int[problemInstance.vehicleCount*2];
+			int i;
+			for(i=0;i<problemInstance.vehicleCount;i++) temp[i] = parent1.routePartition[period][i];
+			for(i=0;i<problemInstance.vehicleCount;i++) temp[i+problemInstance.vehicleCount] = parent2.routePartition[period][i];
+			
+			
+			for(i=0;i<problemInstance.vehicleCount*2;i++)
 			{
-				if(temp[i]>temp[j])
+				for(int j=i+1;j<problemInstance.vehicleCount*2;j++)
 				{
-					int tmp = temp[i];
-					temp[i] = temp[j];
-					temp[j]=tmp;
+					if(temp[i]>temp[j])
+					{
+						int tmp = temp[i];
+						temp[i] = temp[j];
+						temp[j]=tmp;
+					}
 				}
 			}
+			
+			for( i=0;i<problemInstance.vehicleCount;i++) child1.routePartition[period][i] = temp[2*i];
+			for( i=0;i<problemInstance.vehicleCount;i++) child2.routePartition[period][i] = temp[2*i+1];
+			
 		}
-		
-		for( i=0;i<problemInstance.vehicleCount;i++) child1.routePartition[i] = temp[2*i];
-		for( i=0;i<problemInstance.vehicleCount;i++) child2.routePartition[i] = temp[2*i+1];
-		
-		
 		//System.out.println(" "+n);
 	}
 
