@@ -254,7 +254,11 @@ public class Algo25_50_25_with_gradual_elitist_with_uniform_selection
 	{
 		int selectedMutationOperator = selectMutationOperator();
 		
-		if(selectedMutationOperator==0)offspring.mutateRoutePartition();
+		if(selectedMutationOperator==0)
+		{
+			int ran = Utility.randomIntInclusive(problemInstance.periodCount-1);
+			offspring.mutateRoutePartition(ran);
+		}
 		else if (selectedMutationOperator == 1)
 		{
 			int period = Utility.randomIntInclusive(problemInstance.periodCount-1);
@@ -264,8 +268,9 @@ public class Algo25_50_25_with_gradual_elitist_with_uniform_selection
 		{
 			//int client = Utility.randomIntInclusive(problemInstance.customerCount-1);
 			//offspring.mutatePeriodAssignment(client);
-			offspring.mutateRoutePartition();
+			
 			int period = Utility.randomIntInclusive(problemInstance.periodCount-1);
+			offspring.mutateRoutePartition(period);
 			offspring.mutatePermutation(period);//for now single period			
 		}
 		else if (selectedMutationOperator == 3){}

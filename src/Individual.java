@@ -328,10 +328,14 @@ public class Individual
 			out.println();
 		}
 
-		out.print("Route partition : ");
-		for( i=0;i<problemInstance.vehicleCount;i++)out.print(routePartition[i] +" ");
-		out.println();
+		out.print("Route partition : \n");
 		
+		for(i=0;i<problemInstance.periodCount;i++)
+		{
+			for( j=0;j<problemInstance.vehicleCount;j++)
+				out.print(routePartition[i][j] +" ");
+			out.println();
+		}
 
         // print load violation
 
@@ -381,9 +385,14 @@ public class Individual
 			out.println();
 		}
 
-		out.print("Route partition : ");
-		for( i=0;i<problemInstance.vehicleCount;i++)out.print(routePartition[i] +" ");
-		out.println();
+		out.print("Route partition : \n");
+		
+		for(i=0;i<problemInstance.periodCount;i++)
+		{
+			for( j=0;j<problemInstance.vehicleCount;j++)
+				out.print(routePartition[i][j] +" ");
+			out.println();
+		}
 		
 
         // print load violation
@@ -396,7 +405,7 @@ public class Individual
 		
 	}
 	
-	
+	// swaps even if neither of the customers get visited that day
 	void mutatePermutation(int period)
 	{
 		int first = Utility.randomIntInclusive(problemInstance.customerCount-1);
@@ -409,7 +418,7 @@ public class Individual
 			count++;
 			if(count==problemInstance.customerCount)break;
 		}
-		while(periodAssignment[period][second]==false || second == first);
+		while(second == first);
 
 		int temp = permutation[period][first];
 		permutation[period][first] = permutation[period][second];
@@ -417,8 +426,101 @@ public class Individual
 
 		// FITNESS CAN BE UPDATED HERE
 	}
-
 	
+	void mutatePermutationWithinSingleRoute()
+	{
+		boolean success = false;
+		do
+		{
+			int period = Utility.randomIntInclusive(problemInstance.periodCount-1);
+			int vehicle = Utility.randomIntInclusive(problemInstance.vehicleCount-1);
+			success = mutatePermutationWithinSingleRoute(period, vehicle);
+		}while(success==false);
+		
+	}
+	
+
+	//returns if permutation successful
+	boolean mutatePermutationWithinSingleRoute(int period,int vehicle)
+	{
+		int start,end;
+		
+		if(vehicle == 0) start = 0;
+		else start = routePartition[period][vehicle-1]+1;
+
+		end = routePartition[period][vehicle];
+
+		if(end<=start) return false;
+		
+		int first = Utility.randomIntInclusive(start,end);
+
+		int second;
+		do
+		{
+			second = Utility.randomIntInclusive(start,end);
+		}
+		while(second == first);
+
+		int temp = permutation[period][first];
+		permutation[period][first] = permutation[period][second];
+		permutation[period][second] = temp;
+
+		
+		return true;
+		
+	}
+	void mutatePermutationOfDifferentRoute()
+	{
+		
+		if(problemInstance.vehicleCount<2)return;
+		
+		boolean success = false;
+		do
+		{
+			int period = Utility.randomIntInclusive(problemInstance.periodCount-1);
+			int vehicle1 = Utility.randomIntInclusive(problemInstance.vehicleCount-1);
+			int vehicle2 = Utility.randomIntInclusive(problemInstance.vehicleCount-1);
+			if(vehicle1==vehicle2)continue;
+			success = mutatePermutationOfDifferentRoute(period, vehicle1,vehicle2);
+		}while(success==false);
+		
+	}
+	
+
+	//returns if permutation successful
+	boolean mutatePermutationOfDifferentRoute(int period,int vehicle1,int vehicle2)
+	{
+		int start1,end1,start2,end2;
+		
+		if(vehicle1 == 0) start1 = 0;
+		else start1 = routePartition[period][vehicle1-1]+1;
+
+		end1 = routePartition[period][vehicle1];
+
+		if(end1<start1) return false;
+		
+		
+		if(vehicle2 == 0) start2 = 0;
+		else start2 = routePartition[period][vehicle2-1]+1;
+
+		end2 = routePartition[period][vehicle2];
+
+		if(end2<start2) return false;
+		
+		int first = Utility.randomIntInclusive(start1,end1);
+		int second = Utility.randomIntInclusive(start2,end2);
+		
+
+		
+		int temp = permutation[period][first];
+		permutation[period][first] = permutation[period][second];
+		permutation[period][second] = temp;
+
+		
+		return true;
+		
+	}
+
 	//moves some red line
 	//no effect if only one vehicle
 	void mutateRoutePartition(int period)
