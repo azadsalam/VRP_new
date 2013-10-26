@@ -7,8 +7,8 @@ import javax.swing.plaf.metal.MetalIconFactory.FileIcon16;
 
 public class Solver 
 {
-	String inputFileName = "in1.txt";
-	String outputFileName = "out1.txt";
+	String inputFileName = "testIn.txt";
+	String outputFileName = "testOut.txt";
 	
 	File inputFile,outputFile;	
 	Scanner input;
@@ -63,7 +63,7 @@ public class Solver
 		int feasibleCount=0;
 		
 		
-		Algo25_50_25_with_gradual_elitist_with_uniform_selection ga = new Algo25_50_25_with_gradual_elitist_with_uniform_selection (problemInstance);
+		GeneticAlgorithm ga = new TestDistance (problemInstance);
 		ga.run();
 		
 		/*
@@ -87,7 +87,7 @@ public class Solver
 		
 		System.out.format("Min : %f Avg : %f  Max : %f Feasible : %d \n",min,avg,max,feasibleCount);
 		*/
-		exportToCsv.createCSV();
+		//exportToCsv.createCSV();
 		
 		output.close();
 		

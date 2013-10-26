@@ -2,7 +2,7 @@ import java.io.PrintWriter;
 import java.util.Scanner;
 
 
-public class Algo25_50_25_with_gradual_elitist_with_uniform_selection 
+public class Algo25_50_25_with_gradual_elitist_with_uniform_selection implements GeneticAlgorithm
 {
 	PrintWriter out; 
 	

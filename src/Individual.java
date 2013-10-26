@@ -4,9 +4,12 @@ import java.util.Scanner;
 
 public class Individual 
 {
+	//representation
 	boolean periodAssignment[][];
 	int permutation[][];
 	int routePartition[][];
+	
+	
 	double cost;
 	
 	double costWithPenalty;
@@ -22,7 +25,8 @@ public class Individual
 	double totalRouteTimeViolation;
 	
 	ProblemInstance problemInstance;
-
+	
+	
 
 	public Individual()
 	{
@@ -440,7 +444,7 @@ public class Individual
 	}
 	
 
-	//returns if permutation successful
+	//returns true if permutation successful
 	boolean mutatePermutationWithinSingleRoute(int period,int vehicle)
 	{
 		int start,end;
@@ -693,4 +697,83 @@ public class Individual
 		}
 	}
 
+	public static double distance(ProblemInstance problemInstance, Individual first,Individual second)
+	{
+		boolean print=true;
+
+		if(print)
+		{
+			problemInstance.out.println("In distance function : ");
+		}
+		
+		double distance=0;
+		int distanceX=0;
+		int distanceY=0;
+		int distanceZ=0;
+		
+		double X,Y,Z;
+		double tmp;
+		for(int i=0;i<problemInstance.periodCount;i++)
+		{
+			for(int j=0;j<problemInstance.customerCount;j++)
+			{
+				//distance for periodAssigment
+				if(first.periodAssignment[i][j] != second.periodAssignment[i][j])
+					distanceX++;
+			}
+		}
+		
+		
+		tmp = (double)problemInstance.periodCount*problemInstance.customerCount;
+		X = distanceX / tmp;
+		
+		
+		distanceY=0;
+		for(int i=0;i<problemInstance.periodCount;i++)
+		{
+			for(int j=0;j<problemInstance.customerCount;j++)
+			{
+				//distance for permutation - A distance (Campos)
+				//distanceY += Math.abs(first.permutation[i][j] - second.permutation[i][j]);
+				
+				//hamming distance
+				if(first.permutation[i][j] != second.permutation[i][j])
+					distanceY++;
+			}
+		}
+		
+		tmp = problemInstance.periodCount*problemInstance.customerCount;
+		Y = distanceY/tmp;
+		
+			
+		distanceZ=0;
+		for(int i=0;i<problemInstance.periodCount;i++)
+		{
+			for(int j=0;j<problemInstance.vehicleCount;j++)
+			{
+				//distance for route partition - A distance
+				distanceZ += Math.abs(first.routePartition[i][j] - second.routePartition[i][j]);
+			}
+		}
+		
+		//as the last element is always same
+		tmp = problemInstance.periodCount * problemInstance.customerCount * (problemInstance.vehicleCount-1);
+		if(tmp ==0)Z=0;
+		else Z = (double)distanceZ/tmp; 
+	
+		distance = (X+Y+Z)/3;
+		
+		if(print)
+		{
+			problemInstance.out.println("distanceX : "+distanceX+" distanceY : "+distanceY+" distanceZ : " +distanceZ);
+			problemInstance.out.println("maxX : "+(problemInstance.periodCount*problemInstance.customerCount)
+								+" maxY : "+ (problemInstance.periodCount*problemInstance.customerCount)
+								+" maxZ : " +( problemInstance.periodCount * problemInstance.customerCount * (problemInstance.vehicleCount-1)) + "\n");
+			
+			
+		}
+		
+		return distance;
+	}
+	
 }

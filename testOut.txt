@@ -1,0 +1,561 @@
+Test cases (Now ignored): 1
+
+
+
+In distance function : 
+distanceX : 0 distanceY : 0 distanceZ : 0
+maxX : 15 maxY : 15 maxZ : 15
+
+0.0
+PERIOD ASSIGMENT : 
+0 1 1 1 0 
+1 1 0 0 1 
+1 0 1 1 1 
+Permutation : 
+4 0 1 3 2 
+3 1 2 4 0 
+0 1 3 4 2 
+Route partition : 
+2 4 
+3 4 
+0 4 
+LOAD VIOLATION MATRIX : 
+-7.0 -4.0 
+-4.0 -7.0 
+-7.0 -1.0 
+Is Feasible : true
+Total Load Violation : 0.0
+Total route time violation : 0.0
+Cost : 60.0
+Cost with penalty : 60.0
+
+PERIOD ASSIGMENT : 
+0 1 1 1 0 
+1 1 0 0 1 
+1 0 1 1 1 
+Permutation : 
+4 0 1 3 2 
+3 1 2 4 0 
+0 1 3 4 2 
+Route partition : 
+2 4 
+3 4 
+0 4 
+LOAD VIOLATION MATRIX : 
+-7.0 -4.0 
+-4.0 -7.0 
+-7.0 -1.0 
+Is Feasible : true
+Total Load Violation : 0.0
+Total route time violation : 0.0
+Cost : 60.0
+Cost with penalty : 60.0
+
+
+
+
+
+
+
+In distance function : 
+distanceX : 8 distanceY : 14 distanceZ : 4
+maxX : 15 maxY : 15 maxZ : 15
+
+0.5777777777777778
+PERIOD ASSIGMENT : 
+1 1 0 1 0 
+1 1 1 0 1 
+0 0 1 1 1 
+Permutation : 
+3 1 4 0 2 
+2 0 3 1 4 
+4 1 2 3 0 
+Route partition : 
+0 4 
+3 4 
+3 4 
+LOAD VIOLATION MATRIX : 
+-7.0 -4.0 
+-1.0 -7.0 
+-1.0 -10.0 
+Is Feasible : true
+Total Load Violation : 0.0
+Total route time violation : 0.0
+Cost : 55.0
+Cost with penalty : 55.0
+
+PERIOD ASSIGMENT : 
+0 0 1 1 0 
+1 1 0 1 1 
+1 1 1 0 1 
+Permutation : 
+2 3 0 4 1 
+1 3 0 4 2 
+0 3 2 1 4 
+Route partition : 
+1 4 
+0 4 
+3 4 
+LOAD VIOLATION MATRIX : 
+-4.0 -10.0 
+-7.0 -1.0 
+-1.0 -7.0 
+Is Feasible : true
+Total Load Violation : 0.0
+Total route time violation : 0.0
+Cost : 47.0
+Cost with penalty : 47.0
+
+
+
+
+
+
+
+In distance function : 
+distanceX : 4 distanceY : 7 distanceZ : 4
+maxX : 15 maxY : 15 maxZ : 15
+
+0.3333333333333333
+PERIOD ASSIGMENT : 
+1 1 1 1 1 
+1 1 0 0 0 
+0 0 1 1 1 
+Permutation : 
+3 2 4 0 1 
+2 3 1 0 4 
+2 1 4 3 0 
+Route partition : 
+1 4 
+1 4 
+4 4 
+LOAD VIOLATION MATRIX : 
+-4.0 -1.0 
+-10.0 -4.0 
+-1.0 0.0 
+Is Feasible : true
+Total Load Violation : 0.0
+Total route time violation : 0.0
+Cost : 46.0
+Cost with penalty : 46.0
+
+PERIOD ASSIGMENT : 
+1 1 0 1 0 
+1 1 1 0 1 
+0 0 1 1 1 
+Permutation : 
+3 1 4 0 2 
+2 0 3 1 4 
+4 1 2 3 0 
+Route partition : 
+0 4 
+3 4 
+3 4 
+LOAD VIOLATION MATRIX : 
+-7.0 -4.0 
+-1.0 -7.0 
+-1.0 -10.0 
+Is Feasible : true
+Total Load Violation : 0.0
+Total route time violation : 0.0
+Cost : 55.0
+Cost with penalty : 55.0
+
+
+
+
+
+
+
+In distance function : 
+distanceX : 4 distanceY : 12 distanceZ : 4
+maxX : 15 maxY : 15 maxZ : 15
+
+0.4444444444444444
+PERIOD ASSIGMENT : 
+1 1 0 1 0 
+1 1 1 0 1 
+0 0 1 1 1 
+Permutation : 
+3 1 4 0 2 
+2 0 3 1 4 
+4 1 2 3 0 
+Route partition : 
+0 4 
+3 4 
+3 4 
+LOAD VIOLATION MATRIX : 
+-7.0 -4.0 
+-1.0 -7.0 
+-1.0 -10.0 
+Is Feasible : true
+Total Load Violation : 0.0
+Total route time violation : 0.0
+Cost : 55.0
+Cost with penalty : 55.0
+
+PERIOD ASSIGMENT : 
+1 1 0 1 1 
+0 1 1 0 1 
+1 0 1 1 0 
+Permutation : 
+2 4 1 0 3 
+4 1 2 3 0 
+2 1 0 3 4 
+Route partition : 
+1 4 
+3 4 
+0 4 
+LOAD VIOLATION MATRIX : 
+-7.0 -1.0 
+-1.0 -10.0 
+-7.0 -4.0 
+Is Feasible : true
+Total Load Violation : 0.0
+Total route time violation : 0.0
+Cost : 47.0
+Cost with penalty : 47.0
+
+
+
+
+
+
+
+In distance function : 
+distanceX : 6 distanceY : 14 distanceZ : 3
+maxX : 15 maxY : 15 maxZ : 15
+
+0.5111111111111112
+PERIOD ASSIGMENT : 
+0 1 1 1 0 
+1 1 0 0 1 
+1 0 1 1 1 
+Permutation : 
+4 0 1 3 2 
+3 1 2 4 0 
+0 1 3 4 2 
+Route partition : 
+2 4 
+3 4 
+0 4 
+LOAD VIOLATION MATRIX : 
+-7.0 -4.0 
+-4.0 -7.0 
+-7.0 -1.0 
+Is Feasible : true
+Total Load Violation : 0.0
+Total route time violation : 0.0
+Cost : 60.0
+Cost with penalty : 60.0
+
+PERIOD ASSIGMENT : 
+1 1 1 1 1 
+1 0 0 0 1 
+0 1 1 1 0 
+Permutation : 
+4 3 2 1 0 
+0 3 4 1 2 
+3 2 4 1 0 
+Route partition : 
+1 4 
+3 4 
+2 4 
+LOAD VIOLATION MATRIX : 
+-4.0 -1.0 
+-4.0 -10.0 
+-4.0 -7.0 
+Is Feasible : true
+Total Load Violation : 0.0
+Total route time violation : 0.0
+Cost : 55.0
+Cost with penalty : 55.0
+
+
+
+
+
+
+
+In distance function : 
+distanceX : 4 distanceY : 14 distanceZ : 7
+maxX : 15 maxY : 15 maxZ : 15
+
+0.5555555555555555
+PERIOD ASSIGMENT : 
+0 1 1 1 0 
+1 1 0 0 1 
+1 0 1 1 1 
+Permutation : 
+4 0 1 3 2 
+3 1 2 4 0 
+0 1 3 4 2 
+Route partition : 
+2 4 
+3 4 
+0 4 
+LOAD VIOLATION MATRIX : 
+-7.0 -4.0 
+-4.0 -7.0 
+-7.0 -1.0 
+Is Feasible : true
+Total Load Violation : 0.0
+Total route time violation : 0.0
+Cost : 60.0
+Cost with penalty : 60.0
+
+PERIOD ASSIGMENT : 
+1 1 1 1 1 
+1 1 0 0 0 
+0 0 1 1 1 
+Permutation : 
+3 2 4 0 1 
+2 3 1 0 4 
+2 1 4 3 0 
+Route partition : 
+1 4 
+1 4 
+4 4 
+LOAD VIOLATION MATRIX : 
+-4.0 -1.0 
+-10.0 -4.0 
+-1.0 0.0 
+Is Feasible : true
+Total Load Violation : 0.0
+Total route time violation : 0.0
+Cost : 46.0
+Cost with penalty : 46.0
+
+
+
+
+
+
+
+In distance function : 
+distanceX : 0 distanceY : 0 distanceZ : 0
+maxX : 15 maxY : 15 maxZ : 15
+
+0.0
+PERIOD ASSIGMENT : 
+1 1 1 1 1 
+1 0 0 0 1 
+0 1 1 1 0 
+Permutation : 
+4 3 2 1 0 
+0 3 4 1 2 
+3 2 4 1 0 
+Route partition : 
+1 4 
+3 4 
+2 4 
+LOAD VIOLATION MATRIX : 
+-4.0 -1.0 
+-4.0 -10.0 
+-4.0 -7.0 
+Is Feasible : true
+Total Load Violation : 0.0
+Total route time violation : 0.0
+Cost : 55.0
+Cost with penalty : 55.0
+
+PERIOD ASSIGMENT : 
+1 1 1 1 1 
+1 0 0 0 1 
+0 1 1 1 0 
+Permutation : 
+4 3 2 1 0 
+0 3 4 1 2 
+3 2 4 1 0 
+Route partition : 
+1 4 
+3 4 
+2 4 
+LOAD VIOLATION MATRIX : 
+-4.0 -1.0 
+-4.0 -10.0 
+-4.0 -7.0 
+Is Feasible : true
+Total Load Violation : 0.0
+Total route time violation : 0.0
+Cost : 55.0
+Cost with penalty : 55.0
+
+
+
+
+
+
+
+In distance function : 
+distanceX : 4 distanceY : 12 distanceZ : 4
+maxX : 15 maxY : 15 maxZ : 15
+
+0.4444444444444444
+PERIOD ASSIGMENT : 
+1 1 0 1 1 
+0 1 1 0 1 
+1 0 1 1 0 
+Permutation : 
+2 4 1 0 3 
+4 1 2 3 0 
+2 1 0 3 4 
+Route partition : 
+1 4 
+3 4 
+0 4 
+LOAD VIOLATION MATRIX : 
+-7.0 -1.0 
+-1.0 -10.0 
+-7.0 -4.0 
+Is Feasible : true
+Total Load Violation : 0.0
+Total route time violation : 0.0
+Cost : 47.0
+Cost with penalty : 47.0
+
+PERIOD ASSIGMENT : 
+1 1 0 1 0 
+1 1 1 0 1 
+0 0 1 1 1 
+Permutation : 
+3 1 4 0 2 
+2 0 3 1 4 
+4 1 2 3 0 
+Route partition : 
+0 4 
+3 4 
+3 4 
+LOAD VIOLATION MATRIX : 
+-7.0 -4.0 
+-1.0 -7.0 
+-1.0 -10.0 
+Is Feasible : true
+Total Load Violation : 0.0
+Total route time violation : 0.0
+Cost : 55.0
+Cost with penalty : 55.0
+
+
+
+
+
+
+
+In distance function : 
+distanceX : 8 distanceY : 11 distanceZ : 3
+maxX : 15 maxY : 15 maxZ : 15
+
+0.4888888888888889
+PERIOD ASSIGMENT : 
+1 1 1 1 1 
+1 0 0 0 1 
+0 1 1 1 0 
+Permutation : 
+4 3 2 1 0 
+0 3 4 1 2 
+3 2 4 1 0 
+Route partition : 
+1 4 
+3 4 
+2 4 
+LOAD VIOLATION MATRIX : 
+-4.0 -1.0 
+-4.0 -10.0 
+-4.0 -7.0 
+Is Feasible : true
+Total Load Violation : 0.0
+Total route time violation : 0.0
+Cost : 55.0
+Cost with penalty : 55.0
+
+PERIOD ASSIGMENT : 
+0 0 1 1 1 
+1 1 1 0 0 
+1 1 0 1 1 
+Permutation : 
+3 4 1 2 0 
+0 1 4 3 2 
+4 0 3 2 1 
+Route partition : 
+3 4 
+4 4 
+2 4 
+LOAD VIOLATION MATRIX : 
+-1.0 -10.0 
+-1.0 0.0 
+-1.0 -7.0 
+Is Feasible : true
+Total Load Violation : 0.0
+Total route time violation : 0.0
+Cost : 46.0
+Cost with penalty : 46.0
+
+
+
+
+
+
+
+In distance function : 
+distanceX : 6 distanceY : 12 distanceZ : 8
+maxX : 15 maxY : 15 maxZ : 15
+
+0.5777777777777778
+PERIOD ASSIGMENT : 
+1 1 0 1 1 
+0 1 1 0 1 
+1 0 1 1 0 
+Permutation : 
+2 4 1 0 3 
+4 1 2 3 0 
+2 1 0 3 4 
+Route partition : 
+1 4 
+3 4 
+0 4 
+LOAD VIOLATION MATRIX : 
+-7.0 -1.0 
+-1.0 -10.0 
+-7.0 -4.0 
+Is Feasible : true
+Total Load Violation : 0.0
+Total route time violation : 0.0
+Cost : 47.0
+Cost with penalty : 47.0
+
+PERIOD ASSIGMENT : 
+1 1 1 1 0 
+0 1 1 1 1 
+1 0 0 0 1 
+Permutation : 
+3 4 2 0 1 
+1 4 2 0 3 
+1 0 2 4 3 
+Route partition : 
+4 4 
+2 4 
+4 4 
+LOAD VIOLATION MATRIX : 
+2.0 0.0 
+-1.0 -7.0 
+-4.0 0.0 
+Is Feasible : false
+Total Load Violation : 2.0
+Total route time violation : 5.0
+Cost : 50.0
+Cost with penalty : 1053.0
+
+
+
+
+0.0
+0.0
+0.3333333333333333
+0.4444444444444444
+0.4444444444444444
+0.4888888888888889
+0.5111111111111112
+0.5555555555555555
+0.5777777777777778
+0.5777777777777778

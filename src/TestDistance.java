@@ -1,14 +1,16 @@
 import java.io.PrintWriter;
+import java.lang.reflect.Array;
+import java.util.Arrays;
 import java.util.Scanner;
 
 
-public class BasicAlgo  implements GeneticAlgorithm
+public class TestDistance  implements GeneticAlgorithm
 {
 	PrintWriter out; 
 	
-	int POPULATION_SIZE = 200;
-	int NUMBER_OF_OFFSPRING = 100;
-	int NUMBER_OF_GENERATION = 500;
+	int POPULATION_SIZE = 10;
+	int NUMBER_OF_OFFSPRING = 10;
+	int NUMBER_OF_GENERATION = 1;
 	
 	ProblemInstance problemInstance;
 	Individual population[];
@@ -27,7 +29,7 @@ public class BasicAlgo  implements GeneticAlgorithm
 	double routeTimePenaltyFactor;
 	
 	
-	public BasicAlgo(ProblemInstance problemInstance) 
+	public TestDistance(ProblemInstance problemInstance) 
 	{
 		// TODO Auto-generated constructor stub
 		this.problemInstance = problemInstance;
@@ -48,18 +50,18 @@ public class BasicAlgo  implements GeneticAlgorithm
 	public Individual run() 
 	{
 		
-		int selectedParent;
+		int selectedParent1,selectedParent2;
 		int i;
 		
-		Individual parent,offspring;
+		Individual parent1,parent2,offspring;
 
 		// INITIALISE POPULATION
 		initialisePopulation();
 
 		sort(population);
 
-		
-		for(int generation=0;generation<NUMBER_OF_GENERATION;generation++)
+		double[] distances = new double[NUMBER_OF_OFFSPRING];
+		for(int generation=0;generation<1;generation++)
 		{
 			//sort function uses selection sort, replace with some O(n lg n) sort algthm
 
@@ -68,68 +70,30 @@ public class BasicAlgo  implements GeneticAlgorithm
 			//Select a parent and apply genetic operator
 			for( i=0;i<NUMBER_OF_OFFSPRING;i++)
 			{
-					selectedParent=rouletteWheelSelection();
+					selectedParent1=rouletteWheelSelection();
+					parent1 = population[selectedParent1];
+					
+					selectedParent2=rouletteWheelSelection();
+					parent2 = population[selectedParent2];
 
-					parent = population[selectedParent];
-					offspring = new Individual(parent);
 
-					applyMutation(offspring);
-					//parent.print();
-					offspring.calculateCost();
-					//offspring.print();
-					offspringPopulation[i] = offspring;
+					
+					out.println("\n\n");
+					double d = Individual.distance(problemInstance, parent1, parent2);
+					out.println(""+d);
+					distances[i]=d;
+					parent1.print();
+					parent2.print();
+					out.println("\n\n");
 			}
 
 
-			//TAKE THE BEST "POPULATION_SIZE" individuals from the set of all parents and children
-			sort(offspringPopulation);
-
-			//first select best indivdls in the temporary array
-			//afterwards replace population with it
-			i = 0;
-			int j = 0;
-			int cursor = 0;
-
-			while(cursor<POPULATION_SIZE)
-			{
-				if(i == POPULATION_SIZE)//NEVER GONNA HAPPEN 
-				{
-					temporaryPopulation[cursor] = offspringPopulation[j];
-					j++;
-				}
-				else if(j== NUMBER_OF_OFFSPRING)
-				{
-					temporaryPopulation[cursor] = population[i];
-					i++;
-				}
-				else if(population[i].costWithPenalty <= offspringPopulation[j].costWithPenalty)
-				{
-					temporaryPopulation[cursor] = population[i];
-					i++;
-				}
-				else
-				{
-					temporaryPopulation[cursor] = offspringPopulation[j];
-					j++;
-				}
-				cursor++;
-			}
-
-			//replace population with temporary array
-			for(i=0;i<POPULATION_SIZE;i++)
-			{
-				population[i] = temporaryPopulation[i];
-			}
 		}
 
-
-		sortWithCost(population);
-		out.print("\n\n\n\n\n--------------------------------------------------\n");
-		out.print("\n\n\nFINAL POPULATION\n\n");
-		for( i=0;i<POPULATION_SIZE;i++)
+		Arrays.sort(distances);
+		for( i=0;i<NUMBER_OF_OFFSPRING;i++)
 		{
-			out.println("\n\nIndividual : "+i);
-			population[i].print();
+			out.println(distances[i]);
 		}
 		
 		return population[0];
@@ -285,13 +249,13 @@ public class BasicAlgo  implements GeneticAlgorithm
 
 	void initialisePopulation()
 	{
-		out.print("Initial population : \n");
+		//out.print("Initial population : \n");
 		for(int i=0; i<POPULATION_SIZE; i++)
 		{
 			population[i] = new Individual(problemInstance);
 			population[i].initialise();
-			out.println("Printing individual "+ i +" : \n");
-			population[i].print();
+			//out.println("Printing individual "+ i +" : \n");
+			//population[i].print();
 		}
 	}
 
