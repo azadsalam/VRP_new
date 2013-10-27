@@ -82,10 +82,10 @@ public class Algo25_50_25_with_gradual_elitist_with_uniform_selection implements
 		
 		for( generation=0;generation<NUMBER_OF_GENERATION;generation++)
 		{
-			//sort function uses selection sort, replace with some O(n lg n) sort algthm
 			
 			calculateCostWithPenalty(0,POPULATION_SIZE,generation,true);
-			sort(population,0,POPULATION_SIZE);
+			
+			Utility.sort(population);
 			
 			
 			i=0;
@@ -196,7 +196,7 @@ public class Algo25_50_25_with_gradual_elitist_with_uniform_selection implements
 		
 		for(int i=start; i<start+length; i++)
 		{
-			population[i].calculateCost();
+			population[i].calculateCostAndPenalty();
 			
 			penalty = 0;
 			penalty += population[i].totalLoadViolation * loadPenaltyFactor;
@@ -224,29 +224,6 @@ public class Algo25_50_25_with_gradual_elitist_with_uniform_selection implements
 		}
 	}
 	
-	//SORT THE INDIVIDUALS ON ASCENDING ORDER OF COST
-	//BETTER INDIVIDUALS HAVE LOWER INDEX
-	//COST LESS, INDEX LESS ;-)
-	void sort(Individual[] array,int start,int length)
-	{
-		Individual temp;
-		//FOR NOW DONE SELECTION SORT
-		//AFTERWARDS REPLACE IT WITH QUICK SORT OR SOME OTHER O(n logn) sort
-		for(int i=start;i<start+length;i++)
-		{
-			for(int j=i+1;j<start+length;j++)
-			{
-				if(array[i].costWithPenalty > array[j].costWithPenalty)
-				{
-					temp = array[i];
-					array[i] =array[j];
-					array[j] = temp;
-				}
-			}
-		}
-
-	}
-
 	
 	// for now not applying periodAssignment Mutation operator
 	// for now working with only MDVRP ->  period = 1

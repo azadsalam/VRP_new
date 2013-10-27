@@ -4,11 +4,11 @@ import java.util.Arrays;
 import java.util.Scanner;
 
 
-public class TestDistance  implements GeneticAlgorithm
+public class TestAlgo  implements GeneticAlgorithm
 {
 	PrintWriter out; 
 	
-	int POPULATION_SIZE = 10;
+	int POPULATION_SIZE = 50;
 	int NUMBER_OF_OFFSPRING = 10;
 	int NUMBER_OF_GENERATION = 1;
 	
@@ -29,7 +29,7 @@ public class TestDistance  implements GeneticAlgorithm
 	double routeTimePenaltyFactor;
 	
 	
-	public TestDistance(ProblemInstance problemInstance) 
+	public TestAlgo(ProblemInstance problemInstance) 
 	{
 		// TODO Auto-generated constructor stub
 		this.problemInstance = problemInstance;
@@ -58,7 +58,15 @@ public class TestDistance  implements GeneticAlgorithm
 		// INITIALISE POPULATION
 		initialisePopulation();
 
-		sort(population);
+		TotalCostCalculator.calculateCostofPopulation(population, loadPenaltyFactor, routeTimePenaltyFactor);
+		
+		for( i=0;i<POPULATION_SIZE;i++) System.out.print(population[i].costWithPenalty + " ");
+		System.out.print("\n");
+
+		Utility.sort(population);
+		
+		for( i=0;i<POPULATION_SIZE;i++) System.out.print(population[i].costWithPenalty + " ");
+		System.out.print("\n");
 
 		double[] distances = new double[NUMBER_OF_OFFSPRING];
 		for(int generation=0;generation<1;generation++)
@@ -76,75 +84,16 @@ public class TestDistance  implements GeneticAlgorithm
 					selectedParent2=rouletteWheelSelection();
 					parent2 = population[selectedParent2];
 
-
-					
-					out.println("\n\n");
-					double d = Individual.distance(problemInstance, parent1, parent2);
-					out.println(""+d);
-					distances[i]=d;
-					parent1.print();
-					parent2.print();
-					out.println("\n\n");
 			}
 
 
 		}
 
-		Arrays.sort(distances);
-		for( i=0;i<NUMBER_OF_OFFSPRING;i++)
-		{
-			out.println(distances[i]);
-		}
-		
 		return population[0];
 
 	}
 	
 	
-	
-	void sortWithCost(Individual[] array)
-	{
-		Individual temp;
-		//FOR NOW DONE SELECTION SORT
-		//AFTERWARDS REPLACE IT WITH QUICK SORT OR SOME OTHER O(n logn) sort
-		for(int i=0;i<array.length;i++)
-		{
-			for(int j=i+1;j<array.length;j++)
-			{
-				if(array[i].cost > array[j].cost)
-				{
-					temp = array[i];
-					array[i] =array[j];
-					array[j] = temp;
-				}
-			}
-		}
-
-	}
-
-	//SORT THE INDIVIDUALS ON ASCENDING ORDER OF COST
-	//BETTER INDIVIDUALS HAVE LOWER INDEX
-	//COST LESS, INDEX LESS ;-)
-	void sort(Individual[] array)
-	{
-		Individual temp;
-		//FOR NOW DONE SELECTION SORT
-		//AFTERWARDS REPLACE IT WITH QUICK SORT OR SOME OTHER O(n logn) sort
-		for(int i=0;i<array.length;i++)
-		{
-			for(int j=i+1;j<array.length;j++)
-			{
-				if(array[i].costWithPenalty > array[j].costWithPenalty)
-				{
-					temp = array[i];
-					array[i] =array[j];
-					array[j] = temp;
-				}
-			}
-		}
-
-	}
-
 	
 	void initialiseRouletteWheelSelection(int generation)
 	{

@@ -212,7 +212,7 @@ public class Algo25_50_25_with_semi_elitist_with_binary_tournament
 		
 		for(int i=start; i<start+length; i++)
 		{
-			population[i].calculateCost();
+			population[i].calculateCostAndPenalty();
 			
 			penalty = 0;
 			penalty += population[i].totalLoadViolation * loadPenaltyFactor;

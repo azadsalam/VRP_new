@@ -75,7 +75,7 @@ public class BasicAlgo  implements GeneticAlgorithm
 
 					applyMutation(offspring);
 					//parent.print();
-					offspring.calculateCost();
+					offspring.calculateCostAndPenalty();
 					//offspring.print();
 					offspringPopulation[i] = offspring;
 			}
@@ -192,7 +192,7 @@ public class BasicAlgo  implements GeneticAlgorithm
 		//cout<< "SELECTION\nCost : ";
 		for( i=0;i<POPULATION_SIZE;i++)
 		{
-			population[i].calculateCost();
+			population[i].calculateCostAndPenalty();
 			fitness[i] = population[i].cost;
 			// incorporate penalty
 	

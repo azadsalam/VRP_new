@@ -114,7 +114,7 @@ public class Individual
 			routePartition[period][problemInstance.vehicleCount-1] = problemInstance.customerCount-1;
 		}
 		
-		calculateCost();
+		calculateCostAndPenalty();
 
 	}
 	
@@ -183,8 +183,12 @@ public class Individual
 
 	}
 
-	//calculate and return cost of individual
-	void calculateCost()
+	/**
+	 * Calculates cost and penalty of every individual
+	 * For route time violation travelling times are not considered
+	 * route time violation = maximum duration of a route - Sum of service time
+	 */
+	void calculateCostAndPenalty()
 	{
 		double tempCost = 0;
 
@@ -196,7 +200,7 @@ public class Individual
 		{
 			for(int j=0;j<problemInstance.vehicleCount;j++)
 			{
-				tempCost += calculateFitness(i,j);
+				tempCost += calculateCost(i,j);
                 //calculate the total load violation
                 //Add only when actually the load is violated i.e. violation is positive
                 if(loadViolation[i][j]>0) totalLoadViolation += loadViolation[i][j];
@@ -213,15 +217,16 @@ public class Individual
 
 		feasibilitySet = true;
 		
-		//costWithPenalty = cost + totalLoadViolation + totalRouteTimeViolation;
-		
 	}
 
 	//calcuate fitness for each period for each vehicle
 	// route for vehicle i is  [ routePartition[i-1]+1 , routePartition[i] ]
 	// given that routePartition[i-1]+1 <= routePartition[i]
+	//ignoring travelling time for now - for cordeau MDVRP
+	// only service time is considered
 
-	double calculateFitness(int period,int vehicle)
+
+	double calculateCost(int period,int vehicle)
 	{
 		int assignedDepot;
 		assignedDepot = problemInstance.depotAllocation[vehicle];
