@@ -27,12 +27,23 @@ public class Utility
 	*/
 	public static void sort(Individual[] array)
 	{
+		sort(array, array.length);
+	}
+	
+	/**
+	 * Sorts in increasing order of cost+penalty in rance [0, length)
+	 * @param array
+	 * @param length
+	 */
+	
+	public static void sort(Individual[] array,int length)
+	{
 		Individual temp;
 		//FOR NOW DONE SELECTION SORT
 		//AFTERWARDS REPLACE IT WITH QUICK SORT OR SOME OTHER O(n logn) sort
-		for(int i=0;i<array.length;i++)
+		for(int i=0;i<length;i++)
 		{
-			for(int j=i+1;j<array.length;j++)
+			for(int j=i+1;j<length;j++)
 			{
 				if(array[i].costWithPenalty > array[j].costWithPenalty)
 				{
@@ -42,6 +53,8 @@ public class Utility
 				}
 			}
 		}
+
 	}
 
-}
+}	
+	

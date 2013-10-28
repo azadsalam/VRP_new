@@ -35,7 +35,7 @@ public class Algo25_50_25_with_gradual_elitist_with_uniform_selection implements
 	Individual parent1,parent2;
 	
 	static public boolean  outputToFile = true;
-	static public boolean writeToExcel = true;
+	//
 	
 	public Algo25_50_25_with_gradual_elitist_with_uniform_selection(ProblemInstance problemInstance) 
 	{
@@ -61,16 +61,11 @@ public class Algo25_50_25_with_gradual_elitist_with_uniform_selection implements
 		worstStart = moderateStart + moderateInterval + 1;
 		worstInterval = bestInterval;
 		
-		
-		
-		if(writeToExcel) Solver.exportToCsv.init(NUMBER_OF_GENERATION+1);
-		
+
 	}
 
 	public Individual run() 
 	{
-		
-		
 		elitistRatio = (FINAL_DEGREE_OF_ELITISM - INITIAL_DEGREE_OF_ELITISM) / NUMBER_OF_GENERATION;
 		
 		int i,generation;
@@ -78,14 +73,15 @@ public class Algo25_50_25_with_gradual_elitist_with_uniform_selection implements
 		Individual offspring1,offspring2;
 
 		initialisePopulation();
-		//sort(population,0,POPULATION_SIZE);
 		
 		for( generation=0;generation<NUMBER_OF_GENERATION;generation++)
 		{
+						
+			TotalCostCalculator.calculateCostofPopulation(population,0, POPULATION_SIZE, loadPenaltyFactor, routeTimePenaltyFactor) ;
+			Solver.gatherExcelData(population, POPULATION_SIZE, generation);
+
 			
-			calculateCostWithPenalty(0,POPULATION_SIZE,generation,true);
-			
-			Utility.sort(population);
+			Utility.sort(population,POPULATION_SIZE);
 			
 			
 			i=0;
@@ -106,9 +102,8 @@ public class Algo25_50_25_with_gradual_elitist_with_uniform_selection implements
 				i++;
 			}
 
-			//only evaluate the newly born individuals
-			calculateCostWithPenalty(POPULATION_SIZE, POPULATION_SIZE, generation,false);			
-			sort(population,0,POPULATION_SIZE*2);
+			TotalCostCalculator.calculateCostofPopulation(population, POPULATION_SIZE,NUMBER_OF_OFFSPRING, loadPenaltyFactor, routeTimePenaltyFactor) ;
+			Utility.sort(population);
 			
 			//semi elitist approach, the a portion of best individuals always make to next generation
 			int n =  ((INITIAL_DEGREE_OF_ELITISM +(int)(elitistRatio* generation))* POPULATION_SIZE) / 100 ;
@@ -127,8 +122,9 @@ public class Algo25_50_25_with_gradual_elitist_with_uniform_selection implements
 		}
 
 
-		calculateCostWithPenalty(0, POPULATION_SIZE, generation, true);
-		sort(population, 0, POPULATION_SIZE);
+		TotalCostCalculator.calculateCostofPopulation(population,0,POPULATION_SIZE, loadPenaltyFactor, routeTimePenaltyFactor);
+		Utility.sort(population);
+		Solver.gatherExcelData(population, POPULATION_SIZE, generation);
 		
 		//sort(population);
 		if(outputToFile)
@@ -186,45 +182,6 @@ public class Algo25_50_25_with_gradual_elitist_with_uniform_selection implements
 		return population[index];
 	}
 	
-	// calculate cost (calls calculateCost function) and adds penalty to determine costWithPenalty
-	void calculateCostWithPenalty(int start, int length, int generation,boolean print)
-	{
-		double sum=0,avg,penalty;
-		double min =0xFFFFFFF;
-		double max = -1;
-		int feasibleCount = 0;
-		
-		for(int i=start; i<start+length; i++)
-		{
-			population[i].calculateCostAndPenalty();
-			
-			penalty = 0;
-			penalty += population[i].totalLoadViolation * loadPenaltyFactor;
-			penalty += population[i].totalRouteTimeViolation * routeTimePenaltyFactor;
-			//penalty *= (generation+1);
-			
-			population[i].costWithPenalty = population[i].cost + penalty;
-			
-			sum += population[i].costWithPenalty;
-			if(population[i].costWithPenalty > max) max = population[i].costWithPenalty;
-			if(population[i].costWithPenalty < min) min = population[i].costWithPenalty;
-			if(population[i].isFeasible) feasibleCount++;
-		}
-		
-		avg = sum / POPULATION_SIZE;
-
-		if(print && outputToFile)	out.format("Generation %d : Min : %f Avg : %f  Max : %f Feasible : %d \n",generation,min,avg,max,feasibleCount);
-		
-		if(print && writeToExcel)
-		{
-			Solver.exportToCsv.min[generation] = min;
-			Solver.exportToCsv.avg[generation] = avg;
-			Solver.exportToCsv.max[generation] = max;
-			Solver.exportToCsv.feasibleCount[generation] = feasibleCount;
-		}
-	}
-	
-	
 	// for now not applying periodAssignment Mutation operator
 	// for now working with only MDVRP ->  period = 1
 	void applyMutation(Individual offspring)
@@ -273,6 +230,11 @@ public class Algo25_50_25_with_gradual_elitist_with_uniform_selection implements
 			//out.println("Printing individual "+ i +" : \n");
 			//population[i].miniPrint();
 		}
+	}
+	
+	public int getNumberOfGeeration()
+	{
+		return NUMBER_OF_GENERATION;
 	}
 
 }

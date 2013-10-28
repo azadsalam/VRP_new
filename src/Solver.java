@@ -7,8 +7,8 @@ import javax.swing.plaf.metal.MetalIconFactory.FileIcon16;
 
 public class Solver 
 {
-	String inputFileName = "pr01.txt";
-	String outputFileName = "outPr01.txt";
+	String inputFileName = "in1.txt";
+	String outputFileName = "out1.txt";
 	
 	File inputFile,outputFile;	
 	Scanner input;
@@ -17,6 +17,9 @@ public class Solver
 	public static ExportToCSV exportToCsv;
 		
 	ProblemInstance problemInstance;
+	
+	public static boolean writeToExcel;
+	
 	public void initialise() 
 	{
 		try
@@ -54,23 +57,73 @@ public class Solver
 	}
 	public void solve() 
 	{
+		writeToExcel = true;
+		
+		
 		problemInstance.print();
 		
+		GeneticAlgorithm ga = new Algo25_50_25_with_gradual_elitist_with_uniform_selection(problemInstance);		
+		if(writeToExcel) Solver.exportToCsv.init(ga.getNumberOfGeeration()+1);	
+		
+		
+		ga.run();
+		
+//		generateAggregatedReport(ga);
+
+		if(writeToExcel)
+			exportToCsv.createCSV();
+		
+		output.close();
+		
+	}
+	
+	
+	/**
+	 * gathers the min,avg and max cost \n
+	 * Assumes all individuals cost+penalty is evaluated already
+	 * Also assumes actual population is in [0,populationSize)
+	 * @param population
+	 * @param populationSize
+	 * @param generation
+	 */
+	public static void gatherExcelData(Individual[] population,int populationSize,int generation)
+	{
+		if(writeToExcel)
+		{
+			
+			double sum=0,avg,penalty;
+			double min =0xFFFFFFF;
+			double max = -1;
+			int feasibleCount = 0;
+			
+			for(int i=0; i<populationSize; i++)
+			{
+				sum += population[i].costWithPenalty;
+				if(population[i].costWithPenalty > max) max = population[i].costWithPenalty;
+				if(population[i].costWithPenalty < min) min = population[i].costWithPenalty;
+				if(population[i].isFeasible) feasibleCount++;
+			}
+			
+			avg = sum / populationSize;
+
+		
+			exportToCsv.min[generation] = min;
+			exportToCsv.avg[generation] = avg;
+			exportToCsv.max[generation] = max;
+			exportToCsv.feasibleCount[generation] = feasibleCount;
+		}
+	}
+	
+	public void generateAggregatedReport(GeneticAlgorithm ga)
+	{
 		double min = 0xFFFFFF;
 		double max = -1;
 		double sum = 0;
 		double avg;
 		int feasibleCount=0;
-		
-		
-		GeneticAlgorithm ga = new TestAlgo(problemInstance) ;
-		ga.run();
-		
-		/*
+
 		for(int i=0; i<100; i++)
-		{
-			Algo25_50_25_with_gradual_elitist_with_uniform_selection ga = new Algo25_50_25_with_gradual_elitist_with_uniform_selection(problemInstance);
-			
+		{			
 			Individual sol = ga.run();
 			
 			if(sol.isFeasible==true)
@@ -86,10 +139,7 @@ public class Solver
 		
 		
 		System.out.format("Min : %f Avg : %f  Max : %f Feasible : %d \n",min,avg,max,feasibleCount);
-		*/
-		exportToCsv.createCSV();
-		
-		output.close();
-		
 	}
+	
+	
 }
