@@ -56,5 +56,13 @@ public class Utility
 
 	}
 
+	
+	public static void concatPopulation(Individual target[],Individual[] first,Individual[] second)
+	{
+		for(int i=0;i<first.length;i++) 
+			target[i] = first[i];
+		for(int i=0;i<second.length;i++)
+			target[i+first.length] = second[i];
+	}
 }	
 	
