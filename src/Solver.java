@@ -19,7 +19,8 @@ public class Solver
 	ProblemInstance problemInstance;
 	
 	public static boolean writeToExcel;
-	
+	public static boolean generateAggregatedReport;
+	public static boolean outputToFile;
 	public void initialise() 
 	{
 		try
@@ -57,25 +58,33 @@ public class Solver
 	}
 	public void solve() 
 	{
-		writeToExcel = true;
-		
+		// singlerun = true when excel needs to be generated or output checked for testing
+		// sigleRun = false when aggregated report is to be generated
+		boolean singleRun = true;
+		writeToExcel = singleRun;
+		outputToFile = singleRun;
+		generateAggregatedReport = !singleRun;
 		
 		problemInstance.print();
 		
 		GeneticAlgorithm ga = new Algo25_50_25_with_gradual_elitist_with_uniform_selection(problemInstance);		
-		if(writeToExcel) Solver.exportToCsv.init(ga.getNumberOfGeeration()+1);	
-		
-		
-		ga.run();
-		
-//		generateAggregatedReport(ga);
-
-		if(writeToExcel)
+		if(writeToExcel) 
+		{
+			Solver.exportToCsv.init(ga.getNumberOfGeeration()+1);	
+			ga.run();
 			exportToCsv.createCSV();
+		}
+		
+		
+		if(generateAggregatedReport)
+			generateAggregatedReport(ga);
+		
 		
 		output.close();
 		
 	}
+	
+	
 	
 	
 	/**

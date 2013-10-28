@@ -31,17 +31,17 @@ public class Algo25_50_25_with_gradual_elitist_with_uniform_selection implements
 	double loadPenaltyFactor;
 	double routeTimePenaltyFactor;
 	
+	Mutation mutation;
 	
 	Individual parent1,parent2;
-	
-	static public boolean  outputToFile = true;
-	//
 	
 	public Algo25_50_25_with_gradual_elitist_with_uniform_selection(ProblemInstance problemInstance) 
 	{
 		// TODO Auto-generated constructor stub
 		this.problemInstance = problemInstance;
 		out = problemInstance.out;
+		
+		mutation = new Mutation(problemInstance);
 		
 		population = new Individual[POPULATION_SIZE+NUMBER_OF_OFFSPRING];
 				
@@ -72,7 +72,7 @@ public class Algo25_50_25_with_gradual_elitist_with_uniform_selection implements
 		
 		Individual offspring1,offspring2;
 
-		initialisePopulation();
+		PopulationInitiator.initialisePopulation(population, POPULATION_SIZE, problemInstance);
 		
 		for( generation=0;generation<NUMBER_OF_GENERATION;generation++)
 		{
@@ -93,8 +93,8 @@ public class Algo25_50_25_with_gradual_elitist_with_uniform_selection implements
 				offspring2 = new Individual(problemInstance);
 				Individual.crossOver(problemInstance, parent1, parent2, offspring1, offspring2);	
 				
-				applyMutation(offspring1);
-				applyMutation(offspring2);
+				mutation.applyMutation(offspring1);
+				mutation.applyMutation(offspring2);
 				
 				population[i+POPULATION_SIZE] = offspring1;
 				i++;
@@ -126,8 +126,8 @@ public class Algo25_50_25_with_gradual_elitist_with_uniform_selection implements
 		Utility.sort(population);
 		Solver.gatherExcelData(population, POPULATION_SIZE, generation);
 		
-		//sort(population);
-		if(outputToFile)
+
+		if(Solver.outputToFile)
 		{
 			out.print("\n\n\n\n\n--------------------------------------------------\n");
 		//	calculateCostWithPenalty(0, POPULATION_SIZE, generation, true);
@@ -182,59 +182,8 @@ public class Algo25_50_25_with_gradual_elitist_with_uniform_selection implements
 		return population[index];
 	}
 	
-	// for now not applying periodAssignment Mutation operator
-	// for now working with only MDVRP ->  period = 1
-	void applyMutation(Individual offspring)
-	{
-		int selectedMutationOperator = selectMutationOperator();
-		
-		if(selectedMutationOperator==0)
-		{
-			int ran = Utility.randomIntInclusive(problemInstance.periodCount-1);
-			offspring.mutateRoutePartition(ran);
-		}
-		else if (selectedMutationOperator == 1)
-		{
-			int period = Utility.randomIntInclusive(problemInstance.periodCount-1);
-			offspring.mutatePermutation(period);//for now single period
-		}
-		else if (selectedMutationOperator == 2)
-		{
-			//int client = Utility.randomIntInclusive(problemInstance.customerCount-1);
-			//offspring.mutatePeriodAssignment(client);
-			
-			int period = Utility.randomIntInclusive(problemInstance.periodCount-1);
-			offspring.mutateRoutePartition(period);
-			offspring.mutatePermutation(period);//for now single period			
-		}
-		else if (selectedMutationOperator == 3){}
-		
-	}
-
-	//0 -> route partition
-	//1 ->	permutation
-	//2 -> route partition + permutation
-	//3 -> none
-	int selectMutationOperator()
-	{
-		return Utility.randomIntInclusive(3);
-	}
-
-	void initialisePopulation()
-	{
-	//	out.print("Initial population : \n");
-		for(int i=0; i<POPULATION_SIZE; i++)
-		{
-			population[i] = new Individual(problemInstance);
-			population[i].initialise();
-			//out.println("Printing individual "+ i +" : \n");
-			//population[i].miniPrint();
-		}
-	}
-	
 	public int getNumberOfGeeration()
 	{
 		return NUMBER_OF_GENERATION;
 	}
-
 }
