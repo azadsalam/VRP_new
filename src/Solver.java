@@ -67,7 +67,7 @@ public class Solver
 		
 		problemInstance.print();
 		
-		GeneticAlgorithm ga = new Algo25_50_25_with_gradual_elitist_with_uniform_selection(problemInstance);		
+		GeneticAlgorithm ga = new Scheme1(problemInstance);		
 		if(writeToExcel) 
 		{
 			Solver.exportToCsv.init(ga.getNumberOfGeeration()+1);	

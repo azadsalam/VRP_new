@@ -2,11 +2,11 @@ import java.io.PrintWriter;
 import java.util.Scanner;
 
 
-public class BasicAlgo implements GeneticAlgorithm
+public class Scheme1 implements GeneticAlgorithm
 {
 	//Algorithm parameters
 	int POPULATION_SIZE = 200; 
-	int NUMBER_OF_OFFSPRING = POPULATION_SIZE;   
+	int NUMBER_OF_OFFSPRING = 200;   
 	int NUMBER_OF_GENERATION = 1000;	
 	double loadPenaltyFactor = 10;
 	double routeTimePenaltyFactor = 1;
@@ -31,7 +31,7 @@ public class BasicAlgo implements GeneticAlgorithm
 	//Temprary Variables
 	Individual parent1,parent2;
 	
-	public BasicAlgo(ProblemInstance problemInstance) 
+	public Scheme1(ProblemInstance problemInstance) 
 	{
 		// TODO Auto-generated constructor stub
 		this.problemInstance = problemInstance;
@@ -47,10 +47,10 @@ public class BasicAlgo implements GeneticAlgorithm
 		parentOffspringTotalPopulation = new Individual[POPULATION_SIZE + NUMBER_OF_OFFSPRING];
 		
 		//Add additional code here
-		parentSelectionOperator = ;
-		survivalSelectionOperator = ; 
-		localImprovement = ;
-		localSearch = ;
+		parentSelectionOperator = new RoutletteWheelSelection();
+		survivalSelectionOperator = new FUSS(); 
+		//localImprovement = ;
+		//localSearch = ;
 	
 	}
 
@@ -67,7 +67,7 @@ public class BasicAlgo implements GeneticAlgorithm
 		{
 			//For collecting min,max,avg
 			Solver.gatherExcelData(population, POPULATION_SIZE, generation);
-
+			TotalCostCalculator.calculateCostofPopulation(population,0, POPULATION_SIZE, loadPenaltyFactor, routeTimePenaltyFactor) ;
 			
 			parentSelectionOperator.initialise(population,false);
 			
@@ -102,11 +102,12 @@ public class BasicAlgo implements GeneticAlgorithm
 				population[i] = survivalSelectionOperator.getIndividual(parentOffspringTotalPopulation);
 			}
 			
-			
+			/*
 			localImprovement.initialise(population, localSearch);
 			localImprovement.run(population);
-			
 			TotalCostCalculator.calculateCostofPopulation(population, 0, POPULATION_SIZE, loadPenaltyFactor, routeTimePenaltyFactor);
+			*/
+			
 			Utility.sort(population);
 			
 		}
@@ -115,7 +116,6 @@ public class BasicAlgo implements GeneticAlgorithm
 		TotalCostCalculator.calculateCostofPopulation(population,0,POPULATION_SIZE, loadPenaltyFactor, routeTimePenaltyFactor);
 		Utility.sort(population);
 		Solver.gatherExcelData(population, POPULATION_SIZE, generation);
-		
 		
 		
 

@@ -1,6 +1,9 @@
 public abstract class SelectionOperator 
 {
-	public void initialise(Individual[] population)
+	boolean survivalSelection;
+	boolean mark[];
+	
+	public void initialise(Individual[] population,boolean survivalSelection)
 	{
 		
 	}

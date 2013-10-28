@@ -11,6 +11,11 @@ public class Utility
 		return m+random;
 	}
 	
+	public static double randomDouble(double m,double n)
+	{
+		double random = randomGenerator.nextDouble();
+		return m+random*(n-m);
+	}
 	
 	//[0,n]
 	public static int randomIntInclusive(int n)

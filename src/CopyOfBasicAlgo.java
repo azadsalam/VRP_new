@@ -2,7 +2,7 @@ import java.io.PrintWriter;
 import java.util.Scanner;
 
 
-public class BasicAlgo implements GeneticAlgorithm
+public class CopyOfBasicAlgo implements GeneticAlgorithm
 {
 	//Algorithm parameters
 	int POPULATION_SIZE = 200; 
@@ -31,7 +31,7 @@ public class BasicAlgo implements GeneticAlgorithm
 	//Temprary Variables
 	Individual parent1,parent2;
 	
-	public BasicAlgo(ProblemInstance problemInstance) 
+	public CopyOfBasicAlgo(ProblemInstance problemInstance) 
 	{
 		// TODO Auto-generated constructor stub
 		this.problemInstance = problemInstance;
@@ -69,7 +69,7 @@ public class BasicAlgo implements GeneticAlgorithm
 			Solver.gatherExcelData(population, POPULATION_SIZE, generation);
 
 			
-			parentSelectionOperator.initialise(population,false);
+			parentSelectionOperator.initialise(population);
 			
 			i=0;
 			while(i<NUMBER_OF_OFFSPRING)
@@ -94,7 +94,7 @@ public class BasicAlgo implements GeneticAlgorithm
 
 			TotalCostCalculator.calculateCostofPopulation(offspringPopulation, 0,NUMBER_OF_OFFSPRING, loadPenaltyFactor, routeTimePenaltyFactor) ;
 			Utility.concatPopulation(parentOffspringTotalPopulation, population, offspringPopulation);
-			survivalSelectionOperator.initialise(parentOffspringTotalPopulation,true);
+			survivalSelectionOperator.initialise(parentOffspringTotalPopulation);
 			
 			
 			for(i=0;i<POPULATION_SIZE;i++)

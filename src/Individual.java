@@ -415,6 +415,7 @@ public class Individual
 	}
 	
 	// swaps even if neither of the customers get visited that day
+	// updates cost and penalty
 	void mutatePermutation(int period)
 	{
 		int first = Utility.randomIntInclusive(problemInstance.customerCount-1);
@@ -433,9 +434,12 @@ public class Individual
 		permutation[period][first] = permutation[period][second];
 		permutation[period][second] = temp;
 
+		calculateCostAndPenalty();
 		// FITNESS CAN BE UPDATED HERE
+		
 	}
 	
+	// updates cost and penalty
 	void mutatePermutationWithinSingleRoute()
 	{
 		boolean success = false;
@@ -445,12 +449,12 @@ public class Individual
 			int vehicle = Utility.randomIntInclusive(problemInstance.vehicleCount-1);
 			success = mutatePermutationWithinSingleRoute(period, vehicle);
 		}while(success==false);
-		
+		calculateCostAndPenalty();
 	}
 	
-
 	//returns true if permutation successful
 	boolean mutatePermutationWithinSingleRoute(int period,int vehicle)
+
 	{
 		int start,end;
 		
@@ -478,9 +482,10 @@ public class Individual
 		return true;
 		
 	}
+	
+	// updates cost and penalty
 	void mutatePermutationOfDifferentRoute()
-	{
-		
+	{	
 		if(problemInstance.vehicleCount<2)return;
 		
 		boolean success = false;
@@ -493,6 +498,7 @@ public class Individual
 			success = mutatePermutationOfDifferentRoute(period, vehicle1,vehicle2);
 		}while(success==false);
 		
+		calculateCostAndPenalty();
 	}
 	
 
@@ -530,6 +536,18 @@ public class Individual
 		
 	}
 
+	// updates cost and penalty
+	void mutateRoutePartition()
+	{
+		//nothing to do if only one vehicle
+		if(problemInstance.vehicleCount == 1) return ;
+		
+		int period = Utility.randomIntInclusive(problemInstance.periodCount-1);
+		mutateRoutePartition(period);
+		
+		calculateCostAndPenalty();
+	}
+	
 	//moves some red line
 	//no effect if only one vehicle
 	void mutateRoutePartition(int period)
@@ -573,12 +591,29 @@ public class Individual
 	}
 
 
+	// updates cost + penalty
+	// if sobgula client er frequency = period hoy tahole, period assignment mutation er kono effect nai
+	void mutatePeriodAssignment()
+	{
+		boolean success;
+		int clientNo;
+		int total = problemInstance.customerCount;
+		do
+		{
+			clientNo = Utility.randomIntInclusive(problemInstance.customerCount-1);
+			success = mutatePeriodAssignment(clientNo);
+			total--;
+		}while(success==false && total>0);
+		
+		calculateCostAndPenalty();
+	}
+	
 	//returns 0 if it couldnt mutate as period == freq
-	int mutatePeriodAssignment(int clientNo)
+	boolean mutatePeriodAssignment(int clientNo)
 	{
 		//no way to mutate per. ass. as freq. == period
-		if(problemInstance.frequencyAllocation[clientNo] == problemInstance.periodCount) return 0;
-		if(problemInstance.frequencyAllocation[clientNo] == 0) return 0;		
+		if(problemInstance.frequencyAllocation[clientNo] == problemInstance.periodCount) return false;
+		if(problemInstance.frequencyAllocation[clientNo] == 0) return false;		
 
 		int previouslyAssigned; // one period that was assigned to client
 		do
@@ -595,7 +630,8 @@ public class Individual
 		periodAssignment[previouslyAssigned][clientNo] = false;
 		periodAssignment[previouslyUnassigned][clientNo]= true;
 
-		return 1;
+
+		return true;
 	}
 	
 	/** 
@@ -655,6 +691,10 @@ public class Individual
 			for( i=0;i<problemInstance.vehicleCount;i++) child2.routePartition[period][i] = temp[2*i+1];
 			
 		}
+		
+		child1.calculateCostAndPenalty();
+		child2.calculateCostAndPenalty();
+		
 		//System.out.println(" "+n);
 	}
 

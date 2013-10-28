@@ -4,7 +4,7 @@ import java.util.Arrays;
 import java.util.Scanner;
 
 
-public class TestAlgo  implements GeneticAlgorithm
+public class SelectionTestAlgo  implements GeneticAlgorithm
 {
 	PrintWriter out; 
 	
@@ -29,7 +29,7 @@ public class TestAlgo  implements GeneticAlgorithm
 	double routeTimePenaltyFactor;
 	
 	
-	public TestAlgo(ProblemInstance problemInstance) 
+	public SelectionTestAlgo(ProblemInstance problemInstance) 
 	{
 		// TODO Auto-generated constructor stub
 		this.problemInstance = problemInstance;
@@ -42,7 +42,7 @@ public class TestAlgo  implements GeneticAlgorithm
 		fitness = new double[POPULATION_SIZE];
 		cdf = new double[POPULATION_SIZE];
 		
-		loadPenaltyFactor = 500;
+		loadPenaltyFactor = 10;
 		routeTimePenaltyFactor = 0.6;
 		
 	}
@@ -65,22 +65,39 @@ public class TestAlgo  implements GeneticAlgorithm
 		System.out.print("\n");
 
 		
-		SelectionOperator so = new FUSS();
+		SelectionOperator so = new RoutletteWheelSelection();
 		for(int generation=0;generation<1;generation++)
 		{
 			//sort function uses selection sort, replace with some O(n lg n) sort algthm
 
-			//initialiseRouletteWheelSelection(generation);
-			so.initialise(population);
-			
 			double[] cst = new double[NUMBER_OF_OFFSPRING];
+			
+			//initialiseRouletteWheelSelection(generation);
+			so.initialise(population,true);
+			
+
 			//Select a parent and apply genetic operator
 			for( i=0;i<NUMBER_OF_OFFSPRING;i++)
 			{
 					cst[i]= so.getIndividual(population).costWithPenalty;
 			}
 			
-			//Arrays.sort(cst);
+			Arrays.sort(cst);
+
+			for( i=0;i<NUMBER_OF_OFFSPRING;i++) System.out.print(cst[i] + " ");
+			System.out.print("\n");
+
+			
+			so.initialise(population,false);
+			
+
+			//Select a parent and apply genetic operator
+			for( i=0;i<NUMBER_OF_OFFSPRING;i++)
+			{
+					cst[i]= so.getIndividual(population).costWithPenalty;
+			}
+			
+			Arrays.sort(cst);
 
 			for( i=0;i<NUMBER_OF_OFFSPRING;i++) System.out.print(cst[i] + " ");
 			System.out.print("\n");

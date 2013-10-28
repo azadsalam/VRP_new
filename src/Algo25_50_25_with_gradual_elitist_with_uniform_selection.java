@@ -72,7 +72,8 @@ public class Algo25_50_25_with_gradual_elitist_with_uniform_selection implements
 		
 		Individual offspring1,offspring2;
 
-		PopulationInitiator.initialisePopulation(population, POPULATION_SIZE, problemInstance);
+		PopulationInitiator.initialisePopulation(population, POPULATION_SIZE+NUMBER_OF_OFFSPRING, problemInstance);
+		
 		
 		for( generation=0;generation<NUMBER_OF_GENERATION;generation++)
 		{
@@ -83,6 +84,7 @@ public class Algo25_50_25_with_gradual_elitist_with_uniform_selection implements
 			
 			Utility.sort(population,POPULATION_SIZE);
 			
+		
 			
 			i=0;
 			while(i<NUMBER_OF_OFFSPRING)
