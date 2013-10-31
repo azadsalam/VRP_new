@@ -4,7 +4,7 @@ import java.util.Arrays;
 import java.util.Scanner;
 
 
-public class TestAlgo  implements GeneticAlgorithm
+public class LocalSearchTestAlgo  implements GeneticAlgorithm
 {
 	PrintWriter out; 
 	
@@ -29,7 +29,7 @@ public class TestAlgo  implements GeneticAlgorithm
 	double routeTimePenaltyFactor;
 	
 	
-	public TestAlgo(ProblemInstance problemInstance) 
+	public LocalSearchTestAlgo(ProblemInstance problemInstance) 
 	{
 		// TODO Auto-generated constructor stub
 		this.problemInstance = problemInstance;
@@ -55,15 +55,22 @@ public class TestAlgo  implements GeneticAlgorithm
 		
 		Individual parent1,parent2,offspring;
 
+		LocalSearch localSearch = new FirstChoiceHillClimbing();
 		
 		// INITIALISE POPULATION
 		initialisePopulation();
 		TotalCostCalculator.calculateCostofPopulation(population,0,POPULATION_SIZE, loadPenaltyFactor, routeTimePenaltyFactor);
-	
-		
+		Utility.sort(population);
 		for(int generation=0;generation<1;generation++)
 		{
 
+			for( i=0;i<POPULATION_SIZE;i++)
+			{
+				double prev = population[i].costWithPenalty;
+				localSearch.improve(population[i], loadPenaltyFactor, routeTimePenaltyFactor);
+				double newf= population[i].costWithPenalty;	
+				System.out.println("Prev : "+prev+" New : "+newf+ " Imrvmnt : "+(prev-newf));
+			}
 		}
 
 		return population[0];

@@ -22,5 +22,29 @@ public class TotalCostCalculator
 			
 		}
 	}
+	
+	/**
+	 * Enumerates the individual and calculate the cost with penalty 
+	 * @param population
+	 * @param loadPenaltyFactor
+	 * @param routeTimePenaltyFactor
+	 */
+	public static void calculateCost(Individual individual, double loadPenaltyFactor, double routeTimePenaltyFactor)
+	{
+		double penalty;
+		
+		individual.calculateCostAndPenalty();
+		
+		penalty = 0;
+		penalty += individual.totalLoadViolation * loadPenaltyFactor;
+		penalty += individual.totalRouteTimeViolation * routeTimePenaltyFactor;
+		//penalty *= (generation+1);
+		
+		individual.costWithPenalty = individual.cost + penalty;
+		
+		
+	}
+	
+	
 
 }

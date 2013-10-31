@@ -41,7 +41,7 @@ public class Algo25_50_25_with_gradual_elitist_with_uniform_selection implements
 		this.problemInstance = problemInstance;
 		out = problemInstance.out;
 		
-		mutation = new Mutation(problemInstance);
+		mutation = new Mutation();
 		
 		population = new Individual[POPULATION_SIZE+NUMBER_OF_OFFSPRING];
 				
@@ -80,11 +80,9 @@ public class Algo25_50_25_with_gradual_elitist_with_uniform_selection implements
 						
 			TotalCostCalculator.calculateCostofPopulation(population,0, POPULATION_SIZE, loadPenaltyFactor, routeTimePenaltyFactor) ;
 			Solver.gatherExcelData(population, POPULATION_SIZE, generation);
-
 			
 			Utility.sort(population,POPULATION_SIZE);
 			
-		
 			
 			i=0;
 			while(i<NUMBER_OF_OFFSPRING)

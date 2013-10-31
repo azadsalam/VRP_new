@@ -4,7 +4,7 @@ import java.util.Arrays;
 import java.util.Scanner;
 
 
-public class TestAlgo  implements GeneticAlgorithm
+public class LocalImprovementTest  implements GeneticAlgorithm
 {
 	PrintWriter out; 
 	
@@ -29,7 +29,7 @@ public class TestAlgo  implements GeneticAlgorithm
 	double routeTimePenaltyFactor;
 	
 	
-	public TestAlgo(ProblemInstance problemInstance) 
+	public LocalImprovementTest(ProblemInstance problemInstance) 
 	{
 		// TODO Auto-generated constructor stub
 		this.problemInstance = problemInstance;
@@ -56,15 +56,46 @@ public class TestAlgo  implements GeneticAlgorithm
 		Individual parent1,parent2,offspring;
 
 		
+		
+		
 		// INITIALISE POPULATION
 		initialisePopulation();
 		TotalCostCalculator.calculateCostofPopulation(population,0,POPULATION_SIZE, loadPenaltyFactor, routeTimePenaltyFactor);
 	
+		LocalImprovement li = new LocalImprovementBasedOnFuss(loadPenaltyFactor, routeTimePenaltyFactor, new FirstChoiceHillClimbing(),POPULATION_SIZE);
 		
-		for(int generation=0;generation<1;generation++)
+		
+		double prev[] = new double[POPULATION_SIZE];
+		double imp[] = new double[POPULATION_SIZE];
+				
+		Utility.sort(population);
+		for(i=0;i<POPULATION_SIZE;i++)
 		{
-
+			System.out.print(" "+population[i].costWithPenalty);
+			prev[i] = population[i].costWithPenalty;
 		}
+		System.out.println();
+
+		
+		li.initialise(population);
+		li.run(population);
+	
+		
+		TotalCostCalculator.calculateCostofPopulation(population,0,POPULATION_SIZE, loadPenaltyFactor, routeTimePenaltyFactor);
+		
+		for(i=0;i<POPULATION_SIZE;i++)
+		{
+			System.out.print(" "+population[i].costWithPenalty);
+			imp[i] = population[i].costWithPenalty;
+		}
+		System.out.println();
+		
+		for(i=0;i<POPULATION_SIZE;i++)
+		{
+			System.out.print(" "+(prev[i] - imp[i]));
+		}
+		System.out.println();
+
 
 		return population[0];
 

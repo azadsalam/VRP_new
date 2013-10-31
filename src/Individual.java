@@ -136,8 +136,12 @@ public class Individual
 	}
 	
 	
-	// make a copy cat individual
-		//copies problem instance, periodAssignment, permutation, routePartition
+	/** Makes a copy cat individual.Copy Constructor.
+	 * 
+		* copies problem instance, periodAssignment, permutation, routePartition.
+		 * <br>
+		 * @param original
+		 */
 	public Individual(Individual original)
 	{
 	    int i,j;
@@ -180,6 +184,40 @@ public class Individual
 		//allocate demanViolationMatrix
 
         loadViolation = new double[problemInstance.periodCount][problemInstance.vehicleCount];
+
+	}
+	
+	public void copyIndividual(Individual original)
+	{
+		int i,j;
+		problemInstance = original.problemInstance;
+
+		for( i=0;i<problemInstance.periodCount;i++)
+		{
+			for( j=0;j<problemInstance.customerCount;j++)
+			{
+				periodAssignment[i][j] = original.periodAssignment[i][j];
+			}
+		}
+
+		for( i=0;i<problemInstance.periodCount;i++)
+		{
+			for( j=0;j<problemInstance.customerCount;j++)
+			{
+				permutation[i][j] = original.permutation[i][j];
+			}
+		}
+
+		for( i=0;i<problemInstance.periodCount;i++)
+		{
+			for( j=0;j<problemInstance.vehicleCount;j++)
+			{
+				routePartition[i][j] = original.routePartition[i][j];
+			}
+		}
+		
+		cost = original.cost;
+		costWithPenalty = original.costWithPenalty;
 
 	}
 
@@ -453,8 +491,7 @@ public class Individual
 	}
 	
 	//returns true if permutation successful
-	boolean mutatePermutationWithinSingleRoute(int period,int vehicle)
-
+	private boolean mutatePermutationWithinSingleRoute(int period,int vehicle)
 	{
 		int start,end;
 		
@@ -503,7 +540,7 @@ public class Individual
 	
 
 	//returns if permutation successful
-	boolean mutatePermutationOfDifferentRoute(int period,int vehicle1,int vehicle2)
+	private boolean mutatePermutationOfDifferentRoute(int period,int vehicle1,int vehicle2)
 	{
 		int start1,end1,start2,end2;
 		
@@ -550,7 +587,7 @@ public class Individual
 	
 	//moves some red line
 	//no effect if only one vehicle
-	void mutateRoutePartition(int period)
+	private void mutateRoutePartition(int period)
 	{
 		//nothing to do if only one vehicle
 		if(problemInstance.vehicleCount == 1) return ;
@@ -609,7 +646,7 @@ public class Individual
 	}
 	
 	//returns 0 if it couldnt mutate as period == freq
-	boolean mutatePeriodAssignment(int clientNo)
+	private boolean mutatePeriodAssignment(int clientNo)
 	{
 		//no way to mutate per. ass. as freq. == period
 		if(problemInstance.frequencyAllocation[clientNo] == problemInstance.periodCount) return false;

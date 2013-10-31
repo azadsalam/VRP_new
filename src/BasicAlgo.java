@@ -38,7 +38,7 @@ public class BasicAlgo implements GeneticAlgorithm
 		out = problemInstance.out;
 
 
-		mutation = new Mutation(problemInstance);
+		mutation = new Mutation();
 		
 		
 		//Change here if needed
@@ -94,6 +94,13 @@ public class BasicAlgo implements GeneticAlgorithm
 
 			TotalCostCalculator.calculateCostofPopulation(offspringPopulation, 0,NUMBER_OF_OFFSPRING, loadPenaltyFactor, routeTimePenaltyFactor) ;
 			Utility.concatPopulation(parentOffspringTotalPopulation, population, offspringPopulation);
+			
+			
+			localImprovement.initialise(parentOffspringTotalPopulation, localSearch);
+			localImprovement.run(population);
+			
+			TotalCostCalculator.calculateCostofPopulation(population, 0, POPULATION_SIZE, loadPenaltyFactor, routeTimePenaltyFactor);
+			
 			survivalSelectionOperator.initialise(parentOffspringTotalPopulation,true);
 			
 			
@@ -103,10 +110,6 @@ public class BasicAlgo implements GeneticAlgorithm
 			}
 			
 			
-			localImprovement.initialise(population, localSearch);
-			localImprovement.run(population);
-			
-			TotalCostCalculator.calculateCostofPopulation(population, 0, POPULATION_SIZE, loadPenaltyFactor, routeTimePenaltyFactor);
 			Utility.sort(population);
 			
 		}

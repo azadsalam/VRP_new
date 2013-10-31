@@ -31,6 +31,8 @@ public class Scheme1 implements GeneticAlgorithm
 	//Temprary Variables
 	Individual parent1,parent2;
 	
+
+	
 	public Scheme1(ProblemInstance problemInstance) 
 	{
 		// TODO Auto-generated constructor stub
@@ -38,7 +40,7 @@ public class Scheme1 implements GeneticAlgorithm
 		out = problemInstance.out;
 
 
-		mutation = new Mutation(problemInstance);
+		mutation = new Mutation();
 		
 		
 		//Change here if needed
@@ -48,10 +50,10 @@ public class Scheme1 implements GeneticAlgorithm
 		
 		//Add additional code here
 		parentSelectionOperator = new RoutletteWheelSelection();
-		survivalSelectionOperator = new FUSS(); 
-		//localImprovement = ;
-		//localSearch = ;
-	
+	    //survivalSelectionOperator = new FUSS(); 
+
+		localSearch = new FirstChoiceHillClimbing();
+		localImprovement = new LocalImprovementBasedOnFuss(loadPenaltyFactor, routeTimePenaltyFactor, localSearch, POPULATION_SIZE);	
 	}
 
 	public Individual run() 
@@ -94,19 +96,29 @@ public class Scheme1 implements GeneticAlgorithm
 
 			TotalCostCalculator.calculateCostofPopulation(offspringPopulation, 0,NUMBER_OF_OFFSPRING, loadPenaltyFactor, routeTimePenaltyFactor) ;
 			Utility.concatPopulation(parentOffspringTotalPopulation, population, offspringPopulation);
-			survivalSelectionOperator.initialise(parentOffspringTotalPopulation,true);
 			
 			
-			for(i=0;i<POPULATION_SIZE;i++)
+			localImprovement.initialise(parentOffspringTotalPopulation);
+			localImprovement.run(parentOffspringTotalPopulation);
+			
+			TotalCostCalculator.calculateCostofPopulation(population, 0, POPULATION_SIZE, loadPenaltyFactor, routeTimePenaltyFactor);
+			
+			
+			//semi elitist + Uniform approach, the n portion of best individuals always make to next generation
+			int n =  30 ;
+			int rand;
+			
+			Utility.sort(parentOffspringTotalPopulation);
+			
+			for(i=0;i<n;i++)
+				population[i] = parentOffspringTotalPopulation[i];
+			
+			for(i=n;i<POPULATION_SIZE;i++)
 			{
-				population[i] = survivalSelectionOperator.getIndividual(parentOffspringTotalPopulation);
+				rand  = Utility.randomIntInclusive(n, POPULATION_SIZE*2 - 1);
+				population[i] = parentOffspringTotalPopulation[rand];
 			}
 			
-			/*
-			localImprovement.initialise(population, localSearch);
-			localImprovement.run(population);
-			TotalCostCalculator.calculateCostofPopulation(population, 0, POPULATION_SIZE, loadPenaltyFactor, routeTimePenaltyFactor);
-			*/
 			
 			Utility.sort(population);
 			

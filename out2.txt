@@ -1,1 +1,3412 @@
 Test cases (Now ignored): 1
+
+
+
+
+
+--------------------------------------------------
+
+
+
+FINAL POPULATION
+
+
+
+Individual : 0
+PERIOD ASSIGMENT : 
+1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
+Permutation : 
+43 41 18 39 40 12 24 13 3 1 35 34 20 38 32 44 14 47 26 10 31 0 7 30 25 6 42 22 5 23 17 46 11 45 8 48 36 16 4 37 15 49 33 29 9 28 21 27 2 19 
+Route partition : 
+8 16 27 33 33 44 44 49 
+LOAD VIOLATION MATRIX : 
+-7.0 -42.0 -3.0 -35.0 0.0 -8.0 0.0 -88.0 
+Is Feasible : true
+Total Load Violation : 0.0
+Total route time violation : 0.0
+Cost : 636.5159522672712
+Cost with penalty : 636.5159522672712
+
+
+
+Individual : 1
+PERIOD ASSIGMENT : 
+1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
+Permutation : 
+43 41 18 39 40 12 24 13 3 1 35 34 20 38 32 44 14 47 26 10 31 0 7 30 25 6 42 22 5 23 17 46 11 45 8 48 36 16 4 37 15 49 33 29 9 28 21 27 2 19 
+Route partition : 
+8 16 27 33 33 44 44 49 
+LOAD VIOLATION MATRIX : 
+-7.0 -42.0 -3.0 -35.0 0.0 -8.0 0.0 -88.0 
+Is Feasible : true
+Total Load Violation : 0.0
+Total route time violation : 0.0
+Cost : 636.5159522672712
+Cost with penalty : 636.5159522672712
+
+
+
+Individual : 2
+PERIOD ASSIGMENT : 
+1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
+Permutation : 
+43 41 18 39 40 12 24 13 3 1 35 34 20 38 32 44 14 47 26 10 31 0 7 30 25 6 42 22 5 23 17 46 11 45 8 48 36 16 4 37 15 49 33 29 9 28 21 27 2 19 
+Route partition : 
+8 16 27 33 33 44 44 49 
+LOAD VIOLATION MATRIX : 
+-7.0 -42.0 -3.0 -35.0 0.0 -8.0 0.0 -88.0 
+Is Feasible : true
+Total Load Violation : 0.0
+Total route time violation : 0.0
+Cost : 636.5159522672712
+Cost with penalty : 636.5159522672712
+
+
+
+Individual : 3
+PERIOD ASSIGMENT : 
+1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
+Permutation : 
+43 41 18 39 40 12 24 13 3 1 35 34 20 38 32 44 14 47 26 10 31 0 7 30 25 6 42 22 5 23 17 46 11 45 8 48 36 16 4 37 15 49 33 29 9 28 21 27 2 19 
+Route partition : 
+8 16 27 33 33 44 44 49 
+LOAD VIOLATION MATRIX : 
+-7.0 -42.0 -3.0 -35.0 0.0 -8.0 0.0 -88.0 
+Is Feasible : true
+Total Load Violation : 0.0
+Total route time violation : 0.0
+Cost : 636.5159522672712
+Cost with penalty : 636.5159522672712
+
+
+
+Individual : 4
+PERIOD ASSIGMENT : 
+1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
+Permutation : 
+43 41 18 39 40 12 24 13 3 1 35 34 20 38 32 44 14 47 26 10 31 0 7 30 25 6 42 22 5 23 17 46 11 45 8 48 36 16 4 37 15 49 33 29 9 28 21 27 2 19 
+Route partition : 
+8 16 27 33 33 44 44 49 
+LOAD VIOLATION MATRIX : 
+-7.0 -42.0 -3.0 -35.0 0.0 -8.0 0.0 -88.0 
+Is Feasible : true
+Total Load Violation : 0.0
+Total route time violation : 0.0
+Cost : 636.5159522672712
+Cost with penalty : 636.5159522672712
+
+
+
+Individual : 5
+PERIOD ASSIGMENT : 
+1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
+Permutation : 
+43 41 18 39 40 12 24 13 3 1 35 34 20 38 32 44 14 47 26 10 31 0 7 30 25 6 42 22 5 23 17 46 11 45 8 48 36 16 4 37 15 49 33 29 9 28 21 27 2 19 
+Route partition : 
+8 16 27 33 44 44 49 49 
+LOAD VIOLATION MATRIX : 
+-7.0 -42.0 -3.0 -35.0 -8.0 0.0 -88.0 0.0 
+Is Feasible : true
+Total Load Violation : 0.0
+Total route time violation : 0.0
+Cost : 636.5159522672712
+Cost with penalty : 636.5159522672712
+
+
+
+Individual : 6
+PERIOD ASSIGMENT : 
+1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
+Permutation : 
+43 41 18 39 40 12 24 13 3 1 35 34 20 38 32 44 14 47 26 10 31 0 7 30 25 6 42 22 5 23 17 46 11 45 8 48 36 16 4 37 15 49 33 29 9 28 21 27 2 19 
+Route partition : 
+8 16 27 33 33 44 44 49 
+LOAD VIOLATION MATRIX : 
+-7.0 -42.0 -3.0 -35.0 0.0 -8.0 0.0 -88.0 
+Is Feasible : true
+Total Load Violation : 0.0
+Total route time violation : 0.0
+Cost : 636.5159522672712
+Cost with penalty : 636.5159522672712
+
+
+
+Individual : 7
+PERIOD ASSIGMENT : 
+1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
+Permutation : 
+43 41 18 39 40 12 24 13 3 1 35 34 20 38 32 44 14 47 26 10 31 0 7 30 25 6 42 22 5 23 17 46 11 45 8 48 36 16 4 37 15 49 33 29 9 28 21 27 2 19 
+Route partition : 
+8 16 27 33 44 44 49 49 
+LOAD VIOLATION MATRIX : 
+-7.0 -42.0 -3.0 -35.0 -8.0 0.0 -88.0 0.0 
+Is Feasible : true
+Total Load Violation : 0.0
+Total route time violation : 0.0
+Cost : 636.5159522672712
+Cost with penalty : 636.5159522672712
+
+
+
+Individual : 8
+PERIOD ASSIGMENT : 
+1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
+Permutation : 
+43 41 18 39 40 12 24 13 3 1 35 34 20 38 32 44 14 47 26 10 31 0 7 30 25 6 42 22 5 23 17 46 11 45 8 48 36 16 4 37 15 49 33 29 9 28 21 27 2 19 
+Route partition : 
+8 16 27 33 33 44 44 49 
+LOAD VIOLATION MATRIX : 
+-7.0 -42.0 -3.0 -35.0 0.0 -8.0 0.0 -88.0 
+Is Feasible : true
+Total Load Violation : 0.0
+Total route time violation : 0.0
+Cost : 636.5159522672712
+Cost with penalty : 636.5159522672712
+
+
+
+Individual : 9
+PERIOD ASSIGMENT : 
+1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
+Permutation : 
+43 41 18 39 40 12 24 13 3 1 35 34 20 38 32 44 14 47 26 10 31 0 7 30 25 6 42 22 5 23 17 46 11 45 8 48 36 16 4 37 15 49 33 29 9 28 21 27 2 19 
+Route partition : 
+8 16 27 33 44 44 49 49 
+LOAD VIOLATION MATRIX : 
+-7.0 -42.0 -3.0 -35.0 -8.0 0.0 -88.0 0.0 
+Is Feasible : true
+Total Load Violation : 0.0
+Total route time violation : 0.0
+Cost : 636.5159522672712
+Cost with penalty : 636.5159522672712
+
+
+
+Individual : 10
+PERIOD ASSIGMENT : 
+1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
+Permutation : 
+43 41 18 39 40 12 24 13 3 1 35 34 20 38 32 44 14 47 26 10 31 0 7 30 25 6 42 22 5 23 17 46 11 45 8 48 36 16 4 37 15 49 33 29 9 28 21 27 2 19 
+Route partition : 
+8 16 27 33 44 44 49 49 
+LOAD VIOLATION MATRIX : 
+-7.0 -42.0 -3.0 -35.0 -8.0 0.0 -88.0 0.0 
+Is Feasible : true
+Total Load Violation : 0.0
+Total route time violation : 0.0
+Cost : 636.5159522672712
+Cost with penalty : 636.5159522672712
+
+
+
+Individual : 11
+PERIOD ASSIGMENT : 
+1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
+Permutation : 
+43 41 18 39 40 12 24 13 3 1 35 34 20 38 32 44 14 47 26 10 31 0 7 30 25 6 42 22 5 23 17 46 11 45 8 48 36 16 4 37 15 49 33 29 9 28 21 27 2 19 
+Route partition : 
+8 16 27 33 33 44 44 49 
+LOAD VIOLATION MATRIX : 
+-7.0 -42.0 -3.0 -35.0 0.0 -8.0 0.0 -88.0 
+Is Feasible : true
+Total Load Violation : 0.0
+Total route time violation : 0.0
+Cost : 636.5159522672712
+Cost with penalty : 636.5159522672712
+
+
+
+Individual : 12
+PERIOD ASSIGMENT : 
+1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
+Permutation : 
+43 41 18 39 40 12 24 13 3 1 35 34 20 38 32 44 14 47 26 10 31 0 7 30 25 6 42 22 5 23 17 46 11 45 8 48 36 16 4 37 15 49 33 29 9 28 21 27 2 19 
+Route partition : 
+8 16 27 33 33 44 44 49 
+LOAD VIOLATION MATRIX : 
+-7.0 -42.0 -3.0 -35.0 0.0 -8.0 0.0 -88.0 
+Is Feasible : true
+Total Load Violation : 0.0
+Total route time violation : 0.0
+Cost : 636.5159522672712
+Cost with penalty : 636.5159522672712
+
+
+
+Individual : 13
+PERIOD ASSIGMENT : 
+1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
+Permutation : 
+43 41 18 39 40 12 24 13 3 1 35 34 20 38 32 44 14 47 26 10 31 0 7 30 25 6 42 22 5 23 17 46 11 45 8 48 36 16 4 37 15 49 33 29 9 28 21 27 2 19 
+Route partition : 
+8 16 27 33 33 44 44 49 
+LOAD VIOLATION MATRIX : 
+-7.0 -42.0 -3.0 -35.0 0.0 -8.0 0.0 -88.0 
+Is Feasible : true
+Total Load Violation : 0.0
+Total route time violation : 0.0
+Cost : 636.5159522672712
+Cost with penalty : 636.5159522672712
+
+
+
+Individual : 14
+PERIOD ASSIGMENT : 
+1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
+Permutation : 
+43 41 18 39 40 12 24 13 3 1 35 34 20 38 32 44 14 47 26 10 31 0 7 30 25 6 42 22 5 23 17 46 11 45 8 48 36 16 4 37 15 49 33 29 9 28 21 27 2 19 
+Route partition : 
+8 16 27 33 33 44 44 49 
+LOAD VIOLATION MATRIX : 
+-7.0 -42.0 -3.0 -35.0 0.0 -8.0 0.0 -88.0 
+Is Feasible : true
+Total Load Violation : 0.0
+Total route time violation : 0.0
+Cost : 636.5159522672712
+Cost with penalty : 636.5159522672712
+
+
+
+Individual : 15
+PERIOD ASSIGMENT : 
+1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
+Permutation : 
+43 41 18 39 40 12 24 13 3 1 35 34 20 38 32 44 14 47 26 10 31 0 7 30 25 6 42 22 5 23 17 46 11 45 8 48 36 16 4 37 15 49 33 29 9 28 21 27 2 19 
+Route partition : 
+8 16 27 33 33 44 44 49 
+LOAD VIOLATION MATRIX : 
+-7.0 -42.0 -3.0 -35.0 0.0 -8.0 0.0 -88.0 
+Is Feasible : true
+Total Load Violation : 0.0
+Total route time violation : 0.0
+Cost : 636.5159522672712
+Cost with penalty : 636.5159522672712
+
+
+
+Individual : 16
+PERIOD ASSIGMENT : 
+1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
+Permutation : 
+43 41 18 39 40 12 24 13 3 1 35 34 20 38 32 44 14 47 26 10 31 0 7 30 25 6 42 22 5 23 17 46 11 45 8 48 36 16 4 37 15 49 33 29 9 28 21 27 2 19 
+Route partition : 
+8 16 27 33 33 44 44 49 
+LOAD VIOLATION MATRIX : 
+-7.0 -42.0 -3.0 -35.0 0.0 -8.0 0.0 -88.0 
+Is Feasible : true
+Total Load Violation : 0.0
+Total route time violation : 0.0
+Cost : 636.5159522672712
+Cost with penalty : 636.5159522672712
+
+
+
+Individual : 17
+PERIOD ASSIGMENT : 
+1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
+Permutation : 
+43 41 18 39 40 12 24 13 3 1 35 34 20 38 32 44 14 47 26 10 31 0 7 30 25 6 42 22 5 23 17 46 11 45 8 48 36 16 4 37 15 49 33 29 9 28 21 27 2 19 
+Route partition : 
+8 16 27 33 33 44 44 49 
+LOAD VIOLATION MATRIX : 
+-7.0 -42.0 -3.0 -35.0 0.0 -8.0 0.0 -88.0 
+Is Feasible : true
+Total Load Violation : 0.0
+Total route time violation : 0.0
+Cost : 636.5159522672712
+Cost with penalty : 636.5159522672712
+
+
+
+Individual : 18
+PERIOD ASSIGMENT : 
+1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
+Permutation : 
+43 41 18 39 40 12 24 13 3 1 35 34 20 38 32 44 14 47 26 10 31 0 7 30 25 6 42 22 5 23 17 46 11 45 8 48 36 16 4 37 15 49 33 29 9 28 21 27 2 19 
+Route partition : 
+8 16 27 33 33 44 44 49 
+LOAD VIOLATION MATRIX : 
+-7.0 -42.0 -3.0 -35.0 0.0 -8.0 0.0 -88.0 
+Is Feasible : true
+Total Load Violation : 0.0
+Total route time violation : 0.0
+Cost : 636.5159522672712
+Cost with penalty : 636.5159522672712
+
+
+
+Individual : 19
+PERIOD ASSIGMENT : 
+1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
+Permutation : 
+43 41 18 39 40 12 24 13 3 1 35 34 20 38 32 44 14 47 26 10 31 0 7 30 25 6 42 22 5 23 17 46 11 45 8 48 36 16 4 37 15 49 33 29 9 28 21 27 2 19 
+Route partition : 
+8 16 27 33 44 44 49 49 
+LOAD VIOLATION MATRIX : 
+-7.0 -42.0 -3.0 -35.0 -8.0 0.0 -88.0 0.0 
+Is Feasible : true
+Total Load Violation : 0.0
+Total route time violation : 0.0
+Cost : 636.5159522672712
+Cost with penalty : 636.5159522672712
+
+
+
+Individual : 20
+PERIOD ASSIGMENT : 
+1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
+Permutation : 
+43 41 18 39 40 12 24 13 3 1 35 34 20 38 32 44 14 47 26 10 31 0 7 30 25 6 42 22 5 23 17 46 11 45 8 48 36 16 4 37 15 49 33 29 9 28 21 27 2 19 
+Route partition : 
+8 16 27 33 33 44 44 49 
+LOAD VIOLATION MATRIX : 
+-7.0 -42.0 -3.0 -35.0 0.0 -8.0 0.0 -88.0 
+Is Feasible : true
+Total Load Violation : 0.0
+Total route time violation : 0.0
+Cost : 636.5159522672712
+Cost with penalty : 636.5159522672712
+
+
+
+Individual : 21
+PERIOD ASSIGMENT : 
+1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
+Permutation : 
+43 41 18 39 40 12 24 13 3 1 35 34 20 38 32 44 14 47 26 10 31 0 7 30 25 6 42 22 5 23 17 46 11 45 8 48 36 16 4 37 15 49 33 29 9 28 21 27 2 19 
+Route partition : 
+8 16 27 33 33 44 44 49 
+LOAD VIOLATION MATRIX : 
+-7.0 -42.0 -3.0 -35.0 0.0 -8.0 0.0 -88.0 
+Is Feasible : true
+Total Load Violation : 0.0
+Total route time violation : 0.0
+Cost : 636.5159522672712
+Cost with penalty : 636.5159522672712
+
+
+
+Individual : 22
+PERIOD ASSIGMENT : 
+1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
+Permutation : 
+43 41 18 39 40 12 24 13 3 1 35 34 20 38 32 44 14 47 26 10 31 0 7 30 25 6 42 22 5 23 17 46 11 45 8 48 36 16 4 37 15 49 33 29 9 28 21 27 2 19 
+Route partition : 
+8 16 27 33 44 44 49 49 
+LOAD VIOLATION MATRIX : 
+-7.0 -42.0 -3.0 -35.0 -8.0 0.0 -88.0 0.0 
+Is Feasible : true
+Total Load Violation : 0.0
+Total route time violation : 0.0
+Cost : 636.5159522672712
+Cost with penalty : 636.5159522672712
+
+
+
+Individual : 23
+PERIOD ASSIGMENT : 
+1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
+Permutation : 
+43 41 18 39 40 12 24 13 3 1 35 34 20 38 32 44 14 47 26 10 31 0 7 30 25 6 42 22 5 23 17 46 11 45 8 48 36 16 4 37 15 49 33 29 9 28 21 27 2 19 
+Route partition : 
+8 16 27 33 33 44 49 49 
+LOAD VIOLATION MATRIX : 
+-7.0 -42.0 -3.0 -35.0 0.0 -8.0 -88.0 -88.0 
+Is Feasible : true
+Total Load Violation : 0.0
+Total route time violation : 0.0
+Cost : 636.5159522672712
+Cost with penalty : 636.5159522672712
+
+
+
+Individual : 24
+PERIOD ASSIGMENT : 
+1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
+Permutation : 
+43 41 18 39 40 12 24 13 3 1 35 34 20 38 32 44 14 47 26 10 31 0 7 30 25 6 42 22 5 23 17 46 11 45 8 48 36 16 4 37 15 49 33 29 9 28 21 27 2 19 
+Route partition : 
+8 16 27 33 33 44 44 49 
+LOAD VIOLATION MATRIX : 
+-7.0 -42.0 -3.0 -35.0 0.0 -8.0 0.0 -88.0 
+Is Feasible : true
+Total Load Violation : 0.0
+Total route time violation : 0.0
+Cost : 636.5159522672712
+Cost with penalty : 636.5159522672712
+
+
+
+Individual : 25
+PERIOD ASSIGMENT : 
+1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
+Permutation : 
+43 41 18 39 40 12 24 13 3 1 35 34 20 38 32 44 14 47 26 10 31 0 7 30 25 6 42 22 5 23 17 46 11 45 8 48 36 16 4 37 15 49 33 29 9 28 21 27 2 19 
+Route partition : 
+8 16 27 33 44 44 49 49 
+LOAD VIOLATION MATRIX : 
+-7.0 -42.0 -3.0 -35.0 -8.0 0.0 -88.0 0.0 
+Is Feasible : true
+Total Load Violation : 0.0
+Total route time violation : 0.0
+Cost : 636.5159522672712
+Cost with penalty : 636.5159522672712
+
+
+
+Individual : 26
+PERIOD ASSIGMENT : 
+1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
+Permutation : 
+43 41 18 39 40 12 24 13 3 1 35 34 20 38 32 44 14 47 26 10 31 0 7 30 25 6 42 22 5 23 17 46 11 45 8 48 36 16 4 37 15 49 33 29 9 28 21 27 2 19 
+Route partition : 
+8 16 27 33 33 44 44 49 
+LOAD VIOLATION MATRIX : 
+-7.0 -42.0 -3.0 -35.0 0.0 -8.0 0.0 -88.0 
+Is Feasible : true
+Total Load Violation : 0.0
+Total route time violation : 0.0
+Cost : 636.5159522672712
+Cost with penalty : 636.5159522672712
+
+
+
+Individual : 27
+PERIOD ASSIGMENT : 
+1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
+Permutation : 
+43 41 18 39 40 12 24 13 3 1 35 34 20 38 32 44 14 47 26 10 31 0 7 30 25 6 42 22 5 23 17 46 11 45 8 48 36 16 4 37 15 49 33 29 9 28 21 27 2 19 
+Route partition : 
+8 16 27 33 33 44 44 49 
+LOAD VIOLATION MATRIX : 
+-7.0 -42.0 -3.0 -35.0 0.0 -8.0 0.0 -88.0 
+Is Feasible : true
+Total Load Violation : 0.0
+Total route time violation : 0.0
+Cost : 636.5159522672712
+Cost with penalty : 636.5159522672712
+
+
+
+Individual : 28
+PERIOD ASSIGMENT : 
+1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
+Permutation : 
+43 41 18 39 40 12 24 13 3 1 35 34 20 38 32 44 14 47 26 10 31 0 7 30 25 6 42 22 5 23 17 46 11 45 8 48 36 16 4 37 15 49 33 29 9 28 21 27 2 19 
+Route partition : 
+8 16 27 33 33 44 49 49 
+LOAD VIOLATION MATRIX : 
+-7.0 -42.0 -3.0 -35.0 0.0 -8.0 -88.0 0.0 
+Is Feasible : true
+Total Load Violation : 0.0
+Total route time violation : 0.0
+Cost : 636.5159522672712
+Cost with penalty : 636.5159522672712
+
+
+
+Individual : 29
+PERIOD ASSIGMENT : 
+1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
+Permutation : 
+43 41 18 39 40 12 24 13 3 1 35 34 20 38 32 44 14 47 26 10 31 0 7 30 25 6 42 22 5 23 17 46 11 45 8 48 36 16 4 37 15 49 33 29 9 28 21 27 2 19 
+Route partition : 
+8 16 27 33 44 44 49 49 
+LOAD VIOLATION MATRIX : 
+-7.0 -42.0 -3.0 -35.0 -8.0 0.0 -88.0 0.0 
+Is Feasible : true
+Total Load Violation : 0.0
+Total route time violation : 0.0
+Cost : 636.5159522672712
+Cost with penalty : 636.5159522672712
+
+
+
+Individual : 30
+PERIOD ASSIGMENT : 
+1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
+Permutation : 
+43 41 18 39 40 12 24 13 3 1 35 34 20 38 32 44 14 47 26 10 31 0 7 30 25 6 42 22 5 23 17 46 11 45 8 48 36 16 4 37 15 49 33 29 9 28 21 27 2 19 
+Route partition : 
+8 16 27 33 44 44 49 49 
+LOAD VIOLATION MATRIX : 
+-7.0 -42.0 -3.0 -35.0 -8.0 0.0 -88.0 0.0 
+Is Feasible : true
+Total Load Violation : 0.0
+Total route time violation : 0.0
+Cost : 636.5159522672712
+Cost with penalty : 636.5159522672712
+
+
+
+Individual : 31
+PERIOD ASSIGMENT : 
+1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
+Permutation : 
+43 41 18 39 40 12 24 13 3 1 35 34 20 38 32 44 14 47 26 10 31 0 7 30 25 6 42 22 5 23 17 46 11 45 8 48 36 16 4 37 15 49 33 29 9 28 21 27 2 19 
+Route partition : 
+8 16 27 33 33 44 44 49 
+LOAD VIOLATION MATRIX : 
+-7.0 -42.0 -3.0 -35.0 0.0 -8.0 0.0 -88.0 
+Is Feasible : true
+Total Load Violation : 0.0
+Total route time violation : 0.0
+Cost : 636.5159522672712
+Cost with penalty : 636.5159522672712
+
+
+
+Individual : 32
+PERIOD ASSIGMENT : 
+1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
+Permutation : 
+43 41 18 39 40 12 24 13 3 1 35 34 20 38 32 44 14 47 26 10 31 0 7 30 25 6 42 22 5 23 17 46 11 45 8 48 36 16 4 37 15 49 33 29 9 28 21 27 2 19 
+Route partition : 
+8 16 27 33 44 44 49 49 
+LOAD VIOLATION MATRIX : 
+-7.0 -42.0 -3.0 -35.0 -8.0 0.0 -88.0 0.0 
+Is Feasible : true
+Total Load Violation : 0.0
+Total route time violation : 0.0
+Cost : 636.5159522672712
+Cost with penalty : 636.5159522672712
+
+
+
+Individual : 33
+PERIOD ASSIGMENT : 
+1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
+Permutation : 
+43 41 18 39 40 12 24 13 3 1 35 34 20 38 32 44 14 47 26 10 31 0 7 30 25 6 42 22 5 23 17 46 11 45 8 48 36 16 4 37 15 49 33 29 9 28 21 27 2 19 
+Route partition : 
+8 16 27 33 33 44 44 49 
+LOAD VIOLATION MATRIX : 
+-7.0 -42.0 -3.0 -35.0 0.0 -8.0 0.0 -88.0 
+Is Feasible : true
+Total Load Violation : 0.0
+Total route time violation : 0.0
+Cost : 636.5159522672712
+Cost with penalty : 636.5159522672712
+
+
+
+Individual : 34
+PERIOD ASSIGMENT : 
+1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
+Permutation : 
+43 41 18 39 40 12 24 13 3 1 35 34 20 38 32 44 14 47 26 10 31 0 7 30 25 6 42 22 5 23 17 46 11 45 8 48 36 16 4 37 15 49 33 29 9 28 21 27 2 19 
+Route partition : 
+8 16 27 33 33 44 44 49 
+LOAD VIOLATION MATRIX : 
+-7.0 -42.0 -3.0 -35.0 0.0 -8.0 0.0 -88.0 
+Is Feasible : true
+Total Load Violation : 0.0
+Total route time violation : 0.0
+Cost : 636.5159522672712
+Cost with penalty : 636.5159522672712
+
+
+
+Individual : 35
+PERIOD ASSIGMENT : 
+1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
+Permutation : 
+43 41 18 39 40 12 24 13 3 1 35 34 20 38 32 44 14 47 26 10 31 0 7 30 25 6 42 22 5 23 17 46 11 45 8 48 36 16 4 37 15 49 33 29 9 28 21 27 2 19 
+Route partition : 
+8 16 27 33 33 44 44 49 
+LOAD VIOLATION MATRIX : 
+-7.0 -42.0 -3.0 -35.0 0.0 -8.0 0.0 -88.0 
+Is Feasible : true
+Total Load Violation : 0.0
+Total route time violation : 0.0
+Cost : 636.5159522672712
+Cost with penalty : 636.5159522672712
+
+
+
+Individual : 36
+PERIOD ASSIGMENT : 
+1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
+Permutation : 
+43 41 18 39 40 12 24 13 3 1 35 34 20 38 32 44 14 47 26 10 31 0 7 30 25 6 42 22 5 23 17 46 11 45 8 48 36 16 4 37 15 49 33 29 9 28 21 27 2 19 
+Route partition : 
+8 16 27 33 44 44 49 49 
+LOAD VIOLATION MATRIX : 
+-7.0 -42.0 -3.0 -35.0 -8.0 0.0 -88.0 0.0 
+Is Feasible : true
+Total Load Violation : 0.0
+Total route time violation : 0.0
+Cost : 636.5159522672712
+Cost with penalty : 636.5159522672712
+
+
+
+Individual : 37
+PERIOD ASSIGMENT : 
+1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
+Permutation : 
+43 41 18 39 40 12 24 13 3 1 35 34 20 38 32 44 14 47 26 10 31 0 7 30 25 6 42 22 5 23 17 46 11 45 8 48 36 16 4 37 15 49 33 29 9 28 21 27 2 19 
+Route partition : 
+8 16 27 33 33 44 44 49 
+LOAD VIOLATION MATRIX : 
+-7.0 -42.0 -3.0 -35.0 0.0 -8.0 0.0 -88.0 
+Is Feasible : true
+Total Load Violation : 0.0
+Total route time violation : 0.0
+Cost : 636.5159522672712
+Cost with penalty : 636.5159522672712
+
+
+
+Individual : 38
+PERIOD ASSIGMENT : 
+1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
+Permutation : 
+43 41 18 39 40 12 24 13 3 1 35 34 20 38 32 44 14 47 26 10 31 0 7 30 25 6 42 22 5 23 17 46 11 45 8 48 36 16 4 37 15 49 33 29 9 28 21 27 2 19 
+Route partition : 
+8 16 27 33 33 44 44 49 
+LOAD VIOLATION MATRIX : 
+-7.0 -42.0 -3.0 -35.0 0.0 -8.0 0.0 -88.0 
+Is Feasible : true
+Total Load Violation : 0.0
+Total route time violation : 0.0
+Cost : 636.5159522672712
+Cost with penalty : 636.5159522672712
+
+
+
+Individual : 39
+PERIOD ASSIGMENT : 
+1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
+Permutation : 
+43 41 18 39 40 12 24 13 3 1 35 34 20 38 32 44 14 47 26 10 31 0 7 30 25 6 42 22 5 23 17 46 11 45 8 48 36 16 4 37 15 49 33 29 9 28 21 27 2 19 
+Route partition : 
+8 16 27 33 44 44 49 49 
+LOAD VIOLATION MATRIX : 
+-7.0 -42.0 -3.0 -35.0 -8.0 0.0 -88.0 0.0 
+Is Feasible : true
+Total Load Violation : 0.0
+Total route time violation : 0.0
+Cost : 636.5159522672712
+Cost with penalty : 636.5159522672712
+
+
+
+Individual : 40
+PERIOD ASSIGMENT : 
+1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
+Permutation : 
+43 41 18 39 40 12 24 13 3 1 35 34 20 38 32 44 14 47 26 10 31 0 7 30 25 6 42 22 5 23 17 46 11 45 8 48 4 16 36 37 15 49 33 29 9 28 21 27 2 19 
+Route partition : 
+8 16 27 33 44 44 49 49 
+LOAD VIOLATION MATRIX : 
+-7.0 -42.0 -3.0 -35.0 -8.0 0.0 -88.0 0.0 
+Is Feasible : true
+Total Load Violation : 0.0
+Total route time violation : 0.0
+Cost : 638.9878645268562
+Cost with penalty : 638.9878645268562
+
+
+
+Individual : 41
+PERIOD ASSIGMENT : 
+1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
+Permutation : 
+43 41 18 39 40 12 24 13 3 1 35 34 20 38 32 44 14 47 26 10 31 0 7 30 25 6 42 22 5 23 17 46 11 45 8 48 36 16 4 37 15 49 33 29 9 28 21 27 2 19 
+Route partition : 
+8 16 27 33 33 44 45 49 
+LOAD VIOLATION MATRIX : 
+-7.0 -42.0 -3.0 -35.0 0.0 -8.0 -154.0 -94.0 
+Is Feasible : true
+Total Load Violation : 0.0
+Total route time violation : 0.0
+Cost : 640.3000275571596
+Cost with penalty : 640.3000275571596
+
+
+
+Individual : 42
+PERIOD ASSIGMENT : 
+1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
+Permutation : 
+43 41 18 39 40 12 24 13 3 1 35 34 20 38 32 44 14 47 26 10 31 0 7 30 25 6 42 22 5 23 17 46 11 45 8 48 36 16 4 37 15 49 33 29 9 28 21 27 2 19 
+Route partition : 
+8 16 27 33 33 44 45 49 
+LOAD VIOLATION MATRIX : 
+-7.0 -42.0 -3.0 -35.0 0.0 -8.0 -154.0 -94.0 
+Is Feasible : true
+Total Load Violation : 0.0
+Total route time violation : 0.0
+Cost : 640.3000275571596
+Cost with penalty : 640.3000275571596
+
+
+
+Individual : 43
+PERIOD ASSIGMENT : 
+1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
+Permutation : 
+43 41 18 39 40 12 24 13 3 1 35 34 20 38 32 44 14 47 26 10 31 0 7 30 25 6 42 22 5 23 17 46 11 45 8 48 36 16 4 37 15 49 33 29 9 28 27 21 2 19 
+Route partition : 
+8 16 27 33 44 44 49 49 
+LOAD VIOLATION MATRIX : 
+-7.0 -42.0 -3.0 -35.0 -8.0 0.0 -88.0 0.0 
+Is Feasible : true
+Total Load Violation : 0.0
+Total route time violation : 0.0
+Cost : 645.0855520256343
+Cost with penalty : 645.0855520256343
+
+
+
+Individual : 44
+PERIOD ASSIGMENT : 
+1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
+Permutation : 
+43 41 18 39 40 12 24 13 3 1 35 34 20 38 32 44 14 47 26 10 31 0 7 30 25 6 42 22 23 5 17 46 11 45 8 48 36 16 4 37 15 49 33 29 9 28 21 27 2 19 
+Route partition : 
+7 16 27 33 33 44 44 49 
+LOAD VIOLATION MATRIX : 
+-16.0 -33.0 -3.0 -35.0 0.0 -8.0 0.0 -88.0 
+Is Feasible : true
+Total Load Violation : 0.0
+Total route time violation : 0.0
+Cost : 645.2327236647602
+Cost with penalty : 645.2327236647602
+
+
+
+Individual : 45
+PERIOD ASSIGMENT : 
+1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
+Permutation : 
+43 41 18 39 40 12 24 13 3 1 35 34 20 38 32 44 14 47 26 10 31 0 7 30 25 22 42 6 5 23 17 46 11 45 8 48 36 16 4 37 15 49 33 29 9 28 21 27 2 19 
+Route partition : 
+8 16 27 33 33 44 44 49 
+LOAD VIOLATION MATRIX : 
+-7.0 -42.0 -3.0 -35.0 0.0 -8.0 0.0 -88.0 
+Is Feasible : true
+Total Load Violation : 0.0
+Total route time violation : 0.0
+Cost : 645.2889356475769
+Cost with penalty : 645.2889356475769
+
+
+
+Individual : 46
+PERIOD ASSIGMENT : 
+1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
+Permutation : 
+43 41 18 39 40 12 24 13 3 1 35 34 20 38 32 14 44 47 26 10 31 0 7 30 25 6 42 22 5 23 17 46 11 45 8 48 36 16 4 37 15 49 33 29 9 28 21 27 2 19 
+Route partition : 
+8 16 27 33 33 44 44 49 
+LOAD VIOLATION MATRIX : 
+-7.0 -42.0 -3.0 -35.0 0.0 -8.0 0.0 -88.0 
+Is Feasible : true
+Total Load Violation : 0.0
+Total route time violation : 0.0
+Cost : 646.156344108075
+Cost with penalty : 646.156344108075
+
+
+
+Individual : 47
+PERIOD ASSIGMENT : 
+1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
+Permutation : 
+43 41 18 39 40 12 24 13 3 1 35 34 20 38 32 44 14 47 26 10 31 0 7 30 25 6 42 22 5 23 17 46 45 11 8 48 36 16 4 37 15 49 33 29 9 28 21 27 2 19 
+Route partition : 
+8 16 27 33 33 44 44 49 
+LOAD VIOLATION MATRIX : 
+-7.0 -42.0 -3.0 -35.0 0.0 -8.0 0.0 -88.0 
+Is Feasible : true
+Total Load Violation : 0.0
+Total route time violation : 0.0
+Cost : 646.2416369746817
+Cost with penalty : 646.2416369746817
+
+
+
+Individual : 48
+PERIOD ASSIGMENT : 
+1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
+Permutation : 
+43 41 18 39 40 12 24 13 3 1 35 34 20 38 44 32 14 47 26 10 31 0 7 30 25 6 42 22 5 23 17 46 11 45 8 48 36 16 4 37 15 49 33 29 9 28 21 27 2 19 
+Route partition : 
+8 16 27 33 33 44 44 49 
+LOAD VIOLATION MATRIX : 
+-7.0 -42.0 -3.0 -35.0 0.0 -8.0 0.0 -88.0 
+Is Feasible : true
+Total Load Violation : 0.0
+Total route time violation : 0.0
+Cost : 648.1567919753666
+Cost with penalty : 648.1567919753666
+
+
+
+Individual : 49
+PERIOD ASSIGMENT : 
+1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
+Permutation : 
+43 41 18 39 40 12 24 13 3 1 35 34 20 38 32 44 14 47 26 10 31 0 7 30 25 6 42 22 5 23 46 17 11 45 8 48 36 16 4 37 15 49 33 29 9 28 21 27 2 19 
+Route partition : 
+8 16 27 33 44 44 49 49 
+LOAD VIOLATION MATRIX : 
+-7.0 -42.0 -3.0 -35.0 -8.0 0.0 -88.0 0.0 
+Is Feasible : true
+Total Load Violation : 0.0
+Total route time violation : 0.0
+Cost : 649.7766345700742
+Cost with penalty : 649.7766345700742
+
+
+
+Individual : 50
+PERIOD ASSIGMENT : 
+1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
+Permutation : 
+43 41 18 39 40 12 24 13 3 1 35 34 20 38 32 44 14 47 26 10 31 0 7 30 25 6 42 22 5 23 17 46 11 45 8 48 36 16 4 37 15 49 33 29 9 28 21 27 19 2 
+Route partition : 
+8 16 27 33 33 44 44 49 
+LOAD VIOLATION MATRIX : 
+-7.0 -42.0 -3.0 -35.0 0.0 -8.0 0.0 -88.0 
+Is Feasible : true
+Total Load Violation : 0.0
+Total route time violation : 0.0
+Cost : 651.2529480151389
+Cost with penalty : 651.2529480151389
+
+
+
+Individual : 51
+PERIOD ASSIGMENT : 
+1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
+Permutation : 
+43 41 18 39 40 12 24 13 3 1 35 34 20 38 32 44 14 47 26 10 31 0 7 30 25 6 42 22 5 23 17 46 11 45 33 48 36 16 4 37 15 49 8 29 9 28 21 27 2 19 
+Route partition : 
+8 16 27 33 33 44 44 49 
+LOAD VIOLATION MATRIX : 
+-7.0 -42.0 -3.0 -35.0 0.0 -8.0 0.0 -88.0 
+Is Feasible : true
+Total Load Violation : 0.0
+Total route time violation : 0.0
+Cost : 652.8682267363487
+Cost with penalty : 652.8682267363487
+
+
+
+Individual : 52
+PERIOD ASSIGMENT : 
+1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
+Permutation : 
+43 41 18 39 40 12 24 13 3 1 35 34 20 38 32 44 14 47 26 10 31 0 7 30 25 6 42 22 5 23 17 46 11 45 33 48 36 16 4 37 15 49 8 29 9 28 21 27 2 19 
+Route partition : 
+8 16 27 33 33 44 44 49 
+LOAD VIOLATION MATRIX : 
+-7.0 -42.0 -3.0 -35.0 0.0 -8.0 0.0 -88.0 
+Is Feasible : true
+Total Load Violation : 0.0
+Total route time violation : 0.0
+Cost : 652.8682267363487
+Cost with penalty : 652.8682267363487
+
+
+
+Individual : 53
+PERIOD ASSIGMENT : 
+1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
+Permutation : 
+43 41 18 39 40 12 24 13 3 1 35 34 20 38 32 44 14 47 26 10 31 0 7 30 25 6 42 22 5 23 17 46 11 45 48 16 36 8 4 37 15 49 33 29 9 28 21 27 2 19 
+Route partition : 
+8 16 27 33 36 44 49 49 
+LOAD VIOLATION MATRIX : 
+-7.0 -42.0 -3.0 -35.0 -130.0 -38.0 -88.0 0.0 
+Is Feasible : true
+Total Load Violation : 0.0
+Total route time violation : 0.0
+Cost : 654.7424902290842
+Cost with penalty : 654.7424902290842
+
+
+
+Individual : 54
+PERIOD ASSIGMENT : 
+1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
+Permutation : 
+43 41 18 39 40 12 24 13 3 1 35 34 20 38 32 44 14 47 26 10 31 0 7 30 25 6 42 22 5 23 17 46 11 45 48 16 36 8 4 37 15 49 33 29 9 28 21 27 2 19 
+Route partition : 
+8 16 27 33 36 44 49 49 
+LOAD VIOLATION MATRIX : 
+-7.0 -42.0 -3.0 -35.0 -130.0 -38.0 -88.0 0.0 
+Is Feasible : true
+Total Load Violation : 0.0
+Total route time violation : 0.0
+Cost : 654.7424902290842
+Cost with penalty : 654.7424902290842
+
+
+
+Individual : 55
+PERIOD ASSIGMENT : 
+1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
+Permutation : 
+43 41 18 39 40 12 24 13 3 1 35 34 20 38 32 44 14 47 26 10 31 0 7 30 25 6 42 22 23 5 11 46 17 45 8 48 36 16 4 37 15 49 33 29 9 28 21 27 2 19 
+Route partition : 
+8 16 27 33 44 44 49 49 
+LOAD VIOLATION MATRIX : 
+-7.0 -42.0 -3.0 -35.0 -8.0 0.0 -88.0 0.0 
+Is Feasible : true
+Total Load Violation : 0.0
+Total route time violation : 0.0
+Cost : 656.2625131337926
+Cost with penalty : 656.2625131337926
+
+
+
+Individual : 56
+PERIOD ASSIGMENT : 
+1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
+Permutation : 
+43 41 18 39 40 12 24 13 3 1 35 34 20 38 32 44 14 47 26 10 31 0 7 30 25 6 42 22 23 5 11 46 17 45 8 48 36 16 4 37 15 49 33 29 9 28 21 27 2 19 
+Route partition : 
+8 16 27 33 44 44 49 49 
+LOAD VIOLATION MATRIX : 
+-7.0 -42.0 -3.0 -35.0 -8.0 0.0 -88.0 0.0 
+Is Feasible : true
+Total Load Violation : 0.0
+Total route time violation : 0.0
+Cost : 656.2625131337926
+Cost with penalty : 656.2625131337926
+
+
+
+Individual : 57
+PERIOD ASSIGMENT : 
+1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
+Permutation : 
+43 41 18 39 40 12 24 13 3 1 28 34 20 38 32 44 14 47 26 10 31 0 7 30 25 6 42 22 5 23 17 46 11 45 8 48 36 16 4 37 15 49 33 29 9 21 35 27 2 19 
+Route partition : 
+8 16 27 33 33 44 49 49 
+LOAD VIOLATION MATRIX : 
+-7.0 -42.0 -3.0 -35.0 0.0 -8.0 -88.0 0.0 
+Is Feasible : true
+Total Load Violation : 0.0
+Total route time violation : 0.0
+Cost : 662.9635082463154
+Cost with penalty : 662.9635082463154
+
+
+
+Individual : 58
+PERIOD ASSIGMENT : 
+1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
+Permutation : 
+43 41 18 39 40 12 24 13 3 1 28 34 20 38 32 44 14 47 26 10 31 0 7 30 25 6 42 22 5 23 17 46 11 45 8 48 36 16 4 37 15 49 33 29 9 21 35 27 2 19 
+Route partition : 
+8 16 27 33 33 44 49 49 
+LOAD VIOLATION MATRIX : 
+-7.0 -42.0 -3.0 -35.0 0.0 -8.0 -88.0 0.0 
+Is Feasible : true
+Total Load Violation : 0.0
+Total route time violation : 0.0
+Cost : 662.9635082463154
+Cost with penalty : 662.9635082463154
+
+
+
+Individual : 59
+PERIOD ASSIGMENT : 
+1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
+Permutation : 
+43 41 18 39 40 12 24 13 3 1 28 34 20 38 32 44 14 47 26 10 31 0 7 30 25 6 42 22 5 23 17 46 11 45 8 48 36 16 4 37 15 49 33 29 9 21 35 27 2 19 
+Route partition : 
+8 16 27 33 33 44 49 49 
+LOAD VIOLATION MATRIX : 
+-7.0 -42.0 -3.0 -35.0 0.0 -8.0 -88.0 0.0 
+Is Feasible : true
+Total Load Violation : 0.0
+Total route time violation : 0.0
+Cost : 662.9635082463154
+Cost with penalty : 662.9635082463154
+
+
+
+Individual : 60
+PERIOD ASSIGMENT : 
+1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
+Permutation : 
+44 41 18 39 40 12 24 13 3 1 35 34 20 38 32 43 14 47 26 10 31 0 7 30 25 6 42 22 5 23 17 46 11 45 8 48 36 16 4 37 15 49 33 29 9 28 21 27 2 19 
+Route partition : 
+8 16 27 33 33 44 44 49 
+LOAD VIOLATION MATRIX : 
+-13.0 -36.0 -3.0 -35.0 0.0 -8.0 0.0 -88.0 
+Is Feasible : true
+Total Load Violation : 0.0
+Total route time violation : 0.0
+Cost : 663.6485060044082
+Cost with penalty : 663.6485060044082
+
+
+
+Individual : 61
+PERIOD ASSIGMENT : 
+1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
+Permutation : 
+44 41 18 39 40 12 24 13 3 1 35 34 20 38 32 43 14 47 26 10 31 0 7 30 25 6 42 22 5 23 17 46 11 45 8 48 36 16 4 37 15 49 33 29 9 28 21 27 2 19 
+Route partition : 
+8 16 27 33 33 44 44 49 
+LOAD VIOLATION MATRIX : 
+-13.0 -36.0 -3.0 -35.0 0.0 -8.0 0.0 -88.0 
+Is Feasible : true
+Total Load Violation : 0.0
+Total route time violation : 0.0
+Cost : 663.6485060044082
+Cost with penalty : 663.6485060044082
+
+
+
+Individual : 62
+PERIOD ASSIGMENT : 
+1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
+Permutation : 
+43 41 18 39 40 12 24 13 3 1 35 34 20 38 32 44 14 47 26 10 31 0 7 30 25 6 42 22 5 23 17 46 11 45 8 48 36 16 4 37 15 49 33 29 9 21 28 27 2 19 
+Route partition : 
+8 16 27 33 33 44 44 49 
+LOAD VIOLATION MATRIX : 
+-7.0 -42.0 -3.0 -35.0 0.0 -8.0 0.0 -88.0 
+Is Feasible : true
+Total Load Violation : 0.0
+Total route time violation : 0.0
+Cost : 667.1582943110525
+Cost with penalty : 667.1582943110525
+
+
+
+Individual : 63
+PERIOD ASSIGMENT : 
+1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
+Permutation : 
+43 41 18 39 40 12 24 13 3 1 35 34 20 38 32 44 14 47 26 10 31 0 7 30 25 6 42 22 5 23 17 46 11 45 33 48 36 16 4 37 15 49 8 29 9 28 21 27 19 2 
+Route partition : 
+8 16 27 33 33 44 44 49 
+LOAD VIOLATION MATRIX : 
+-7.0 -42.0 -3.0 -35.0 0.0 -8.0 0.0 -88.0 
+Is Feasible : true
+Total Load Violation : 0.0
+Total route time violation : 0.0
+Cost : 667.6052224842164
+Cost with penalty : 667.6052224842164
+
+
+
+Individual : 64
+PERIOD ASSIGMENT : 
+1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
+Permutation : 
+43 41 18 39 40 12 24 13 3 1 35 34 20 38 32 44 14 47 26 10 31 0 7 30 25 6 42 22 5 23 17 46 11 45 33 48 36 16 4 37 15 49 8 29 9 28 21 27 19 2 
+Route partition : 
+8 16 27 33 33 44 44 49 
+LOAD VIOLATION MATRIX : 
+-7.0 -42.0 -3.0 -35.0 0.0 -8.0 0.0 -88.0 
+Is Feasible : true
+Total Load Violation : 0.0
+Total route time violation : 0.0
+Cost : 667.6052224842164
+Cost with penalty : 667.6052224842164
+
+
+
+Individual : 65
+PERIOD ASSIGMENT : 
+1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
+Permutation : 
+43 41 18 39 40 12 24 13 3 1 35 34 20 38 32 44 14 47 26 10 31 0 7 30 25 6 42 22 5 23 17 46 11 45 8 48 36 16 4 37 15 49 33 29 9 28 21 27 2 19 
+Route partition : 
+8 17 27 33 44 44 49 49 
+LOAD VIOLATION MATRIX : 
+-7.0 -25.0 -20.0 -35.0 -8.0 0.0 -88.0 0.0 
+Is Feasible : true
+Total Load Violation : 0.0
+Total route time violation : 0.0
+Cost : 679.486754434953
+Cost with penalty : 679.486754434953
+
+
+
+Individual : 66
+PERIOD ASSIGMENT : 
+1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
+Permutation : 
+43 41 18 39 40 12 24 13 3 1 35 34 20 38 32 44 14 47 26 10 31 0 7 30 25 6 42 22 5 23 17 46 11 45 8 48 36 16 4 37 15 49 33 29 9 28 21 27 2 19 
+Route partition : 
+8 17 27 33 44 44 49 49 
+LOAD VIOLATION MATRIX : 
+-7.0 -25.0 -20.0 -35.0 -8.0 0.0 -88.0 0.0 
+Is Feasible : true
+Total Load Violation : 0.0
+Total route time violation : 0.0
+Cost : 679.486754434953
+Cost with penalty : 679.486754434953
+
+
+
+Individual : 67
+PERIOD ASSIGMENT : 
+1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
+Permutation : 
+43 41 18 39 40 12 24 13 3 1 35 34 20 38 32 44 14 47 26 10 31 0 7 30 25 6 42 22 5 23 17 46 11 45 8 48 36 16 4 37 15 49 33 29 9 28 2 27 21 19 
+Route partition : 
+8 16 27 32 33 44 44 49 
+LOAD VIOLATION MATRIX : 
+-7.0 -42.0 -3.0 -40.0 -155.0 -8.0 0.0 -88.0 
+Is Feasible : true
+Total Load Violation : 0.0
+Total route time violation : 0.0
+Cost : 681.4737922636162
+Cost with penalty : 681.4737922636162
+
+
+
+Individual : 68
+PERIOD ASSIGMENT : 
+1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
+Permutation : 
+43 41 18 39 40 12 24 13 3 1 35 34 20 38 32 44 14 47 26 10 31 0 7 30 25 6 42 22 5 23 17 46 11 45 8 48 36 16 4 37 15 49 33 29 9 28 2 27 21 19 
+Route partition : 
+8 16 27 32 33 44 44 49 
+LOAD VIOLATION MATRIX : 
+-7.0 -42.0 -3.0 -40.0 -155.0 -8.0 0.0 -88.0 
+Is Feasible : true
+Total Load Violation : 0.0
+Total route time violation : 0.0
+Cost : 681.4737922636162
+Cost with penalty : 681.4737922636162
+
+
+
+Individual : 69
+PERIOD ASSIGMENT : 
+1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
+Permutation : 
+43 41 18 39 40 12 24 13 3 1 35 34 20 38 32 44 14 47 26 10 31 0 7 30 25 6 42 22 5 23 17 46 11 45 8 48 36 16 4 37 15 49 33 29 9 28 2 27 21 19 
+Route partition : 
+8 16 27 32 33 44 44 49 
+LOAD VIOLATION MATRIX : 
+-7.0 -42.0 -3.0 -40.0 -155.0 -8.0 0.0 -88.0 
+Is Feasible : true
+Total Load Violation : 0.0
+Total route time violation : 0.0
+Cost : 681.4737922636162
+Cost with penalty : 681.4737922636162
+
+
+
+Individual : 70
+PERIOD ASSIGMENT : 
+1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
+Permutation : 
+43 41 18 39 40 12 24 13 3 1 35 34 20 38 32 44 14 47 26 10 31 0 7 30 25 6 42 22 5 23 17 46 11 45 8 48 36 16 4 37 15 49 33 29 9 28 21 19 2 27 
+Route partition : 
+6 16 27 33 33 44 44 49 
+LOAD VIOLATION MATRIX : 
+-37.0 -12.0 -3.0 -35.0 0.0 -8.0 0.0 -88.0 
+Is Feasible : true
+Total Load Violation : 0.0
+Total route time violation : 0.0
+Cost : 686.208196472553
+Cost with penalty : 686.208196472553
+
+
+
+Individual : 71
+PERIOD ASSIGMENT : 
+1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
+Permutation : 
+43 41 18 39 40 12 24 13 3 1 35 34 20 38 32 44 14 47 26 10 31 0 42 30 25 6 7 22 5 23 17 46 11 45 8 48 36 16 4 37 15 49 33 29 9 28 21 27 2 19 
+Route partition : 
+8 16 27 33 33 44 49 49 
+LOAD VIOLATION MATRIX : 
+-7.0 -42.0 -3.0 -35.0 0.0 -8.0 -88.0 0.0 
+Is Feasible : true
+Total Load Violation : 0.0
+Total route time violation : 0.0
+Cost : 686.9658462422236
+Cost with penalty : 686.9658462422236
+
+
+
+Individual : 72
+PERIOD ASSIGMENT : 
+1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
+Permutation : 
+43 41 18 39 40 12 24 13 3 1 35 34 20 38 32 44 14 47 26 10 31 0 7 30 25 6 42 22 5 23 17 46 11 45 8 48 15 16 4 37 36 49 33 29 9 28 21 27 2 19 
+Route partition : 
+8 16 27 33 33 44 44 49 
+LOAD VIOLATION MATRIX : 
+-7.0 -42.0 -3.0 -35.0 0.0 -8.0 0.0 -88.0 
+Is Feasible : true
+Total Load Violation : 0.0
+Total route time violation : 0.0
+Cost : 690.5465603735123
+Cost with penalty : 690.5465603735123
+
+
+
+Individual : 73
+PERIOD ASSIGMENT : 
+1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
+Permutation : 
+43 41 18 39 40 12 24 13 3 1 35 34 20 38 32 44 14 47 42 10 31 0 7 30 25 6 26 22 5 23 17 46 11 45 8 48 36 16 4 37 15 49 33 29 9 28 21 27 2 19 
+Route partition : 
+8 16 27 33 33 44 49 49 
+LOAD VIOLATION MATRIX : 
+-7.0 -42.0 -3.0 -35.0 0.0 -8.0 -88.0 0.0 
+Is Feasible : true
+Total Load Violation : 0.0
+Total route time violation : 0.0
+Cost : 690.9316878609989
+Cost with penalty : 690.9316878609989
+
+
+
+Individual : 74
+PERIOD ASSIGMENT : 
+1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
+Permutation : 
+43 41 18 39 40 12 24 13 3 1 35 34 20 38 32 44 14 47 42 10 31 0 7 30 25 6 26 22 5 23 17 46 11 45 8 48 36 16 4 37 15 49 33 29 9 28 21 27 2 19 
+Route partition : 
+8 16 27 33 33 44 49 49 
+LOAD VIOLATION MATRIX : 
+-7.0 -42.0 -3.0 -35.0 0.0 -8.0 -88.0 0.0 
+Is Feasible : true
+Total Load Violation : 0.0
+Total route time violation : 0.0
+Cost : 690.9316878609989
+Cost with penalty : 690.9316878609989
+
+
+
+Individual : 75
+PERIOD ASSIGMENT : 
+1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
+Permutation : 
+43 41 18 39 40 12 24 13 3 1 28 34 20 38 32 44 14 47 26 10 31 0 7 30 25 6 42 22 5 23 17 46 11 45 8 48 36 16 4 37 15 49 33 29 9 21 35 27 2 19 
+Route partition : 
+6 16 27 33 33 44 49 49 
+LOAD VIOLATION MATRIX : 
+-37.0 -12.0 -3.0 -35.0 0.0 -8.0 -88.0 0.0 
+Is Feasible : true
+Total Load Violation : 0.0
+Total route time violation : 0.0
+Cost : 692.1747048793201
+Cost with penalty : 692.1747048793201
+
+
+
+Individual : 76
+PERIOD ASSIGMENT : 
+1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
+Permutation : 
+43 41 18 39 40 12 24 13 3 1 28 34 20 38 32 44 14 47 26 10 31 0 7 30 25 6 42 22 5 23 17 46 11 45 8 48 36 16 4 37 15 49 33 29 9 21 35 27 2 19 
+Route partition : 
+6 16 27 33 33 44 49 49 
+LOAD VIOLATION MATRIX : 
+-37.0 -12.0 -3.0 -35.0 0.0 -8.0 -88.0 0.0 
+Is Feasible : true
+Total Load Violation : 0.0
+Total route time violation : 0.0
+Cost : 692.1747048793201
+Cost with penalty : 692.1747048793201
+
+
+
+Individual : 77
+PERIOD ASSIGMENT : 
+1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
+Permutation : 
+43 41 18 39 40 12 24 13 3 1 35 34 20 38 32 44 14 47 26 10 31 0 7 30 25 6 42 22 17 23 5 46 11 45 8 37 36 16 4 48 15 49 33 29 9 28 21 27 2 19 
+Route partition : 
+8 16 27 32 33 44 44 49 
+LOAD VIOLATION MATRIX : 
+-7.0 -42.0 -3.0 -40.0 -155.0 -8.0 0.0 -88.0 
+Is Feasible : true
+Total Load Violation : 0.0
+Total route time violation : 0.0
+Cost : 694.0761075412795
+Cost with penalty : 694.0761075412795
+
+
+
+Individual : 78
+PERIOD ASSIGMENT : 
+1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
+Permutation : 
+43 41 18 39 40 12 24 13 3 1 35 34 20 38 32 44 14 47 26 10 31 0 7 30 25 6 42 22 17 23 5 46 11 45 8 37 36 16 4 48 15 49 33 29 9 28 21 27 2 19 
+Route partition : 
+8 16 27 32 33 44 44 49 
+LOAD VIOLATION MATRIX : 
+-7.0 -42.0 -3.0 -40.0 -155.0 -8.0 0.0 -88.0 
+Is Feasible : true
+Total Load Violation : 0.0
+Total route time violation : 0.0
+Cost : 694.0761075412795
+Cost with penalty : 694.0761075412795
+
+
+
+Individual : 79
+PERIOD ASSIGMENT : 
+1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
+Permutation : 
+43 41 18 39 40 12 24 13 3 1 35 34 20 38 44 32 14 47 26 10 31 0 7 30 25 6 42 22 5 23 17 46 11 45 8 37 36 16 4 48 15 49 33 29 9 28 21 27 2 19 
+Route partition : 
+8 16 27 32 33 44 44 49 
+LOAD VIOLATION MATRIX : 
+-7.0 -42.0 -3.0 -40.0 -155.0 -8.0 0.0 -88.0 
+Is Feasible : true
+Total Load Violation : 0.0
+Total route time violation : 0.0
+Cost : 694.8919614921714
+Cost with penalty : 694.8919614921714
+
+
+
+Individual : 80
+PERIOD ASSIGMENT : 
+1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
+Permutation : 
+43 41 18 39 40 12 24 13 3 1 35 34 20 38 32 44 14 47 26 10 31 0 7 30 25 6 42 22 5 23 17 37 11 45 8 48 36 16 4 46 15 49 33 29 9 28 21 27 2 19 
+Route partition : 
+8 16 27 33 39 44 49 49 
+LOAD VIOLATION MATRIX : 
+-7.0 -42.0 -3.0 -45.0 -73.0 -85.0 -88.0 0.0 
+Is Feasible : true
+Total Load Violation : 0.0
+Total route time violation : 0.0
+Cost : 699.9451992542165
+Cost with penalty : 699.9451992542165
+
+
+
+Individual : 81
+PERIOD ASSIGMENT : 
+1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
+Permutation : 
+43 41 18 39 40 12 24 13 3 1 35 34 20 38 32 44 14 47 26 10 31 0 7 30 25 6 42 22 5 23 17 37 11 45 8 48 36 16 4 46 15 49 33 29 9 28 21 27 2 19 
+Route partition : 
+8 16 27 33 39 44 49 49 
+LOAD VIOLATION MATRIX : 
+-7.0 -42.0 -3.0 -45.0 -73.0 -85.0 -88.0 0.0 
+Is Feasible : true
+Total Load Violation : 0.0
+Total route time violation : 0.0
+Cost : 699.9451992542165
+Cost with penalty : 699.9451992542165
+
+
+
+Individual : 82
+PERIOD ASSIGMENT : 
+1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
+Permutation : 
+43 41 18 39 40 12 24 13 3 19 35 34 20 38 32 44 14 47 26 10 31 6 7 30 25 0 42 22 5 23 17 46 11 45 8 48 36 16 4 37 15 49 33 29 9 28 21 27 2 1 
+Route partition : 
+8 16 27 33 33 44 45 49 
+LOAD VIOLATION MATRIX : 
+-7.0 -44.0 -3.0 -35.0 0.0 -8.0 -154.0 -92.0 
+Is Feasible : true
+Total Load Violation : 0.0
+Total route time violation : 0.0
+Cost : 703.562133143394
+Cost with penalty : 703.562133143394
+
+
+
+Individual : 83
+PERIOD ASSIGMENT : 
+1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
+Permutation : 
+43 41 18 39 40 12 24 13 3 1 35 34 33 38 32 44 14 47 26 10 31 0 7 30 25 6 42 22 5 23 17 46 45 11 8 48 36 16 4 37 15 27 49 29 9 28 20 21 2 19 
+Route partition : 
+8 16 27 33 33 44 49 49 
+LOAD VIOLATION MATRIX : 
+-7.0 -24.0 -3.0 -35.0 0.0 -20.0 -94.0 0.0 
+Is Feasible : true
+Total Load Violation : 0.0
+Total route time violation : 0.0
+Cost : 704.3653587312011
+Cost with penalty : 704.3653587312011
+
+
+
+Individual : 84
+PERIOD ASSIGMENT : 
+1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
+Permutation : 
+43 41 18 39 40 12 24 13 3 1 35 34 20 38 32 44 14 47 26 10 31 0 7 30 25 6 42 22 5 23 17 46 11 45 8 48 36 4 37 16 15 49 33 29 9 28 21 27 2 19 
+Route partition : 
+8 16 27 33 33 33 44 49 
+LOAD VIOLATION MATRIX : 
+-7.0 -42.0 -3.0 -35.0 0.0 0.0 -8.0 -88.0 
+Is Feasible : true
+Total Load Violation : 0.0
+Total route time violation : 0.0
+Cost : 707.6772357052521
+Cost with penalty : 707.6772357052521
+
+
+
+Individual : 85
+PERIOD ASSIGMENT : 
+1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
+Permutation : 
+43 41 18 39 40 12 24 13 3 1 35 34 20 38 32 44 14 47 26 10 31 0 7 30 25 6 42 22 5 23 17 46 11 45 8 48 36 4 37 16 15 49 33 29 9 28 21 27 2 19 
+Route partition : 
+8 16 27 33 33 33 44 49 
+LOAD VIOLATION MATRIX : 
+-7.0 -42.0 -3.0 -35.0 0.0 0.0 -8.0 -88.0 
+Is Feasible : true
+Total Load Violation : 0.0
+Total route time violation : 0.0
+Cost : 707.6772357052521
+Cost with penalty : 707.6772357052521
+
+
+
+Individual : 86
+PERIOD ASSIGMENT : 
+1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
+Permutation : 
+43 41 18 39 40 12 24 13 3 48 35 34 20 38 32 44 14 47 26 10 31 0 7 30 25 6 42 22 5 23 17 46 11 45 8 1 36 16 4 37 15 49 33 29 9 28 21 27 2 19 
+Route partition : 
+8 16 27 33 33 44 44 49 
+LOAD VIOLATION MATRIX : 
+-7.0 -54.0 -3.0 -35.0 0.0 4.0 0.0 -88.0 
+Is Feasible : false
+Total Load Violation : 4.0
+Total route time violation : 0.0
+Cost : 668.5626483251117
+Cost with penalty : 708.5626483251117
+
+
+
+Individual : 87
+PERIOD ASSIGMENT : 
+1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
+Permutation : 
+43 41 18 39 40 12 24 13 3 1 35 34 20 38 32 44 14 47 26 10 31 0 7 30 25 6 42 22 5 23 17 46 11 45 8 48 36 16 4 37 15 49 33 29 9 28 21 27 2 19 
+Route partition : 
+8 15 25 33 33 44 44 49 
+LOAD VIOLATION MATRIX : 
+-7.0 -52.0 -20.0 -8.0 0.0 -8.0 0.0 -88.0 
+Is Feasible : true
+Total Load Violation : 0.0
+Total route time violation : 0.0
+Cost : 711.0244930592015
+Cost with penalty : 711.0244930592015
+
+
+
+Individual : 88
+PERIOD ASSIGMENT : 
+1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
+Permutation : 
+43 41 18 39 40 12 24 13 3 1 35 34 20 38 32 44 14 47 26 10 31 0 7 30 25 6 42 22 5 23 17 46 11 45 8 48 36 16 4 37 15 49 33 29 9 28 21 27 2 19 
+Route partition : 
+8 15 25 33 33 44 44 49 
+LOAD VIOLATION MATRIX : 
+-7.0 -52.0 -20.0 -8.0 0.0 -8.0 0.0 -88.0 
+Is Feasible : true
+Total Load Violation : 0.0
+Total route time violation : 0.0
+Cost : 711.0244930592015
+Cost with penalty : 711.0244930592015
+
+
+
+Individual : 89
+PERIOD ASSIGMENT : 
+1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
+Permutation : 
+43 41 18 39 40 12 24 13 3 1 35 34 20 38 32 44 14 47 26 10 31 0 7 30 25 6 42 22 5 23 17 46 11 45 8 48 36 16 4 37 15 49 33 29 9 28 21 27 2 19 
+Route partition : 
+8 15 25 33 33 44 44 49 
+LOAD VIOLATION MATRIX : 
+-7.0 -52.0 -20.0 -8.0 0.0 -8.0 0.0 -88.0 
+Is Feasible : true
+Total Load Violation : 0.0
+Total route time violation : 0.0
+Cost : 711.0244930592015
+Cost with penalty : 711.0244930592015
+
+
+
+Individual : 90
+PERIOD ASSIGMENT : 
+1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
+Permutation : 
+43 41 18 39 40 12 24 13 3 1 35 34 20 38 32 44 14 47 26 10 31 0 7 30 25 6 42 22 5 23 17 46 11 45 8 48 36 16 4 37 15 49 33 29 9 28 21 27 2 19 
+Route partition : 
+8 15 25 33 33 44 44 49 
+LOAD VIOLATION MATRIX : 
+-7.0 -52.0 -20.0 -8.0 0.0 -8.0 0.0 -88.0 
+Is Feasible : true
+Total Load Violation : 0.0
+Total route time violation : 0.0
+Cost : 711.0244930592015
+Cost with penalty : 711.0244930592015
+
+
+
+Individual : 91
+PERIOD ASSIGMENT : 
+1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
+Permutation : 
+43 41 24 39 40 12 18 13 3 1 35 34 20 38 32 44 14 47 26 10 31 0 7 30 25 6 42 22 5 23 17 46 45 11 8 48 36 16 4 37 15 49 33 29 9 28 21 27 2 19 
+Route partition : 
+8 16 27 33 33 44 44 49 
+LOAD VIOLATION MATRIX : 
+-7.0 -42.0 -3.0 -35.0 0.0 -8.0 0.0 -88.0 
+Is Feasible : true
+Total Load Violation : 0.0
+Total route time violation : 0.0
+Cost : 714.3182488689404
+Cost with penalty : 714.3182488689404
+
+
+
+Individual : 92
+PERIOD ASSIGMENT : 
+1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
+Permutation : 
+43 41 24 39 40 12 18 13 3 1 35 34 20 38 32 44 14 47 26 10 31 0 7 30 25 6 42 22 5 23 17 46 45 11 8 48 36 16 4 37 15 49 33 29 9 28 21 27 2 19 
+Route partition : 
+8 16 27 33 33 44 44 49 
+LOAD VIOLATION MATRIX : 
+-7.0 -42.0 -3.0 -35.0 0.0 -8.0 0.0 -88.0 
+Is Feasible : true
+Total Load Violation : 0.0
+Total route time violation : 0.0
+Cost : 714.3182488689404
+Cost with penalty : 714.3182488689404
+
+
+
+Individual : 93
+PERIOD ASSIGMENT : 
+1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
+Permutation : 
+43 41 18 39 40 12 24 13 3 1 35 34 26 38 32 44 14 47 20 10 31 0 7 30 25 6 42 22 5 23 46 17 11 45 8 48 36 16 4 37 15 49 33 29 9 28 21 27 2 19 
+Route partition : 
+8 16 27 33 44 44 49 49 
+LOAD VIOLATION MATRIX : 
+-7.0 -35.0 -10.0 -35.0 -8.0 0.0 -88.0 0.0 
+Is Feasible : true
+Total Load Violation : 0.0
+Total route time violation : 0.0
+Cost : 717.6309967630476
+Cost with penalty : 717.6309967630476
+
+
+
+Individual : 94
+PERIOD ASSIGMENT : 
+1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
+Permutation : 
+43 41 18 39 40 12 24 13 3 1 35 34 26 38 32 44 14 47 20 10 31 0 7 30 25 6 42 22 5 23 46 17 11 45 8 48 36 16 4 37 15 49 33 29 9 28 21 27 2 19 
+Route partition : 
+8 16 27 33 44 44 49 49 
+LOAD VIOLATION MATRIX : 
+-7.0 -35.0 -10.0 -35.0 -8.0 0.0 -88.0 0.0 
+Is Feasible : true
+Total Load Violation : 0.0
+Total route time violation : 0.0
+Cost : 717.6309967630476
+Cost with penalty : 717.6309967630476
+
+
+
+Individual : 95
+PERIOD ASSIGMENT : 
+1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
+Permutation : 
+43 41 18 39 40 12 24 13 3 1 35 34 20 38 32 44 14 47 26 10 31 0 7 30 25 6 42 22 5 23 17 46 11 45 8 48 36 16 4 37 15 49 33 29 9 21 28 27 2 19 
+Route partition : 
+8 16 27 33 33 43 44 49 
+LOAD VIOLATION MATRIX : 
+-7.0 -42.0 -3.0 -35.0 0.0 -13.0 -155.0 -88.0 
+Is Feasible : true
+Total Load Violation : 0.0
+Total route time violation : 0.0
+Cost : 718.1562742636957
+Cost with penalty : 718.1562742636957
+
+
+
+Individual : 96
+PERIOD ASSIGMENT : 
+1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
+Permutation : 
+43 41 18 39 40 12 24 13 3 1 35 34 20 38 32 14 44 47 26 10 31 0 7 30 25 6 42 22 5 23 17 46 11 45 8 48 36 16 4 37 15 49 33 29 9 28 21 27 2 19 
+Route partition : 
+8 16 23 27 33 44 44 49 
+LOAD VIOLATION MATRIX : 
+-7.0 -42.0 -56.0 -107.0 -35.0 -8.0 0.0 -88.0 
+Is Feasible : true
+Total Load Violation : 0.0
+Total route time violation : 0.0
+Cost : 734.2018541449144
+Cost with penalty : 734.2018541449144
+
+
+
+Individual : 97
+PERIOD ASSIGMENT : 
+1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
+Permutation : 
+43 41 18 39 40 12 24 13 3 1 35 34 20 38 32 44 14 47 26 10 31 0 7 30 25 6 42 22 5 23 17 46 11 45 8 48 36 16 19 37 15 49 33 29 9 28 21 27 2 4 
+Route partition : 
+8 16 27 33 33 44 44 49 
+LOAD VIOLATION MATRIX : 
+-7.0 -42.0 -3.0 -35.0 0.0 -1.0 0.0 -95.0 
+Is Feasible : true
+Total Load Violation : 0.0
+Total route time violation : 0.0
+Cost : 734.7055578046601
+Cost with penalty : 734.7055578046601
+
+
+
+Individual : 98
+PERIOD ASSIGMENT : 
+1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
+Permutation : 
+43 41 18 39 40 12 24 13 3 1 35 34 20 38 32 44 14 47 26 10 31 0 7 30 25 2 42 22 5 23 17 46 11 45 8 48 36 16 4 37 15 49 33 29 9 28 21 27 6 19 
+Route partition : 
+8 16 27 33 33 44 49 49 
+LOAD VIOLATION MATRIX : 
+-7.0 -42.0 -6.0 -35.0 0.0 -8.0 -85.0 0.0 
+Is Feasible : true
+Total Load Violation : 0.0
+Total route time violation : 0.0
+Cost : 734.932094564337
+Cost with penalty : 734.932094564337
+
+
+
+Individual : 99
+PERIOD ASSIGMENT : 
+1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
+Permutation : 
+43 41 18 39 40 12 24 13 3 1 35 34 20 38 32 44 14 47 26 10 31 0 7 30 25 2 42 22 5 23 17 46 11 45 8 48 36 16 4 37 15 49 33 29 9 28 21 27 6 19 
+Route partition : 
+8 16 27 33 33 44 49 49 
+LOAD VIOLATION MATRIX : 
+-7.0 -42.0 -6.0 -35.0 0.0 -8.0 -85.0 0.0 
+Is Feasible : true
+Total Load Violation : 0.0
+Total route time violation : 0.0
+Cost : 734.932094564337
+Cost with penalty : 734.932094564337
+
+
+
+Individual : 100
+PERIOD ASSIGMENT : 
+1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
+Permutation : 
+43 41 18 39 40 12 24 13 3 1 35 34 20 38 32 44 14 47 26 10 31 0 7 30 25 2 42 22 5 23 17 46 11 45 8 48 36 16 4 37 15 49 33 29 9 28 21 27 6 19 
+Route partition : 
+8 16 27 33 33 44 49 49 
+LOAD VIOLATION MATRIX : 
+-7.0 -42.0 -6.0 -35.0 0.0 -8.0 -85.0 0.0 
+Is Feasible : true
+Total Load Violation : 0.0
+Total route time violation : 0.0
+Cost : 734.932094564337
+Cost with penalty : 734.932094564337
+
+
+
+Individual : 101
+PERIOD ASSIGMENT : 
+1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
+Permutation : 
+43 41 18 39 40 12 24 13 3 1 35 34 20 38 32 44 14 47 26 10 31 0 7 30 25 6 42 22 23 5 17 46 11 45 8 2 36 16 4 37 15 49 33 29 9 28 21 27 48 19 
+Route partition : 
+8 16 27 33 33 44 44 49 
+LOAD VIOLATION MATRIX : 
+-7.0 -42.0 -3.0 -35.0 0.0 -10.0 0.0 -86.0 
+Is Feasible : true
+Total Load Violation : 0.0
+Total route time violation : 0.0
+Cost : 751.0812749688746
+Cost with penalty : 751.0812749688746
+
+
+
+Individual : 102
+PERIOD ASSIGMENT : 
+1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
+Permutation : 
+43 41 18 39 40 10 24 13 3 1 35 34 20 38 32 44 14 47 26 12 31 0 7 30 25 6 42 22 5 23 17 46 11 45 8 48 36 16 4 37 15 49 33 29 9 28 21 27 2 19 
+Route partition : 
+8 16 27 33 33 44 44 49 
+LOAD VIOLATION MATRIX : 
+-11.0 -42.0 1.0 -35.0 0.0 -8.0 0.0 -88.0 
+Is Feasible : false
+Total Load Violation : 1.0
+Total route time violation : 0.0
+Cost : 741.8475825450085
+Cost with penalty : 751.8475825450085
+
+
+
+Individual : 103
+PERIOD ASSIGMENT : 
+1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
+Permutation : 
+43 41 18 39 40 10 24 13 3 1 35 34 20 38 32 44 14 47 26 12 31 0 7 30 25 6 42 22 5 23 17 46 11 45 8 48 36 16 4 37 15 49 33 29 9 28 21 27 2 19 
+Route partition : 
+8 16 27 33 33 44 44 49 
+LOAD VIOLATION MATRIX : 
+-11.0 -42.0 1.0 -35.0 0.0 -8.0 0.0 -88.0 
+Is Feasible : false
+Total Load Violation : 1.0
+Total route time violation : 0.0
+Cost : 741.8475825450085
+Cost with penalty : 751.8475825450085
+
+
+
+Individual : 104
+PERIOD ASSIGMENT : 
+1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
+Permutation : 
+43 41 18 39 40 12 24 13 3 1 35 34 20 38 14 44 32 47 26 10 31 30 7 0 25 6 42 22 5 36 17 46 11 45 8 48 23 16 4 37 15 49 33 29 9 28 21 27 2 19 
+Route partition : 
+8 16 27 33 33 44 49 49 
+LOAD VIOLATION MATRIX : 
+-7.0 -42.0 -3.0 -36.0 0.0 -7.0 -88.0 0.0 
+Is Feasible : true
+Total Load Violation : 0.0
+Total route time violation : 0.0
+Cost : 752.8230511752389
+Cost with penalty : 752.8230511752389
+
+
+
+Individual : 105
+PERIOD ASSIGMENT : 
+1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
+Permutation : 
+43 41 18 39 40 12 24 13 3 1 35 34 20 38 32 44 14 47 26 10 31 0 7 30 25 6 42 22 5 23 28 46 11 45 8 48 36 16 4 37 15 49 33 29 9 17 21 27 2 19 
+Route partition : 
+8 16 27 33 44 44 49 49 
+LOAD VIOLATION MATRIX : 
+-7.0 -42.0 -3.0 -70.0 -8.0 0.0 -53.0 0.0 
+Is Feasible : true
+Total Load Violation : 0.0
+Total route time violation : 0.0
+Cost : 753.9718570487488
+Cost with penalty : 753.9718570487488
+
+
+
+Individual : 106
+PERIOD ASSIGMENT : 
+1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
+Permutation : 
+43 41 18 39 40 12 24 13 3 1 35 34 20 38 32 44 14 47 26 10 31 0 7 30 25 6 42 22 5 23 28 46 11 45 8 48 36 16 4 37 15 49 33 29 9 17 21 27 2 19 
+Route partition : 
+8 16 27 33 44 44 49 49 
+LOAD VIOLATION MATRIX : 
+-7.0 -42.0 -3.0 -70.0 -8.0 0.0 -53.0 0.0 
+Is Feasible : true
+Total Load Violation : 0.0
+Total route time violation : 0.0
+Cost : 753.9718570487488
+Cost with penalty : 753.9718570487488
+
+
+
+Individual : 107
+PERIOD ASSIGMENT : 
+1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
+Permutation : 
+43 41 18 39 40 12 24 13 3 1 35 34 20 38 32 44 14 47 26 10 31 0 7 30 25 6 42 22 5 23 28 46 11 45 8 48 36 16 4 37 15 49 33 29 9 17 21 27 2 19 
+Route partition : 
+8 16 27 33 44 44 49 49 
+LOAD VIOLATION MATRIX : 
+-7.0 -42.0 -3.0 -70.0 -8.0 0.0 -53.0 0.0 
+Is Feasible : true
+Total Load Violation : 0.0
+Total route time violation : 0.0
+Cost : 753.9718570487488
+Cost with penalty : 753.9718570487488
+
+
+
+Individual : 108
+PERIOD ASSIGMENT : 
+1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
+Permutation : 
+43 41 18 39 40 12 24 13 3 1 35 34 20 38 32 44 14 47 26 10 31 0 7 30 25 6 42 22 5 23 28 46 11 45 8 48 36 16 4 37 15 49 33 29 9 17 21 27 2 19 
+Route partition : 
+8 16 27 33 44 44 49 49 
+LOAD VIOLATION MATRIX : 
+-7.0 -42.0 -3.0 -70.0 -8.0 0.0 -53.0 0.0 
+Is Feasible : true
+Total Load Violation : 0.0
+Total route time violation : 0.0
+Cost : 753.9718570487488
+Cost with penalty : 753.9718570487488
+
+
+
+Individual : 109
+PERIOD ASSIGMENT : 
+1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
+Permutation : 
+43 41 18 39 40 12 24 13 3 1 35 34 20 38 32 44 14 47 26 10 31 0 7 5 25 6 42 22 46 23 17 30 11 45 8 48 36 16 4 37 15 49 33 29 9 21 19 27 2 28 
+Route partition : 
+8 16 27 33 33 44 44 49 
+LOAD VIOLATION MATRIX : 
+-7.0 -42.0 1.0 -39.0 0.0 -8.0 0.0 -88.0 
+Is Feasible : false
+Total Load Violation : 1.0
+Total route time violation : 0.0
+Cost : 755.3869987472438
+Cost with penalty : 765.3869987472438
+
+
+
+Individual : 110
+PERIOD ASSIGMENT : 
+1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
+Permutation : 
+18 41 43 39 40 12 24 13 3 1 35 34 20 38 32 44 14 47 26 10 31 0 7 30 25 6 42 22 5 23 28 46 11 45 8 48 36 16 4 37 15 49 33 29 9 17 21 27 2 19 
+Route partition : 
+8 16 27 33 44 44 49 49 
+LOAD VIOLATION MATRIX : 
+-7.0 -42.0 -3.0 -70.0 -8.0 0.0 -53.0 0.0 
+Is Feasible : true
+Total Load Violation : 0.0
+Total route time violation : 0.0
+Cost : 768.6315267962997
+Cost with penalty : 768.6315267962997
+
+
+
+Individual : 111
+PERIOD ASSIGMENT : 
+1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
+Permutation : 
+43 41 18 39 40 12 24 13 3 1 35 34 20 38 32 44 14 47 26 10 31 0 7 30 25 6 42 22 5 23 17 46 11 45 8 48 36 16 4 37 15 49 33 29 9 28 21 27 2 19 
+Route partition : 
+8 19 27 33 33 44 44 49 
+LOAD VIOLATION MATRIX : 
+-7.0 9.0 -54.0 -35.0 0.0 -8.0 0.0 -88.0 
+Is Feasible : false
+Total Load Violation : 9.0
+Total route time violation : 0.0
+Cost : 678.7444290567265
+Cost with penalty : 768.7444290567265
+
+
+
+Individual : 112
+PERIOD ASSIGMENT : 
+1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
+Permutation : 
+43 41 18 39 40 12 24 13 3 1 35 34 20 38 32 44 14 47 26 10 31 0 7 8 25 6 42 22 5 23 17 46 11 45 30 48 36 16 4 37 15 49 33 29 9 28 21 27 2 19 
+Route partition : 
+8 16 27 33 44 44 49 49 
+LOAD VIOLATION MATRIX : 
+-7.0 -42.0 -3.0 -35.0 -8.0 0.0 -88.0 0.0 
+Is Feasible : true
+Total Load Violation : 0.0
+Total route time violation : 0.0
+Cost : 769.6140907268813
+Cost with penalty : 769.6140907268813
+
+
+
+Individual : 113
+PERIOD ASSIGMENT : 
+1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
+Permutation : 
+43 41 18 39 40 12 24 13 3 1 35 34 20 38 32 44 14 47 26 10 31 0 7 30 25 6 42 22 5 23 17 46 11 45 8 48 36 16 4 37 15 49 2 29 9 28 21 27 33 19 
+Route partition : 
+8 16 27 33 33 33 44 49 
+LOAD VIOLATION MATRIX : 
+-7.0 -42.0 -3.0 -35.0 0.0 -18.0 -18.0 -78.0 
+Is Feasible : true
+Total Load Violation : 0.0
+Total route time violation : 0.0
+Cost : 771.1661158383417
+Cost with penalty : 771.1661158383417
+
+
+
+Individual : 114
+PERIOD ASSIGMENT : 
+1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
+Permutation : 
+43 41 18 39 40 12 24 13 3 1 35 34 20 38 32 44 14 47 26 10 31 0 7 30 25 6 42 22 5 23 17 46 11 45 8 48 36 16 4 37 15 49 2 29 9 28 21 27 33 19 
+Route partition : 
+8 16 27 33 33 33 44 49 
+LOAD VIOLATION MATRIX : 
+-7.0 -42.0 -3.0 -35.0 0.0 -18.0 -18.0 -78.0 
+Is Feasible : true
+Total Load Violation : 0.0
+Total route time violation : 0.0
+Cost : 771.1661158383417
+Cost with penalty : 771.1661158383417
+
+
+
+Individual : 115
+PERIOD ASSIGMENT : 
+1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
+Permutation : 
+43 41 18 39 40 12 24 13 3 1 35 34 20 38 32 44 14 47 26 10 31 0 7 30 25 6 42 22 5 23 17 46 11 45 8 48 36 16 4 37 15 49 33 29 9 28 21 27 2 19 
+Route partition : 
+8 15 25 27 33 44 44 49 
+LOAD VIOLATION MATRIX : 
+-7.0 -52.0 -20.0 -133.0 -35.0 -8.0 0.0 -88.0 
+Is Feasible : true
+Total Load Violation : 0.0
+Total route time violation : 0.0
+Cost : 773.3708851651894
+Cost with penalty : 773.3708851651894
+
+
+
+Individual : 116
+PERIOD ASSIGMENT : 
+1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
+Permutation : 
+43 41 18 39 40 12 24 13 3 1 35 34 20 38 32 44 14 47 26 10 31 0 7 30 25 6 42 22 5 23 17 46 11 45 8 48 36 16 4 37 15 49 33 29 9 28 21 27 2 19 
+Route partition : 
+8 15 25 27 33 44 44 49 
+LOAD VIOLATION MATRIX : 
+-7.0 -52.0 -20.0 -133.0 -35.0 -8.0 0.0 -88.0 
+Is Feasible : true
+Total Load Violation : 0.0
+Total route time violation : 0.0
+Cost : 773.3708851651894
+Cost with penalty : 773.3708851651894
+
+
+
+Individual : 117
+PERIOD ASSIGMENT : 
+1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
+Permutation : 
+43 41 18 39 40 12 24 13 3 1 31 34 20 38 32 44 14 10 26 47 35 0 7 30 25 6 42 22 5 23 17 46 21 45 8 48 36 16 4 37 15 49 33 29 9 28 11 27 2 19 
+Route partition : 
+8 16 27 33 33 44 44 49 
+LOAD VIOLATION MATRIX : 
+-7.0 -36.0 -9.0 -56.0 0.0 -8.0 0.0 -67.0 
+Is Feasible : true
+Total Load Violation : 0.0
+Total route time violation : 0.0
+Cost : 779.8682968699873
+Cost with penalty : 779.8682968699873
+
+
+
+Individual : 118
+PERIOD ASSIGMENT : 
+1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
+Permutation : 
+43 41 18 39 40 12 24 13 3 1 31 34 20 38 32 44 14 10 26 47 35 0 7 30 25 6 42 22 5 23 17 46 21 45 8 48 36 16 4 37 15 49 33 29 9 28 11 27 2 19 
+Route partition : 
+8 16 27 33 33 44 44 49 
+LOAD VIOLATION MATRIX : 
+-7.0 -36.0 -9.0 -56.0 0.0 -8.0 0.0 -67.0 
+Is Feasible : true
+Total Load Violation : 0.0
+Total route time violation : 0.0
+Cost : 779.8682968699873
+Cost with penalty : 779.8682968699873
+
+
+
+Individual : 119
+PERIOD ASSIGMENT : 
+1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
+Permutation : 
+43 41 18 39 40 12 24 13 3 1 35 34 20 38 32 44 14 47 26 10 31 0 7 30 25 6 42 22 5 23 28 46 11 45 8 48 36 16 4 37 15 49 33 29 9 17 21 27 2 19 
+Route partition : 
+8 16 27 38 44 44 49 49 
+LOAD VIOLATION MATRIX : 
+-7.0 -42.0 -3.0 -8.0 -70.0 0.0 -53.0 0.0 
+Is Feasible : true
+Total Load Violation : 0.0
+Total route time violation : 0.0
+Cost : 783.1529864373371
+Cost with penalty : 783.1529864373371
+
+
+
+Individual : 120
+PERIOD ASSIGMENT : 
+1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
+Permutation : 
+43 41 18 39 40 12 24 13 3 1 35 34 20 38 32 44 14 47 26 10 31 0 7 30 25 6 42 22 5 23 28 46 11 45 8 48 36 16 4 37 15 49 33 29 9 17 21 27 2 19 
+Route partition : 
+8 16 27 38 44 44 49 49 
+LOAD VIOLATION MATRIX : 
+-7.0 -42.0 -3.0 -8.0 -70.0 0.0 -53.0 0.0 
+Is Feasible : true
+Total Load Violation : 0.0
+Total route time violation : 0.0
+Cost : 783.1529864373371
+Cost with penalty : 783.1529864373371
+
+
+
+Individual : 121
+PERIOD ASSIGMENT : 
+1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
+Permutation : 
+43 41 18 39 40 12 24 13 3 1 35 17 20 38 32 44 14 47 26 10 31 0 7 30 25 6 42 22 5 23 34 46 11 45 8 48 36 16 4 37 15 49 33 29 9 28 21 27 2 19 
+Route partition : 
+8 16 27 33 33 44 44 49 
+LOAD VIOLATION MATRIX : 
+-7.0 -18.0 -3.0 -59.0 0.0 -8.0 0.0 -88.0 
+Is Feasible : true
+Total Load Violation : 0.0
+Total route time violation : 0.0
+Cost : 788.0296955138299
+Cost with penalty : 788.0296955138299
+
+
+
+Individual : 122
+PERIOD ASSIGMENT : 
+1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
+Permutation : 
+43 41 18 39 40 12 24 13 3 1 35 17 20 38 32 44 14 47 26 10 31 0 7 30 25 6 42 22 5 23 34 46 11 45 8 48 36 16 4 37 15 49 33 29 9 28 21 27 2 19 
+Route partition : 
+8 16 27 33 33 44 44 49 
+LOAD VIOLATION MATRIX : 
+-7.0 -18.0 -3.0 -59.0 0.0 -8.0 0.0 -88.0 
+Is Feasible : true
+Total Load Violation : 0.0
+Total route time violation : 0.0
+Cost : 788.0296955138299
+Cost with penalty : 788.0296955138299
+
+
+
+Individual : 123
+PERIOD ASSIGMENT : 
+1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
+Permutation : 
+43 41 24 39 40 5 18 13 3 1 35 34 20 38 32 44 14 47 26 10 31 0 7 30 25 6 42 22 12 23 17 46 45 11 8 48 36 16 4 37 15 49 33 29 9 28 21 27 2 19 
+Route partition : 
+8 16 27 33 33 44 44 49 
+LOAD VIOLATION MATRIX : 
+-15.0 -42.0 -3.0 -27.0 0.0 -8.0 0.0 -88.0 
+Is Feasible : true
+Total Load Violation : 0.0
+Total route time violation : 0.0
+Cost : 788.3344240059779
+Cost with penalty : 788.3344240059779
+
+
+
+Individual : 124
+PERIOD ASSIGMENT : 
+1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
+Permutation : 
+43 41 18 39 40 12 24 13 3 1 35 34 20 30 32 44 14 47 26 10 31 38 7 0 25 6 42 22 5 23 17 46 11 45 8 48 36 16 37 4 15 49 33 29 9 28 21 27 2 19 
+Route partition : 
+8 16 27 33 33 44 44 49 
+LOAD VIOLATION MATRIX : 
+-7.0 -45.0 0.0 -35.0 0.0 -8.0 0.0 -88.0 
+Is Feasible : true
+Total Load Violation : 0.0
+Total route time violation : 0.0
+Cost : 791.4957891139466
+Cost with penalty : 791.4957891139466
+
+
+
+Individual : 125
+PERIOD ASSIGMENT : 
+1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
+Permutation : 
+43 41 18 39 40 12 24 13 3 1 35 34 20 30 32 44 14 47 26 10 31 38 7 0 25 6 42 22 5 23 17 46 11 45 8 48 36 16 37 4 15 49 33 29 9 28 21 27 2 19 
+Route partition : 
+8 16 27 33 33 44 44 49 
+LOAD VIOLATION MATRIX : 
+-7.0 -45.0 0.0 -35.0 0.0 -8.0 0.0 -88.0 
+Is Feasible : true
+Total Load Violation : 0.0
+Total route time violation : 0.0
+Cost : 791.4957891139466
+Cost with penalty : 791.4957891139466
+
+
+
+Individual : 126
+PERIOD ASSIGMENT : 
+1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
+Permutation : 
+43 41 18 39 40 12 24 13 3 1 35 34 20 30 32 44 14 47 26 10 31 38 7 0 25 6 42 22 5 23 17 46 11 45 8 48 36 16 37 4 15 49 33 29 9 28 21 27 2 19 
+Route partition : 
+8 16 27 33 33 44 44 49 
+LOAD VIOLATION MATRIX : 
+-7.0 -45.0 0.0 -35.0 0.0 -8.0 0.0 -88.0 
+Is Feasible : true
+Total Load Violation : 0.0
+Total route time violation : 0.0
+Cost : 791.4957891139466
+Cost with penalty : 791.4957891139466
+
+
+
+Individual : 127
+PERIOD ASSIGMENT : 
+1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
+Permutation : 
+43 41 18 39 40 12 24 13 3 1 35 34 20 30 32 44 14 47 26 10 31 38 7 0 25 6 42 22 5 23 17 46 11 45 8 48 36 16 37 4 15 49 33 29 9 28 21 27 2 19 
+Route partition : 
+8 16 27 33 33 44 44 49 
+LOAD VIOLATION MATRIX : 
+-7.0 -45.0 0.0 -35.0 0.0 -8.0 0.0 -88.0 
+Is Feasible : true
+Total Load Violation : 0.0
+Total route time violation : 0.0
+Cost : 791.4957891139466
+Cost with penalty : 791.4957891139466
+
+
+
+Individual : 128
+PERIOD ASSIGMENT : 
+1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
+Permutation : 
+43 41 18 39 40 12 24 13 3 44 35 34 20 38 32 1 14 47 26 10 31 0 7 30 25 6 42 22 5 23 17 37 11 45 8 48 36 16 4 46 15 49 33 29 9 28 21 27 2 19 
+Route partition : 
+8 16 27 33 33 44 44 49 
+LOAD VIOLATION MATRIX : 
+-7.0 -42.0 -3.0 -45.0 0.0 2.0 0.0 -88.0 
+Is Feasible : false
+Total Load Violation : 2.0
+Total route time violation : 0.0
+Cost : 772.7609818713904
+Cost with penalty : 792.7609818713904
+
+
+
+Individual : 129
+PERIOD ASSIGMENT : 
+1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
+Permutation : 
+43 41 18 39 40 12 24 13 3 19 35 34 20 38 32 44 14 47 26 10 31 0 7 30 25 6 42 22 5 23 1 46 11 45 8 48 36 16 4 37 15 49 33 29 9 28 21 27 2 17 
+Route partition : 
+8 16 27 32 33 44 44 49 
+LOAD VIOLATION MATRIX : 
+-7.0 -44.0 -3.0 -51.0 -155.0 -8.0 0.0 -75.0 
+Is Feasible : true
+Total Load Violation : 0.0
+Total route time violation : 0.0
+Cost : 793.7360554995341
+Cost with penalty : 793.7360554995341
+
+
+
+Individual : 130
+PERIOD ASSIGMENT : 
+1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
+Permutation : 
+43 41 18 39 40 12 24 13 3 19 35 34 20 38 32 44 14 47 26 10 31 0 7 30 25 6 42 22 5 23 1 46 11 45 8 48 36 16 4 37 15 49 33 29 9 28 21 27 2 17 
+Route partition : 
+8 16 27 32 33 44 44 49 
+LOAD VIOLATION MATRIX : 
+-7.0 -44.0 -3.0 -51.0 -155.0 -8.0 0.0 -75.0 
+Is Feasible : true
+Total Load Violation : 0.0
+Total route time violation : 0.0
+Cost : 793.7360554995341
+Cost with penalty : 793.7360554995341
+
+
+
+Individual : 131
+PERIOD ASSIGMENT : 
+1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
+Permutation : 
+43 41 18 39 40 12 24 13 3 1 35 34 20 38 32 44 14 47 26 10 31 0 7 30 25 6 42 22 5 23 17 46 11 45 8 48 36 16 4 37 15 49 33 29 9 28 21 27 2 19 
+Route partition : 
+8 15 25 26 33 44 44 49 
+LOAD VIOLATION MATRIX : 
+-7.0 -52.0 -20.0 -149.0 -19.0 -8.0 0.0 -88.0 
+Is Feasible : true
+Total Load Violation : 0.0
+Total route time violation : 0.0
+Cost : 793.9466656633062
+Cost with penalty : 793.9466656633062
+
+
+
+Individual : 132
+PERIOD ASSIGMENT : 
+1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
+Permutation : 
+43 41 18 39 40 12 24 13 3 1 31 34 20 38 32 44 14 10 26 47 35 0 7 30 25 6 42 22 5 23 17 46 21 45 8 48 36 16 4 37 33 49 15 29 9 28 11 27 2 19 
+Route partition : 
+8 16 27 33 33 44 44 49 
+LOAD VIOLATION MATRIX : 
+-7.0 -36.0 -9.0 -56.0 0.0 -8.0 0.0 -67.0 
+Is Feasible : true
+Total Load Violation : 0.0
+Total route time violation : 0.0
+Cost : 795.2966101885199
+Cost with penalty : 795.2966101885199
+
+
+
+Individual : 133
+PERIOD ASSIGMENT : 
+1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
+Permutation : 
+43 41 18 39 40 12 24 13 3 1 31 34 20 38 32 44 14 10 26 47 35 0 7 30 25 6 42 22 5 23 17 46 21 45 8 48 36 16 4 37 33 49 15 29 9 28 11 27 2 19 
+Route partition : 
+8 16 27 33 33 44 44 49 
+LOAD VIOLATION MATRIX : 
+-7.0 -36.0 -9.0 -56.0 0.0 -8.0 0.0 -67.0 
+Is Feasible : true
+Total Load Violation : 0.0
+Total route time violation : 0.0
+Cost : 795.2966101885199
+Cost with penalty : 795.2966101885199
+
+
+
+Individual : 134
+PERIOD ASSIGMENT : 
+1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
+Permutation : 
+43 41 18 39 40 12 24 13 3 1 31 34 20 38 32 44 14 10 26 47 35 0 7 30 25 6 42 22 5 23 17 46 21 45 8 48 36 16 4 37 33 49 15 29 9 28 11 27 2 19 
+Route partition : 
+8 16 27 33 33 44 44 49 
+LOAD VIOLATION MATRIX : 
+-7.0 -36.0 -9.0 -56.0 0.0 -8.0 0.0 -67.0 
+Is Feasible : true
+Total Load Violation : 0.0
+Total route time violation : 0.0
+Cost : 795.2966101885199
+Cost with penalty : 795.2966101885199
+
+
+
+Individual : 135
+PERIOD ASSIGMENT : 
+1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
+Permutation : 
+43 41 18 39 40 12 47 13 3 1 35 34 20 38 14 44 32 24 26 10 31 0 7 30 25 6 42 22 5 23 17 46 11 45 8 48 36 16 4 37 15 49 33 29 9 28 21 27 2 19 
+Route partition : 
+8 16 27 33 33 44 44 49 
+LOAD VIOLATION MATRIX : 
+-18.0 -42.0 8.0 -35.0 0.0 -8.0 0.0 -88.0 
+Is Feasible : false
+Total Load Violation : 8.0
+Total route time violation : 0.0
+Cost : 715.6108168998335
+Cost with penalty : 795.6108168998335
+
+
+
+Individual : 136
+PERIOD ASSIGMENT : 
+1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
+Permutation : 
+43 41 18 38 40 12 24 13 3 1 35 34 20 39 32 44 14 47 26 10 31 0 7 30 25 6 42 22 5 23 17 46 11 45 8 48 36 16 4 37 15 49 33 29 9 28 21 19 2 27 
+Route partition : 
+8 16 27 33 33 44 44 49 
+LOAD VIOLATION MATRIX : 
+0.0 -49.0 -3.0 -35.0 0.0 -8.0 0.0 -88.0 
+Is Feasible : true
+Total Load Violation : 0.0
+Total route time violation : 0.0
+Cost : 796.8847964462897
+Cost with penalty : 796.8847964462897
+
+
+
+Individual : 137
+PERIOD ASSIGMENT : 
+1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
+Permutation : 
+43 41 18 39 40 12 24 13 3 1 35 34 20 30 32 44 14 47 26 10 31 38 7 0 25 6 42 22 5 23 17 46 11 45 8 48 36 16 37 4 15 49 33 29 9 28 2 27 21 19 
+Route partition : 
+8 16 27 33 33 44 44 49 
+LOAD VIOLATION MATRIX : 
+-7.0 -45.0 0.0 -35.0 0.0 -8.0 0.0 -88.0 
+Is Feasible : true
+Total Load Violation : 0.0
+Total route time violation : 0.0
+Cost : 797.449283556362
+Cost with penalty : 797.449283556362
+
+
+
+Individual : 138
+PERIOD ASSIGMENT : 
+1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
+Permutation : 
+43 41 18 39 40 12 24 13 3 1 35 34 20 30 32 44 14 47 26 10 31 0 7 38 25 6 42 22 5 23 17 46 11 45 8 48 36 16 37 4 15 49 33 29 9 28 21 27 2 19 
+Route partition : 
+8 16 27 33 33 44 44 49 
+LOAD VIOLATION MATRIX : 
+-7.0 -45.0 0.0 -35.0 0.0 -8.0 0.0 -88.0 
+Is Feasible : true
+Total Load Violation : 0.0
+Total route time violation : 0.0
+Cost : 803.1785256950898
+Cost with penalty : 803.1785256950898
+
+
+
+Individual : 139
+PERIOD ASSIGMENT : 
+1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
+Permutation : 
+43 41 18 39 40 12 24 13 3 1 35 34 20 30 32 44 14 47 26 10 31 0 7 38 25 6 42 22 5 23 17 46 11 45 8 48 36 16 37 4 15 49 33 29 9 28 21 27 2 19 
+Route partition : 
+8 16 27 33 33 44 49 49 
+LOAD VIOLATION MATRIX : 
+-7.0 -45.0 0.0 -35.0 0.0 -8.0 -88.0 0.0 
+Is Feasible : true
+Total Load Violation : 0.0
+Total route time violation : 0.0
+Cost : 803.1785256950898
+Cost with penalty : 803.1785256950898
+
+
+
+Individual : 140
+PERIOD ASSIGMENT : 
+1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
+Permutation : 
+43 41 18 39 40 12 24 13 3 1 35 34 20 30 32 44 14 47 26 10 31 0 7 38 25 6 42 22 5 23 17 46 11 45 8 48 36 16 37 4 15 49 33 29 9 28 21 27 2 19 
+Route partition : 
+8 16 27 33 33 44 44 49 
+LOAD VIOLATION MATRIX : 
+-7.0 -45.0 0.0 -35.0 0.0 -8.0 0.0 -88.0 
+Is Feasible : true
+Total Load Violation : 0.0
+Total route time violation : 0.0
+Cost : 803.1785256950898
+Cost with penalty : 803.1785256950898
+
+
+
+Individual : 141
+PERIOD ASSIGMENT : 
+1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
+Permutation : 
+43 18 41 39 40 12 24 13 3 44 35 34 20 38 32 1 14 47 26 10 31 0 7 30 25 6 42 22 5 23 17 37 11 45 8 48 36 16 4 46 15 49 33 29 9 28 21 27 2 19 
+Route partition : 
+8 16 27 33 33 44 44 49 
+LOAD VIOLATION MATRIX : 
+-7.0 -42.0 -3.0 -45.0 0.0 2.0 0.0 -88.0 
+Is Feasible : false
+Total Load Violation : 2.0
+Total route time violation : 0.0
+Cost : 785.4448711887632
+Cost with penalty : 805.4448711887632
+
+
+
+Individual : 142
+PERIOD ASSIGMENT : 
+1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
+Permutation : 
+43 41 18 39 40 12 24 13 3 1 35 34 20 38 32 44 14 47 26 10 31 0 7 30 25 6 42 22 5 23 46 17 11 45 8 48 36 16 4 37 15 49 33 29 9 28 21 27 2 19 
+Route partition : 
+8 15 27 29 33 44 44 49 
+LOAD VIOLATION MATRIX : 
+-7.0 -52.0 7.0 -135.0 -60.0 -8.0 0.0 -88.0 
+Is Feasible : false
+Total Load Violation : 7.0
+Total route time violation : 0.0
+Cost : 739.275298223699
+Cost with penalty : 809.275298223699
+
+
+
+Individual : 143
+PERIOD ASSIGMENT : 
+1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
+Permutation : 
+43 41 18 39 40 12 24 13 3 1 35 34 20 38 32 44 14 47 26 10 31 0 7 30 25 6 42 22 5 23 46 17 11 45 8 48 36 16 4 37 15 49 33 29 9 28 21 27 2 19 
+Route partition : 
+8 15 27 29 33 44 44 49 
+LOAD VIOLATION MATRIX : 
+-7.0 -52.0 7.0 -135.0 -60.0 -8.0 0.0 -88.0 
+Is Feasible : false
+Total Load Violation : 7.0
+Total route time violation : 0.0
+Cost : 739.275298223699
+Cost with penalty : 809.275298223699
+
+
+
+Individual : 144
+PERIOD ASSIGMENT : 
+1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
+Permutation : 
+43 41 18 39 40 12 24 13 3 1 35 34 20 38 32 44 14 19 26 10 31 0 25 30 7 47 42 22 5 23 17 46 11 45 8 48 36 16 4 37 15 49 33 29 9 28 21 27 2 6 
+Route partition : 
+8 16 27 33 33 44 44 49 
+LOAD VIOLATION MATRIX : 
+-7.0 -42.0 6.0 -35.0 0.0 -8.0 0.0 -97.0 
+Is Feasible : false
+Total Load Violation : 6.0
+Total route time violation : 0.0
+Cost : 752.0621252104554
+Cost with penalty : 812.0621252104554
+
+
+
+Individual : 145
+PERIOD ASSIGMENT : 
+1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
+Permutation : 
+43 41 18 39 40 12 24 13 3 1 35 34 20 38 7 44 14 47 26 10 31 0 32 30 25 6 42 22 5 23 17 46 45 11 8 48 36 16 4 37 15 49 33 29 9 28 21 27 2 19 
+Route partition : 
+8 16 27 33 33 44 44 49 
+LOAD VIOLATION MATRIX : 
+-7.0 -42.0 -3.0 -35.0 0.0 -8.0 0.0 -88.0 
+Is Feasible : true
+Total Load Violation : 0.0
+Total route time violation : 0.0
+Cost : 814.3878601040735
+Cost with penalty : 814.3878601040735
+
+
+
+Individual : 146
+PERIOD ASSIGMENT : 
+1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
+Permutation : 
+43 41 18 39 40 12 24 13 3 1 44 34 20 38 32 35 14 47 26 10 31 0 7 30 25 6 42 22 23 5 17 46 11 45 8 48 36 16 4 37 15 49 33 29 9 28 21 27 2 19 
+Route partition : 
+8 16 27 33 33 44 44 49 
+LOAD VIOLATION MATRIX : 
+-7.0 -42.0 -3.0 -35.0 0.0 -8.0 0.0 -88.0 
+Is Feasible : true
+Total Load Violation : 0.0
+Total route time violation : 0.0
+Cost : 818.4249589761297
+Cost with penalty : 818.4249589761297
+
+
+
+Individual : 147
+PERIOD ASSIGMENT : 
+1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
+Permutation : 
+43 41 18 39 40 12 24 13 3 1 35 34 20 38 32 44 14 47 26 10 31 0 25 30 7 19 42 22 5 23 17 46 11 45 8 48 36 16 4 37 15 49 33 29 9 28 21 27 2 6 
+Route partition : 
+8 16 27 33 33 44 44 49 
+LOAD VIOLATION MATRIX : 
+-7.0 -42.0 6.0 -35.0 0.0 -8.0 0.0 -97.0 
+Is Feasible : false
+Total Load Violation : 6.0
+Total route time violation : 0.0
+Cost : 762.7331627337753
+Cost with penalty : 822.7331627337753
+
+
+
+Individual : 148
+PERIOD ASSIGMENT : 
+1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
+Permutation : 
+43 41 25 39 40 12 24 13 3 1 35 34 20 38 32 44 14 47 26 10 31 0 7 30 18 6 42 22 5 23 17 46 11 45 8 48 36 16 4 37 15 49 33 29 9 28 21 27 2 19 
+Route partition : 
+8 16 27 33 33 44 44 49 
+LOAD VIOLATION MATRIX : 
+-9.0 -42.0 -1.0 -35.0 0.0 -8.0 0.0 -88.0 
+Is Feasible : true
+Total Load Violation : 0.0
+Total route time violation : 0.0
+Cost : 831.2945726254953
+Cost with penalty : 831.2945726254953
+
+
+
+Individual : 149
+PERIOD ASSIGMENT : 
+1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
+Permutation : 
+43 41 18 39 40 12 24 13 3 1 31 34 20 38 32 44 14 10 26 47 35 0 7 30 25 6 42 22 5 23 17 46 21 45 8 48 36 16 4 37 15 49 33 29 9 28 11 27 2 19 
+Route partition : 
+8 15 25 33 33 44 44 49 
+LOAD VIOLATION MATRIX : 
+-7.0 -46.0 -26.0 -29.0 0.0 -8.0 0.0 -67.0 
+Is Feasible : true
+Total Load Violation : 0.0
+Total route time violation : 0.0
+Cost : 843.3349524696225
+Cost with penalty : 843.3349524696225
+
+
+
+Individual : 150
+PERIOD ASSIGMENT : 
+1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
+Permutation : 
+43 41 18 39 40 12 24 13 3 1 31 34 20 38 32 44 14 10 26 47 35 0 7 30 25 6 42 22 5 23 17 46 21 45 8 48 36 16 4 37 15 49 33 29 9 28 11 27 2 19 
+Route partition : 
+8 15 25 33 33 44 44 49 
+LOAD VIOLATION MATRIX : 
+-7.0 -46.0 -26.0 -29.0 0.0 -8.0 0.0 -67.0 
+Is Feasible : true
+Total Load Violation : 0.0
+Total route time violation : 0.0
+Cost : 843.3349524696225
+Cost with penalty : 843.3349524696225
+
+
+
+Individual : 151
+PERIOD ASSIGMENT : 
+1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
+Permutation : 
+43 41 18 39 40 12 24 13 3 1 35 34 20 38 32 44 14 47 26 10 31 0 7 30 25 6 42 22 5 23 17 46 11 45 8 48 36 16 4 37 15 49 33 29 9 28 21 27 2 19 
+Route partition : 
+5 16 27 33 33 33 44 49 
+LOAD VIOLATION MATRIX : 
+-65.0 16.0 -3.0 -35.0 0.0 0.0 -8.0 -88.0 
+Is Feasible : false
+Total Load Violation : 16.0
+Total route time violation : 0.0
+Cost : 687.8711258949779
+Cost with penalty : 847.8711258949779
+
+
+
+Individual : 152
+PERIOD ASSIGMENT : 
+1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
+Permutation : 
+43 41 18 39 40 12 24 13 3 1 35 34 20 38 32 44 14 47 26 10 31 0 7 30 25 6 42 22 5 23 17 46 11 45 8 48 36 16 4 37 15 49 33 29 9 28 21 27 2 19 
+Route partition : 
+5 16 27 33 33 33 44 49 
+LOAD VIOLATION MATRIX : 
+-65.0 16.0 -3.0 -35.0 0.0 0.0 -8.0 -88.0 
+Is Feasible : false
+Total Load Violation : 16.0
+Total route time violation : 0.0
+Cost : 687.8711258949779
+Cost with penalty : 847.8711258949779
+
+
+
+Individual : 153
+PERIOD ASSIGMENT : 
+1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
+Permutation : 
+43 41 18 39 40 12 24 13 3 1 35 34 20 38 32 44 14 47 26 10 31 0 7 30 25 6 42 22 5 23 17 46 11 45 8 48 36 16 4 37 15 49 33 29 9 28 21 27 2 19 
+Route partition : 
+5 16 27 33 33 33 44 49 
+LOAD VIOLATION MATRIX : 
+-65.0 16.0 -3.0 -35.0 0.0 0.0 -8.0 -88.0 
+Is Feasible : false
+Total Load Violation : 16.0
+Total route time violation : 0.0
+Cost : 687.8711258949779
+Cost with penalty : 847.8711258949779
+
+
+
+Individual : 154
+PERIOD ASSIGMENT : 
+1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
+Permutation : 
+43 41 18 39 40 12 24 13 3 1 31 34 20 38 32 44 14 10 26 7 35 0 47 30 25 6 42 22 5 23 17 46 21 45 8 48 36 16 4 37 15 49 33 29 9 28 11 27 2 19 
+Route partition : 
+8 15 25 33 33 44 44 49 
+LOAD VIOLATION MATRIX : 
+-7.0 -46.0 -26.0 -29.0 0.0 -8.0 0.0 -67.0 
+Is Feasible : true
+Total Load Violation : 0.0
+Total route time violation : 0.0
+Cost : 850.9550188403387
+Cost with penalty : 850.9550188403387
+
+
+
+Individual : 155
+PERIOD ASSIGMENT : 
+1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
+Permutation : 
+43 41 18 39 40 12 24 13 3 1 31 34 20 38 32 44 14 10 26 7 35 0 47 30 25 6 42 22 5 23 17 46 21 45 8 48 36 16 4 37 15 49 33 29 9 28 11 27 2 19 
+Route partition : 
+8 15 25 33 33 44 44 49 
+LOAD VIOLATION MATRIX : 
+-7.0 -46.0 -26.0 -29.0 0.0 -8.0 0.0 -67.0 
+Is Feasible : true
+Total Load Violation : 0.0
+Total route time violation : 0.0
+Cost : 850.9550188403387
+Cost with penalty : 850.9550188403387
+
+
+
+Individual : 156
+PERIOD ASSIGMENT : 
+1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
+Permutation : 
+43 41 18 39 40 12 24 13 3 20 35 34 1 38 32 44 14 47 26 10 31 0 7 30 25 6 42 22 5 23 17 46 11 45 8 48 36 16 4 37 15 49 33 29 9 28 21 27 2 19 
+Route partition : 
+5 16 27 33 33 33 44 49 
+LOAD VIOLATION MATRIX : 
+-65.0 16.0 -3.0 -35.0 0.0 0.0 -8.0 -88.0 
+Is Feasible : false
+Total Load Violation : 16.0
+Total route time violation : 0.0
+Cost : 704.7863339510374
+Cost with penalty : 864.7863339510374
+
+
+
+Individual : 157
+PERIOD ASSIGMENT : 
+1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
+Permutation : 
+43 41 18 39 40 12 24 13 3 20 35 34 1 38 32 44 14 47 26 10 31 0 7 30 25 6 42 22 5 23 17 46 11 45 8 48 36 16 4 37 15 49 33 29 9 28 21 27 2 19 
+Route partition : 
+5 16 27 33 33 33 44 49 
+LOAD VIOLATION MATRIX : 
+-65.0 16.0 -3.0 -35.0 0.0 0.0 -8.0 -88.0 
+Is Feasible : false
+Total Load Violation : 16.0
+Total route time violation : 0.0
+Cost : 704.7863339510374
+Cost with penalty : 864.7863339510374
+
+
+
+Individual : 158
+PERIOD ASSIGMENT : 
+1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
+Permutation : 
+43 41 18 40 39 12 24 13 3 1 35 34 20 38 32 44 14 47 30 10 31 0 25 26 7 19 42 22 5 23 17 46 11 45 8 48 36 16 4 37 15 49 33 29 9 28 21 27 2 6 
+Route partition : 
+8 16 27 33 33 44 44 49 
+LOAD VIOLATION MATRIX : 
+-7.0 -42.0 6.0 -35.0 0.0 -8.0 0.0 -97.0 
+Is Feasible : false
+Total Load Violation : 6.0
+Total route time violation : 0.0
+Cost : 806.0462779390944
+Cost with penalty : 866.0462779390944
+
+
+
+Individual : 159
+PERIOD ASSIGMENT : 
+1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
+Permutation : 
+43 41 18 39 40 12 24 13 3 1 35 34 20 38 32 44 14 47 26 10 31 0 7 30 25 6 42 22 5 23 16 46 11 45 8 48 36 28 4 37 15 49 33 29 19 17 21 27 2 9 
+Route partition : 
+8 16 27 33 41 44 44 49 
+LOAD VIOLATION MATRIX : 
+-7.0 -42.0 -3.0 -73.0 -55.0 -87.0 0.0 -76.0 
+Is Feasible : true
+Total Load Violation : 0.0
+Total route time violation : 0.0
+Cost : 866.2317757742821
+Cost with penalty : 866.2317757742821
+
+
+
+Individual : 160
+PERIOD ASSIGMENT : 
+1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
+Permutation : 
+19 41 18 39 40 12 24 13 3 1 35 34 20 38 32 44 14 47 26 10 31 0 7 30 25 6 42 22 23 5 17 46 11 45 8 48 36 16 4 37 15 49 33 29 9 28 21 27 2 43 
+Route partition : 
+8 16 27 33 44 44 49 49 
+LOAD VIOLATION MATRIX : 
+5.0 -42.0 -3.0 -35.0 -8.0 0.0 -100.0 0.0 
+Is Feasible : false
+Total Load Violation : 5.0
+Total route time violation : 0.0
+Cost : 818.7279671949374
+Cost with penalty : 868.7279671949374
+
+
+
+Individual : 161
+PERIOD ASSIGMENT : 
+1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
+Permutation : 
+43 41 18 39 40 12 24 13 31 1 3 34 20 38 32 44 14 10 26 47 35 0 7 30 25 6 42 22 5 23 17 46 21 45 8 48 36 16 4 37 33 49 15 29 9 28 11 27 2 19 
+Route partition : 
+8 16 27 33 33 44 49 49 
+LOAD VIOLATION MATRIX : 
+-4.0 -39.0 -9.0 -56.0 0.0 -8.0 -67.0 0.0 
+Is Feasible : true
+Total Load Violation : 0.0
+Total route time violation : 0.0
+Cost : 881.51081817871
+Cost with penalty : 881.51081817871
+
+
+
+Individual : 162
+PERIOD ASSIGMENT : 
+1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
+Permutation : 
+43 41 18 39 40 12 24 13 3 1 28 34 20 38 32 44 14 47 26 10 31 0 7 30 25 6 42 22 5 23 17 46 11 45 8 48 36 16 4 37 15 49 33 29 9 21 35 27 2 19 
+Route partition : 
+8 14 27 33 33 44 44 49 
+LOAD VIOLATION MATRIX : 
+-7.0 -62.0 17.0 -35.0 0.0 -8.0 0.0 -88.0 
+Is Feasible : false
+Total Load Violation : 17.0
+Total route time violation : 0.0
+Cost : 723.3589927028124
+Cost with penalty : 893.3589927028124
+
+
+
+Individual : 163
+PERIOD ASSIGMENT : 
+1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
+Permutation : 
+43 41 18 39 9 12 24 13 3 1 35 34 33 38 32 44 14 47 26 10 31 0 7 30 25 6 42 22 5 23 17 46 45 11 8 48 36 16 4 37 15 27 49 29 40 28 20 21 2 19 
+Route partition : 
+8 16 20 27 33 44 44 49 
+LOAD VIOLATION MATRIX : 
+-29.0 -24.0 -97.0 -66.0 -35.0 2.0 0.0 -94.0 
+Is Feasible : false
+Total Load Violation : 2.0
+Total route time violation : 0.0
+Cost : 901.2870688066912
+Cost with penalty : 921.2870688066912
+
+
+
+Individual : 164
+PERIOD ASSIGMENT : 
+1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
+Permutation : 
+43 41 18 39 40 12 24 13 3 1 31 34 20 38 32 44 14 47 26 10 35 0 7 29 25 6 42 22 5 23 17 46 45 21 8 48 36 16 4 37 30 49 33 15 9 28 11 27 2 19 
+Route partition : 
+8 16 27 33 33 44 44 49 
+LOAD VIOLATION MATRIX : 
+-7.0 -36.0 -1.0 -56.0 0.0 -16.0 0.0 -67.0 
+Is Feasible : true
+Total Load Violation : 0.0
+Total route time violation : 0.0
+Cost : 926.1223828570292
+Cost with penalty : 926.1223828570292
+
+
+
+Individual : 165
+PERIOD ASSIGMENT : 
+1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
+Permutation : 
+13 41 18 39 40 12 24 43 3 1 35 34 20 14 32 44 38 47 26 10 31 0 7 30 25 6 28 22 5 23 17 46 11 45 8 29 36 16 4 37 15 49 33 48 9 42 21 27 2 19 
+Route partition : 
+8 16 20 27 33 44 44 49 
+LOAD VIOLATION MATRIX : 
+-7.0 -42.0 -97.0 -71.0 -35.0 -8.0 0.0 -83.0 
+Is Feasible : true
+Total Load Violation : 0.0
+Total route time violation : 0.0
+Cost : 948.6175988560079
+Cost with penalty : 948.6175988560079
+
+
+
+Individual : 166
+PERIOD ASSIGMENT : 
+1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
+Permutation : 
+43 41 18 35 40 12 24 13 3 1 39 34 20 38 32 44 14 47 26 10 31 0 7 5 25 6 42 22 46 17 23 30 11 45 8 48 36 16 4 37 15 49 33 29 9 21 19 27 2 28 
+Route partition : 
+8 16 27 33 33 44 44 49 
+LOAD VIOLATION MATRIX : 
+-8.0 -41.0 1.0 -39.0 0.0 -8.0 0.0 -88.0 
+Is Feasible : false
+Total Load Violation : 1.0
+Total route time violation : 0.0
+Cost : 967.8797368708639
+Cost with penalty : 977.8797368708639
+
+
+
+Individual : 167
+PERIOD ASSIGMENT : 
+1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
+Permutation : 
+43 41 18 35 40 12 24 13 3 1 39 34 20 38 32 44 14 47 26 10 31 0 7 5 25 6 42 22 46 17 23 30 11 45 8 48 36 16 4 37 15 49 33 29 9 21 19 27 2 28 
+Route partition : 
+8 16 27 33 33 44 44 49 
+LOAD VIOLATION MATRIX : 
+-8.0 -41.0 1.0 -39.0 0.0 -8.0 0.0 -88.0 
+Is Feasible : false
+Total Load Violation : 1.0
+Total route time violation : 0.0
+Cost : 967.8797368708639
+Cost with penalty : 977.8797368708639
+
+
+
+Individual : 168
+PERIOD ASSIGMENT : 
+1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
+Permutation : 
+13 41 18 39 40 12 24 43 3 1 35 34 20 14 32 44 38 47 26 10 31 0 7 30 25 6 28 22 5 23 17 46 11 45 8 29 36 16 4 37 15 49 33 48 9 42 21 27 2 19 
+Route partition : 
+8 16 23 27 33 44 44 49 
+LOAD VIOLATION MATRIX : 
+-7.0 -42.0 -56.0 -112.0 -35.0 -8.0 0.0 -83.0 
+Is Feasible : true
+Total Load Violation : 0.0
+Total route time violation : 0.0
+Cost : 978.7511652367456
+Cost with penalty : 978.7511652367456
+
+
+
+Individual : 169
+PERIOD ASSIGMENT : 
+1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
+Permutation : 
+43 41 18 39 25 12 24 13 3 19 35 34 20 38 32 44 14 47 26 10 31 0 7 30 40 6 42 22 5 23 17 46 11 45 8 48 36 16 4 37 15 49 33 29 9 28 21 27 2 1 
+Route partition : 
+8 16 16 27 33 44 44 49 
+LOAD VIOLATION MATRIX : 
+-27.0 -44.0 0.0 17.0 -35.0 -8.0 0.0 -86.0 
+Is Feasible : false
+Total Load Violation : 17.0
+Total route time violation : 0.0
+Cost : 863.2115642714666
+Cost with penalty : 1033.2115642714666
+
+
+
+Individual : 170
+PERIOD ASSIGMENT : 
+1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
+Permutation : 
+43 41 18 39 40 12 24 13 3 1 35 34 20 38 32 44 14 47 26 10 31 0 7 30 25 6 42 22 5 23 17 46 11 45 8 48 36 16 4 37 15 49 33 29 9 28 21 27 2 19 
+Route partition : 
+8 13 27 33 33 44 44 49 
+LOAD VIOLATION MATRIX : 
+-7.0 -85.0 40.0 -35.0 0.0 -8.0 0.0 -88.0 
+Is Feasible : false
+Total Load Violation : 40.0
+Total route time violation : 0.0
+Cost : 704.1245588681592
+Cost with penalty : 1104.124558868159
+
+
+
+Individual : 171
+PERIOD ASSIGMENT : 
+1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
+Permutation : 
+43 41 18 39 40 12 24 13 3 1 35 34 20 38 32 44 14 47 0 10 31 26 7 30 25 6 42 22 5 23 17 46 11 45 8 48 36 16 4 37 15 49 33 29 9 28 21 27 2 19 
+Route partition : 
+8 16 21 33 33 44 44 49 
+LOAD VIOLATION MATRIX : 
+-7.0 -42.0 -90.0 52.0 0.0 -8.0 0.0 -88.0 
+Is Feasible : false
+Total Load Violation : 52.0
+Total route time violation : 0.0
+Cost : 636.7536764289805
+Cost with penalty : 1156.7536764289805
+
+
+
+Individual : 172
+PERIOD ASSIGMENT : 
+1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
+Permutation : 
+43 41 18 39 40 12 24 13 3 31 1 34 20 38 32 44 14 10 26 47 35 0 7 30 25 6 42 22 5 23 17 46 21 45 8 48 36 16 4 37 15 49 33 29 9 28 11 27 19 2 
+Route partition : 
+8 11 25 33 33 44 44 49 
+LOAD VIOLATION MATRIX : 
+-7.0 -101.0 29.0 -29.0 0.0 -8.0 0.0 -67.0 
+Is Feasible : false
+Total Load Violation : 29.0
+Total route time violation : 0.0
+Cost : 870.0459567627587
+Cost with penalty : 1160.0459567627586
+
+
+
+Individual : 173
+PERIOD ASSIGMENT : 
+1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
+Permutation : 
+43 41 18 39 40 12 24 13 3 31 1 34 20 38 32 44 14 10 26 47 35 0 7 30 25 6 42 22 5 23 17 46 21 45 8 48 36 16 4 37 15 49 33 29 9 28 11 27 19 2 
+Route partition : 
+8 11 25 33 33 44 44 49 
+LOAD VIOLATION MATRIX : 
+-7.0 -101.0 29.0 -29.0 0.0 -8.0 0.0 -67.0 
+Is Feasible : false
+Total Load Violation : 29.0
+Total route time violation : 0.0
+Cost : 870.0459567627587
+Cost with penalty : 1160.0459567627586
+
+
+
+Individual : 174
+PERIOD ASSIGMENT : 
+1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
+Permutation : 
+43 41 18 39 40 12 24 13 3 31 1 34 20 38 32 44 14 10 26 47 35 0 7 30 25 6 42 22 5 23 17 46 21 45 8 48 36 16 4 37 15 49 33 29 9 28 11 27 19 2 
+Route partition : 
+8 11 25 33 33 44 44 49 
+LOAD VIOLATION MATRIX : 
+-7.0 -101.0 29.0 -29.0 0.0 -8.0 0.0 -67.0 
+Is Feasible : false
+Total Load Violation : 29.0
+Total route time violation : 0.0
+Cost : 870.0459567627587
+Cost with penalty : 1160.0459567627586
+
+
+
+Individual : 175
+PERIOD ASSIGMENT : 
+1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
+Permutation : 
+43 41 18 39 40 12 24 13 3 1 31 34 20 38 32 44 14 10 26 47 35 0 7 30 25 6 42 22 5 23 17 46 21 45 8 48 36 16 4 37 33 49 15 29 9 28 11 27 2 19 
+Route partition : 
+8 13 27 33 33 44 44 49 
+LOAD VIOLATION MATRIX : 
+-7.0 -79.0 34.0 -56.0 0.0 -8.0 0.0 -67.0 
+Is Feasible : false
+Total Load Violation : 34.0
+Total route time violation : 0.0
+Cost : 851.8633315971126
+Cost with penalty : 1191.8633315971126
+
+
+
+Individual : 176
+PERIOD ASSIGMENT : 
+1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
+Permutation : 
+43 41 18 39 40 12 24 13 3 1 31 34 20 38 32 44 14 10 26 47 35 0 7 30 25 6 42 22 5 23 17 46 21 45 8 48 36 16 4 37 33 49 15 29 9 28 11 27 2 19 
+Route partition : 
+8 13 27 33 33 44 44 49 
+LOAD VIOLATION MATRIX : 
+-7.0 -79.0 34.0 -56.0 0.0 -8.0 0.0 -67.0 
+Is Feasible : false
+Total Load Violation : 34.0
+Total route time violation : 0.0
+Cost : 851.8633315971126
+Cost with penalty : 1191.8633315971126
+
+
+
+Individual : 177
+PERIOD ASSIGMENT : 
+1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
+Permutation : 
+43 41 18 39 40 12 24 13 3 1 31 34 20 38 32 44 14 10 26 47 35 0 7 30 25 6 42 22 5 23 17 46 21 45 8 48 36 16 4 37 33 49 15 29 9 28 11 27 2 19 
+Route partition : 
+8 13 27 33 33 44 44 49 
+LOAD VIOLATION MATRIX : 
+-7.0 -79.0 34.0 -56.0 0.0 -8.0 0.0 -67.0 
+Is Feasible : false
+Total Load Violation : 34.0
+Total route time violation : 0.0
+Cost : 851.8633315971126
+Cost with penalty : 1191.8633315971126
+
+
+
+Individual : 178
+PERIOD ASSIGMENT : 
+1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
+Permutation : 
+43 41 18 39 40 12 24 13 3 1 35 34 20 38 32 44 14 47 26 10 31 0 7 30 25 6 42 22 23 5 17 46 11 45 8 48 36 16 4 37 15 49 33 29 9 28 21 27 2 19 
+Route partition : 
+8 16 20 33 33 44 44 49 
+LOAD VIOLATION MATRIX : 
+-7.0 -42.0 -97.0 59.0 0.0 -8.0 0.0 -88.0 
+Is Feasible : false
+Total Load Violation : 59.0
+Total route time violation : 0.0
+Cost : 623.8715687988753
+Cost with penalty : 1213.8715687988752
+
+
+
+Individual : 179
+PERIOD ASSIGMENT : 
+1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
+Permutation : 
+43 41 18 39 40 12 24 13 3 1 35 34 20 38 32 44 14 47 26 10 31 0 7 30 25 6 42 22 23 5 17 46 11 45 8 48 36 16 4 37 15 49 33 29 9 28 21 27 2 19 
+Route partition : 
+8 16 20 33 33 44 44 49 
+LOAD VIOLATION MATRIX : 
+-7.0 -42.0 -97.0 59.0 0.0 -8.0 0.0 -88.0 
+Is Feasible : false
+Total Load Violation : 59.0
+Total route time violation : 0.0
+Cost : 623.8715687988753
+Cost with penalty : 1213.8715687988752
+
+
+
+Individual : 180
+PERIOD ASSIGMENT : 
+1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
+Permutation : 
+43 41 18 39 40 12 24 13 3 1 35 34 20 38 32 44 14 47 26 10 31 0 7 30 25 6 42 22 23 5 17 46 11 45 8 48 36 16 4 37 15 49 33 29 9 28 21 27 2 19 
+Route partition : 
+8 16 20 33 33 44 44 49 
+LOAD VIOLATION MATRIX : 
+-7.0 -42.0 -97.0 59.0 0.0 -8.0 0.0 -88.0 
+Is Feasible : false
+Total Load Violation : 59.0
+Total route time violation : 0.0
+Cost : 623.8715687988753
+Cost with penalty : 1213.8715687988752
+
+
+
+Individual : 181
+PERIOD ASSIGMENT : 
+1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
+Permutation : 
+43 41 18 39 40 12 24 13 3 1 35 34 20 38 32 44 14 47 26 10 31 0 7 30 25 6 42 22 23 5 17 46 11 45 8 48 36 16 4 37 15 49 33 29 9 28 21 27 2 19 
+Route partition : 
+8 16 20 33 33 44 44 49 
+LOAD VIOLATION MATRIX : 
+-7.0 -42.0 -97.0 59.0 0.0 -8.0 0.0 -88.0 
+Is Feasible : false
+Total Load Violation : 59.0
+Total route time violation : 0.0
+Cost : 623.8715687988753
+Cost with penalty : 1213.8715687988752
+
+
+
+Individual : 182
+PERIOD ASSIGMENT : 
+1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
+Permutation : 
+43 41 18 39 40 12 24 13 3 1 35 34 20 44 32 38 14 47 26 10 31 0 7 30 25 6 42 22 5 23 17 46 11 45 8 48 36 16 4 37 15 49 33 29 9 28 21 27 2 19 
+Route partition : 
+12 16 27 33 33 44 44 49 
+LOAD VIOLATION MATRIX : 
+54.0 -103.0 -3.0 -35.0 0.0 -8.0 0.0 -88.0 
+Is Feasible : false
+Total Load Violation : 54.0
+Total route time violation : 0.0
+Cost : 684.5486284427287
+Cost with penalty : 1224.5486284427288
+
+
+
+Individual : 183
+PERIOD ASSIGMENT : 
+1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
+Permutation : 
+43 41 18 39 40 12 24 13 3 1 35 34 20 44 32 38 14 47 26 10 31 0 7 30 25 6 42 22 5 23 17 46 11 45 8 48 36 16 4 37 15 49 33 29 9 28 21 27 2 19 
+Route partition : 
+12 16 27 33 33 44 44 49 
+LOAD VIOLATION MATRIX : 
+54.0 -103.0 -3.0 -35.0 0.0 -8.0 0.0 -88.0 
+Is Feasible : false
+Total Load Violation : 54.0
+Total route time violation : 0.0
+Cost : 684.5486284427287
+Cost with penalty : 1224.5486284427288
+
+
+
+Individual : 184
+PERIOD ASSIGMENT : 
+1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
+Permutation : 
+43 41 18 39 40 12 24 13 3 1 35 34 20 38 32 44 14 47 26 10 31 0 7 30 25 6 42 22 5 23 17 46 11 45 8 48 36 16 4 37 15 49 33 29 9 28 21 27 2 19 
+Route partition : 
+12 16 27 33 33 44 44 49 
+LOAD VIOLATION MATRIX : 
+54.0 -103.0 -3.0 -35.0 0.0 -8.0 0.0 -88.0 
+Is Feasible : false
+Total Load Violation : 54.0
+Total route time violation : 0.0
+Cost : 686.0833994578765
+Cost with penalty : 1226.0833994578766
+
+
+
+Individual : 185
+PERIOD ASSIGMENT : 
+1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
+Permutation : 
+43 41 18 39 40 12 24 13 3 1 35 34 20 44 14 38 32 47 26 10 31 0 7 30 25 6 42 22 5 23 17 46 11 45 8 48 36 16 4 37 15 49 33 29 9 28 21 27 2 19 
+Route partition : 
+12 16 27 33 44 44 49 49 
+LOAD VIOLATION MATRIX : 
+54.0 -103.0 -3.0 -35.0 -8.0 0.0 -88.0 0.0 
+Is Feasible : false
+Total Load Violation : 54.0
+Total route time violation : 0.0
+Cost : 695.6211864271256
+Cost with penalty : 1235.6211864271256
+
+
+
+Individual : 186
+PERIOD ASSIGMENT : 
+1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
+Permutation : 
+43 41 18 39 40 12 24 13 3 1 35 34 20 38 32 44 14 26 47 46 31 0 7 30 25 6 42 22 5 23 17 10 11 45 8 48 36 16 4 37 15 49 33 29 9 28 21 27 2 19 
+Route partition : 
+8 16 19 33 33 44 44 49 
+LOAD VIOLATION MATRIX : 
+-7.0 -42.0 -103.0 65.0 0.0 -8.0 0.0 -88.0 
+Is Feasible : false
+Total Load Violation : 65.0
+Total route time violation : 0.0
+Cost : 654.9980691146324
+Cost with penalty : 1304.9980691146325
+
+
+
+Individual : 187
+PERIOD ASSIGMENT : 
+1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
+Permutation : 
+43 41 18 39 40 12 24 13 3 1 31 34 20 38 32 44 14 47 26 10 35 0 7 29 19 6 42 22 5 23 17 46 45 21 8 48 36 16 4 37 30 49 33 15 9 28 11 27 2 25 
+Route partition : 
+8 15 27 33 33 44 44 49 
+LOAD VIOLATION MATRIX : 
+-7.0 -46.0 30.0 -56.0 -81.0 -16.0 0.0 -88.0 
+Is Feasible : false
+Total Load Violation : 30.0
+Total route time violation : 0.0
+Cost : 1029.141812835712
+Cost with penalty : 1329.141812835712
+
+
+
+Individual : 188
+PERIOD ASSIGMENT : 
+1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
+Permutation : 
+43 41 18 39 40 12 24 13 3 1 35 34 20 38 32 44 14 47 26 10 31 0 7 30 25 6 42 22 5 23 17 46 11 45 8 48 36 16 4 37 15 49 33 29 9 28 21 27 2 19 
+Route partition : 
+8 12 27 27 33 43 44 49 
+LOAD VIOLATION MATRIX : 
+-7.0 -99.0 54.0 -145.0 -35.0 -13.0 -155.0 -88.0 
+Is Feasible : false
+Total Load Violation : 54.0
+Total route time violation : 0.0
+Cost : 794.3692851805215
+Cost with penalty : 1334.3692851805215
+
+
+
+Individual : 189
+PERIOD ASSIGMENT : 
+1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
+Permutation : 
+43 41 18 39 40 12 24 13 3 1 35 7 20 38 32 44 14 47 26 10 31 0 34 30 25 6 42 22 5 23 17 46 11 45 8 48 33 16 4 37 15 49 36 29 9 28 21 27 2 19 
+Route partition : 
+8 12 27 32 33 44 44 49 
+LOAD VIOLATION MATRIX : 
+-7.0 -93.0 48.0 -40.0 -155.0 -8.0 0.0 -88.0 
+Is Feasible : false
+Total Load Violation : 48.0
+Total route time violation : 0.0
+Cost : 885.8289822214281
+Cost with penalty : 1365.828982221428
+
+
+
+Individual : 190
+PERIOD ASSIGMENT : 
+1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
+Permutation : 
+43 41 18 39 40 12 24 17 3 1 35 34 20 38 32 44 14 47 26 10 31 0 7 30 25 6 42 22 5 23 13 46 11 45 8 48 36 16 4 37 15 49 33 29 9 28 21 19 2 27 
+Route partition : 
+8 12 27 33 33 44 44 49 
+LOAD VIOLATION MATRIX : 
+13.0 -99.0 54.0 -55.0 0.0 -8.0 0.0 -88.0 
+Is Feasible : false
+Total Load Violation : 67.0
+Total route time violation : 0.0
+Cost : 716.3400308303355
+Cost with penalty : 1386.3400308303355
+
+
+
+Individual : 191
+PERIOD ASSIGMENT : 
+1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
+Permutation : 
+43 41 18 39 40 12 24 17 3 1 35 34 20 38 32 44 14 47 26 10 31 0 7 30 25 6 42 22 5 23 13 46 11 45 8 48 36 16 4 37 15 49 33 29 9 28 21 19 2 27 
+Route partition : 
+8 12 27 33 33 44 44 49 
+LOAD VIOLATION MATRIX : 
+13.0 -99.0 54.0 -55.0 0.0 -8.0 0.0 -88.0 
+Is Feasible : false
+Total Load Violation : 67.0
+Total route time violation : 0.0
+Cost : 716.3400308303355
+Cost with penalty : 1386.3400308303355
+
+
+
+Individual : 192
+PERIOD ASSIGMENT : 
+1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
+Permutation : 
+43 41 18 39 40 11 24 13 3 12 35 34 20 38 32 44 14 47 26 10 31 0 7 30 25 6 42 22 5 23 17 46 1 45 8 48 36 16 4 37 15 49 33 29 9 28 21 27 2 19 
+Route partition : 
+8 24 27 33 44 44 49 49 
+LOAD VIOLATION MATRIX : 
+-1.0 62.0 -114.0 -34.0 -8.0 0.0 -88.0 0.0 
+Is Feasible : false
+Total Load Violation : 62.0
+Total route time violation : 0.0
+Cost : 795.6895838142821
+Cost with penalty : 1415.689583814282
+
+
+
+Individual : 193
+PERIOD ASSIGMENT : 
+1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
+Permutation : 
+43 41 18 39 40 12 24 13 34 1 35 3 20 38 32 44 14 47 26 10 31 0 7 30 25 6 42 22 5 23 17 46 11 45 8 48 36 16 4 37 15 49 33 29 9 28 21 19 2 27 
+Route partition : 
+6 21 27 33 33 44 44 49 
+LOAD VIOLATION MATRIX : 
+-37.0 58.0 -73.0 -35.0 0.0 -8.0 0.0 -88.0 
+Is Feasible : false
+Total Load Violation : 58.0
+Total route time violation : 0.0
+Cost : 838.1288749877509
+Cost with penalty : 1418.1288749877508
+
+
+
+Individual : 194
+PERIOD ASSIGMENT : 
+1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
+Permutation : 
+43 41 18 39 40 12 24 13 34 1 35 3 20 38 32 44 14 47 26 10 31 0 7 30 25 6 42 22 5 23 17 46 11 45 8 48 36 16 4 37 15 49 33 29 9 28 21 19 2 27 
+Route partition : 
+6 21 27 33 33 44 44 49 
+LOAD VIOLATION MATRIX : 
+-37.0 58.0 -73.0 -35.0 0.0 -8.0 0.0 -88.0 
+Is Feasible : false
+Total Load Violation : 58.0
+Total route time violation : 0.0
+Cost : 838.1288749877509
+Cost with penalty : 1418.1288749877508
+
+
+
+Individual : 195
+PERIOD ASSIGMENT : 
+1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
+Permutation : 
+43 41 18 39 23 12 24 13 3 1 19 34 20 38 32 44 14 47 26 10 31 0 7 30 25 6 42 22 5 40 17 46 11 45 8 48 36 16 4 37 15 49 33 29 9 28 21 27 2 35 
+Route partition : 
+12 23 27 33 33 44 44 49 
+LOAD VIOLATION MATRIX : 
+59.0 1.0 -107.0 -18.0 0.0 -8.0 0.0 -110.0 
+Is Feasible : false
+Total Load Violation : 60.0
+Total route time violation : 0.0
+Cost : 834.0697491456303
+Cost with penalty : 1434.0697491456303
+
+
+
+Individual : 196
+PERIOD ASSIGMENT : 
+1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
+Permutation : 
+43 41 18 39 40 12 24 13 3 38 35 34 20 0 32 44 14 47 26 10 31 1 30 7 25 6 42 22 5 23 17 46 11 45 8 48 36 16 4 37 15 49 33 29 9 28 21 27 2 19 
+Route partition : 
+8 12 27 33 33 44 44 49 
+LOAD VIOLATION MATRIX : 
+-7.0 -115.0 70.0 -35.0 0.0 -8.0 0.0 -88.0 
+Is Feasible : false
+Total Load Violation : 70.0
+Total route time violation : 0.0
+Cost : 750.0821523801718
+Cost with penalty : 1450.082152380172
+
+
+
+Individual : 197
+PERIOD ASSIGMENT : 
+1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
+Permutation : 
+43 41 18 39 40 12 24 13 3 1 35 34 20 38 32 44 14 47 26 10 31 0 7 30 25 6 42 22 5 23 17 46 11 45 8 48 36 16 4 37 15 49 33 29 9 28 21 27 2 19 
+Route partition : 
+14 16 27 33 44 44 49 49 
+LOAD VIOLATION MATRIX : 
+91.0 -140.0 -3.0 -35.0 -8.0 0.0 -88.0 0.0 
+Is Feasible : false
+Total Load Violation : 91.0
+Total route time violation : 0.0
+Cost : 668.844957113047
+Cost with penalty : 1578.844957113047
+
+
+
+Individual : 198
+PERIOD ASSIGMENT : 
+1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
+Permutation : 
+43 41 18 39 40 12 24 13 3 1 35 34 20 38 32 44 14 47 26 10 31 0 7 30 25 6 42 22 5 23 17 46 11 45 8 48 36 16 4 37 15 49 33 29 9 28 21 27 2 19 
+Route partition : 
+14 16 27 33 44 44 49 49 
+LOAD VIOLATION MATRIX : 
+91.0 -140.0 -3.0 -35.0 -8.0 0.0 -88.0 0.0 
+Is Feasible : false
+Total Load Violation : 91.0
+Total route time violation : 0.0
+Cost : 668.844957113047
+Cost with penalty : 1578.844957113047
+
+
+
+Individual : 199
+PERIOD ASSIGMENT : 
+1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
+Permutation : 
+43 41 18 39 40 12 24 13 3 1 35 34 20 38 32 44 14 47 26 10 31 0 7 30 25 6 42 22 5 23 17 46 11 45 8 48 36 16 4 37 15 49 33 29 9 28 21 27 2 19 
+Route partition : 
+8 8 27 33 44 44 49 49 
+LOAD VIOLATION MATRIX : 
+-7.0 0.0 115.0 -35.0 -8.0 0.0 -88.0 0.0 
+Is Feasible : false
+Total Load Violation : 115.0
+Total route time violation : 0.0
+Cost : 624.7453433754772
+Cost with penalty : 1774.7453433754772
+

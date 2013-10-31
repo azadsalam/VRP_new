@@ -7,8 +7,8 @@ import javax.swing.plaf.metal.MetalIconFactory.FileIcon16;
 
 public class Solver 
 {
-	String inputFileName = "in1.txt";
-	String outputFileName = "out1.txt";
+	String inputFileName = "MDPVRP_Vidal/pr10.txt";
+	String outputFileName = "MDPVRP_Vidal/out_pr10.txt";
 	
 	File inputFile,outputFile;	
 	Scanner input;
@@ -56,6 +56,8 @@ public class Solver
 			e.printStackTrace();
 		}
 	}
+	
+	
 	public void solve() 
 	{
 		// singlerun = true when excel needs to be generated or output checked for testing
