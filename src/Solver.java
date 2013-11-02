@@ -7,8 +7,10 @@ import javax.swing.plaf.metal.MetalIconFactory.FileIcon16;
 
 public class Solver 
 {
-	String inputFileName = "MDPVRP_Vidal/pr10.txt";
-	String outputFileName = "MDPVRP_Vidal/out_pr10.txt";
+	String inputFileName = "MDPVRP/pr03.txt";
+	String outputFileName = "MDPVRP/out03_scheme3_outburst.txt";
+	int runSize=5;
+	boolean singleRun = true;
 	
 	File inputFile,outputFile;	
 	Scanner input;
@@ -57,19 +59,18 @@ public class Solver
 		}
 	}
 	
-	
 	public void solve() 
 	{
 		// singlerun = true when excel needs to be generated or output checked for testing
 		// sigleRun = false when aggregated report is to be generated
-		boolean singleRun = true;
+		
 		writeToExcel = singleRun;
 		outputToFile = singleRun;
 		generateAggregatedReport = !singleRun;
 		
-		problemInstance.print();
+		//problemInstance.print();
 		
-		GeneticAlgorithm ga = new Scheme1(problemInstance);		
+		GeneticAlgorithm ga = new Scheme3(problemInstance);		
 		if(writeToExcel) 
 		{
 			Solver.exportToCsv.init(ga.getNumberOfGeeration()+1);	
@@ -133,7 +134,7 @@ public class Solver
 		double avg;
 		int feasibleCount=0;
 
-		for(int i=0; i<100; i++)
+		for(int i=0; i<runSize; i++)
 		{			
 			Individual sol = ga.run();
 			

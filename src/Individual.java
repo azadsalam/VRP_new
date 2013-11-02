@@ -453,7 +453,7 @@ public class Individual
 	}
 	
 	// swaps even if neither of the customers get visited that day
-	// updates cost and penalty
+	//  updates cost and penalty
 	void mutatePermutation(int period)
 	{
 		int first = Utility.randomIntInclusive(problemInstance.customerCount-1);

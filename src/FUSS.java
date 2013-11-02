@@ -5,6 +5,10 @@ public class FUSS extends SelectionOperator
 	boolean survivalSelection;
 	boolean mark[];
 	
+	/**
+	 * Sorts the population
+	 * 
+	 */
 	@Override
 	public void initialise(Individual[] population, boolean survivalSelection) {
 		// TODO Auto-generated method stub

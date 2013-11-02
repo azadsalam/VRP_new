@@ -1,12 +1,15 @@
 import java.io.PrintWriter;
+import java.util.Arrays;
 import java.util.Scanner;
 
+import javax.rmi.CORBA.Util;
 
-public class Scheme1 implements GeneticAlgorithm
+
+public class Scheme4 implements GeneticAlgorithm
 {
 	//Algorithm parameters
-	int POPULATION_SIZE = 200; 
-	int NUMBER_OF_OFFSPRING = 200;   
+	int POPULATION_SIZE = 400; 
+	int NUMBER_OF_OFFSPRING = 400;   
 	int NUMBER_OF_GENERATION = 1000;	
 	double loadPenaltyFactor = 10;
 	double routeTimePenaltyFactor = 1;
@@ -19,7 +22,8 @@ public class Scheme1 implements GeneticAlgorithm
 
 	//Operators
 	Mutation mutation;
-    SelectionOperator parentSelectionOperator;
+    SelectionOperator rouletteWheelSelection;
+    SelectionOperator fussSelection;
     SelectionOperator survivalSelectionOperator;
     LocalImprovement localImprovement;
     LocalSearch localSearch;
@@ -33,7 +37,7 @@ public class Scheme1 implements GeneticAlgorithm
 	
 
 	
-	public Scheme1(ProblemInstance problemInstance) 
+	public Scheme4(ProblemInstance problemInstance) 
 	{
 		// TODO Auto-generated constructor stub
 		this.problemInstance = problemInstance;
@@ -49,8 +53,9 @@ public class Scheme1 implements GeneticAlgorithm
 		parentOffspringTotalPopulation = new Individual[POPULATION_SIZE + NUMBER_OF_OFFSPRING];
 		
 		//Add additional code here
-		parentSelectionOperator = new RoutletteWheelSelection();
-	    //survivalSelectionOperator = new FUSS(); 
+		rouletteWheelSelection = new RoutletteWheelSelection();
+	    fussSelection = new FUSS();
+		survivalSelectionOperator = new FUSS(); 
 
 		localSearch = new FirstChoiceHillClimbing();
 		localImprovement = new LocalImprovementBasedOnFuss(loadPenaltyFactor, routeTimePenaltyFactor, localSearch, POPULATION_SIZE);	
@@ -71,17 +76,37 @@ public class Scheme1 implements GeneticAlgorithm
 			Solver.gatherExcelData(population, POPULATION_SIZE, generation);
 			TotalCostCalculator.calculateCostofPopulation(population,0, POPULATION_SIZE, loadPenaltyFactor, routeTimePenaltyFactor) ;
 			
-			parentSelectionOperator.initialise(population,false);
+			//  Best individual always reproduces K=1 times + roulette wheel
+			
+			
+			fussSelection.initialise(population, false);
+			rouletteWheelSelection.initialise(population, false);
 			
 			i=0;
+			
+			parent1 = population[0];
+			parent2 = fussSelection.getIndividual(population);
+			
+			offspring1 = new Individual(problemInstance);
+			offspring2 = new Individual(problemInstance);
+			
+			Individual.crossOver(problemInstance, parent1, parent2, offspring1, offspring2);	
+			
+			mutation.applyMutation(offspring1);
+			mutation.applyMutation(offspring2);
+			
+			offspringPopulation[i] = offspring1;
+			i++;
+			offspringPopulation[i] = offspring2;
+			i++;
+			
 			while(i<NUMBER_OF_OFFSPRING)
 			{
-				parent1 = parentSelectionOperator.getIndividual(population);
-				parent2 = parentSelectionOperator.getIndividual(population);
+				parent1 = rouletteWheelSelection.getIndividual(population);
+				parent2 = fussSelection.getIndividual(population);
 				
 				offspring1 = new Individual(problemInstance);
 				offspring2 = new Individual(problemInstance);
-				
 			
 				Individual.crossOver(problemInstance, parent1, parent2, offspring1, offspring2);	
 				
@@ -97,28 +122,25 @@ public class Scheme1 implements GeneticAlgorithm
 			TotalCostCalculator.calculateCostofPopulation(offspringPopulation, 0,NUMBER_OF_OFFSPRING, loadPenaltyFactor, routeTimePenaltyFactor) ;
 			Utility.concatPopulation(parentOffspringTotalPopulation, population, offspringPopulation);
 			
-			
 			localImprovement.initialise(parentOffspringTotalPopulation);
 			localImprovement.run(parentOffspringTotalPopulation);
 			
 			TotalCostCalculator.calculateCostofPopulation(parentOffspringTotalPopulation, 0, POPULATION_SIZE, loadPenaltyFactor, routeTimePenaltyFactor);
 			
-			
-			//semi elitist + Uniform approach, the n portion of best individuals always make to next generation
-			int n =  30 ;
-			int rand;
-			
+			//Preserving the best individual + FUSS approach, the n portion of best individuals always make to next generation
 			Utility.sort(parentOffspringTotalPopulation);
+
+			population[0] = parentOffspringTotalPopulation[0];
 			
-			for(i=0;i<n;i++)
-				population[i] = parentOffspringTotalPopulation[i];
 			
-			for(i=n;i<POPULATION_SIZE;i++)
+			Individual total[] = new Individual[POPULATION_SIZE+NUMBER_OF_OFFSPRING-1];
+			System.arraycopy(parentOffspringTotalPopulation, 1, total, 0, total.length);
+			
+			survivalSelectionOperator.initialise(total, true);
+			for( i=1;i<POPULATION_SIZE;i++)
 			{
-				rand  = Utility.randomIntInclusive(n, POPULATION_SIZE*2 - 1);
-				population[i] = parentOffspringTotalPopulation[rand];
+				population[i]= survivalSelectionOperator.getIndividual(total);
 			}
-			
 			
 			Utility.sort(population);
 			
@@ -129,8 +151,6 @@ public class Scheme1 implements GeneticAlgorithm
 		Utility.sort(population);
 		Solver.gatherExcelData(population, POPULATION_SIZE, generation);
 		
-		
-
 		if(Solver.outputToFile)
 		{
 			out.print("\n\n\n\n\n--------------------------------------------------\n");
@@ -147,7 +167,6 @@ public class Scheme1 implements GeneticAlgorithm
 
 	}
 	
-		
 	public int getNumberOfGeeration()
 	{
 		return NUMBER_OF_GENERATION;
