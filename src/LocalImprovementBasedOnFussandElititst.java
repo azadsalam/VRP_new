@@ -12,6 +12,7 @@ public class LocalImprovementBasedOnFussandElititst extends LocalImprovement
 
 	SelectionOperator selectionOperator;
 	int elitistCount;
+
 	@Override
 	public void initialise(Individual[] population) {
 		// TODO Auto-generated method stub
