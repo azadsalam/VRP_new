@@ -1,43 +1,39 @@
 
 public class MutationWithVariedStepSize 
 {	
-	//ProblemInstance problemInstance;
+	int initialCount=210;
 	
-	
-	/*
-	public Mutation(ProblemInstance problemInstance) 
+	void applyMutation(Individual offspring,int generation)
 	{
-		// TODO Auto-generated constructor stub
-		this.problemInstance = problemInstance;
-	}
-	*/
-	
-	
-	void applyMutation(Individual offspring)
-	{
-		int selectedMutationOperator = Utility.randomIntInclusive(4);
+		int max = initialCount - generation/12;		
+		int count = Utility.randomIntInclusive(max);
 		
-		if(selectedMutationOperator==0)
+		System.out.println("gen : " + generation + " max : " + max+" count : "+count);		
+
+		
+		for(int i=0;i<count;i++)
 		{
-			offspring.mutateRoutePartition();
-		}
-		else if (selectedMutationOperator == 1)
-		{
-			offspring.mutatePermutationWithinSingleRoute();
-		}
-		else if (selectedMutationOperator == 2)
-		{
-			offspring.mutatePermutationOfDifferentRoute();
-		}
-		else if (selectedMutationOperator == 3)
-		{
-			offspring.mutatePeriodAssignment();
-		}
-		else
-		{
+			int selectedMutationOperator = Utility.randomIntInclusive(3);
 			
+			if(selectedMutationOperator==0)
+			{
+				offspring.mutateRoutePartition();
+			}
+			else if (selectedMutationOperator == 1)
+			{
+				offspring.mutatePermutationWithinSingleRoute();
+			}
+			else if (selectedMutationOperator == 2)
+			{
+				offspring.mutatePermutationOfDifferentRoute();
+			}
+			else if (selectedMutationOperator == 3)
+			{
+				offspring.mutatePeriodAssignment();
+			}	
 		}
 		
+		offspring.calculateCostAndPenalty();
 		
 	}
 

@@ -255,7 +255,7 @@ public class Individual
 
 		feasibilitySet = true;
 		
-	}
+	} 
 
 	//calcuate fitness for each period for each vehicle
 	// route for vehicle i is  [ routePartition[i-1]+1 , routePartition[i] ]
@@ -452,9 +452,10 @@ public class Individual
 		
 	}
 	
+	
 	// swaps even if neither of the customers get visited that day
 	//  updates cost and penalty
-	void mutatePermutation(int period)
+	void mutatePermutationUC(int period)
 	{
 		int first = Utility.randomIntInclusive(problemInstance.customerCount-1);
 
@@ -474,11 +475,33 @@ public class Individual
 
 		calculateCostAndPenalty();
 		// FITNESS CAN BE UPDATED HERE
-		
+	}
+	
+	/** swaps even if neither of the customers get visited that day
+	<br> do NOT updates cost and penalty
+	*/
+	void mutatePermutation(int period)
+	{
+		int first = Utility.randomIntInclusive(problemInstance.customerCount-1);
+
+		int second;
+		int count=0;
+		do
+		{
+			second = Utility.randomIntInclusive(problemInstance.customerCount-1);
+			count++;
+			if(count==problemInstance.customerCount)break;
+		}
+		while(second == first);
+
+		int temp = permutation[period][first];
+		permutation[period][first] = permutation[period][second];
+		permutation[period][second] = temp;
+
 	}
 	
 	// updates cost and penalty
-	void mutatePermutationWithinSingleRoute()
+	void mutatePermutationWithinSingleRouteUC()
 	{
 		boolean success = false;
 		do
@@ -488,6 +511,18 @@ public class Individual
 			success = mutatePermutationWithinSingleRoute(period, vehicle);
 		}while(success==false);
 		calculateCostAndPenalty();
+	}
+	
+	//DO NOT updates cost and penalty
+	void mutatePermutationWithinSingleRoute()
+	{
+		boolean success = false;
+		do
+		{
+			int period = Utility.randomIntInclusive(problemInstance.periodCount-1);
+			int vehicle = Utility.randomIntInclusive(problemInstance.vehicleCount-1);
+			success = mutatePermutationWithinSingleRoute(period, vehicle);
+		}while(success==false);
 	}
 	
 	//returns true if permutation successful
@@ -521,7 +556,7 @@ public class Individual
 	}
 	
 	// updates cost and penalty
-	void mutatePermutationOfDifferentRoute()
+	void mutatePermutationOfDifferentRouteUC()
 	{	
 		if(problemInstance.vehicleCount<2)return;
 		
@@ -536,6 +571,24 @@ public class Individual
 		}while(success==false);
 		
 		calculateCostAndPenalty();
+	}
+	
+	/** DO NOT updates cost and penalty
+	*/
+	void mutatePermutationOfDifferentRoute()
+	{	
+		if(problemInstance.vehicleCount<2)return;
+		
+		boolean success = false;
+		do
+		{
+			int period = Utility.randomIntInclusive(problemInstance.periodCount-1);
+			int vehicle1 = Utility.randomIntInclusive(problemInstance.vehicleCount-1);
+			int vehicle2 = Utility.randomIntInclusive(problemInstance.vehicleCount-1);
+			if(vehicle1==vehicle2)continue;
+			success = mutatePermutationOfDifferentRoute(period, vehicle1,vehicle2);
+		}while(success==false);
+	
 	}
 	
 
@@ -574,7 +627,7 @@ public class Individual
 	}
 
 	// updates cost and penalty
-	void mutateRoutePartition()
+	void mutateRoutePartitionUC()
 	{
 		//nothing to do if only one vehicle
 		if(problemInstance.vehicleCount == 1) return ;
@@ -583,6 +636,19 @@ public class Individual
 		mutateRoutePartition(period);
 		
 		calculateCostAndPenalty();
+	}
+	
+	/** do not updates cost and penalty
+	*/
+	void mutateRoutePartition()
+	{
+		//nothing to do if only one vehicle
+		if(problemInstance.vehicleCount == 1) return ;
+		
+		int period = Utility.randomIntInclusive(problemInstance.periodCount-1);
+		mutateRoutePartition(period);
+		
+
 	}
 	
 	//moves some red line
@@ -630,7 +696,7 @@ public class Individual
 
 	// updates cost + penalty
 	// if sobgula client er frequency = period hoy tahole, period assignment mutation er kono effect nai
-	void mutatePeriodAssignment()
+	void mutatePeriodAssignmentUC()
 	{
 		boolean success;
 		int clientNo;
@@ -643,6 +709,23 @@ public class Individual
 		}while(success==false && total>0);
 		
 		calculateCostAndPenalty();
+	}
+	
+	/** do not updates cost + penalty
+	// if sobgula client er frequency = period hoy tahole, period assignment mutation er kono effect nai
+	*/
+	void mutatePeriodAssignment()
+	{
+		boolean success;
+		int clientNo;
+		int total = problemInstance.customerCount;
+		do
+		{
+			clientNo = Utility.randomIntInclusive(problemInstance.customerCount-1);
+			success = mutatePeriodAssignment(clientNo);
+			total--;
+		}while(success==false && total>0);
+	
 	}
 	
 	//returns 0 if it couldnt mutate as period == freq
