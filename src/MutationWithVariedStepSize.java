@@ -1,11 +1,11 @@
 
 public class MutationWithVariedStepSize 
 {	
-	int initialCount=210;
+	int initialCount=51;
 	
 	void applyMutation(Individual offspring,int generation)
 	{
-		int max = initialCount - generation/12;		
+		int max = initialCount - generation / 50;		
 		int count = Utility.randomIntInclusive(max);
 		
 		System.out.println("gen : " + generation + " max : " + max+" count : "+count);		
