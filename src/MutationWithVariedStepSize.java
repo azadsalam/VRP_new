@@ -5,10 +5,12 @@ public class MutationWithVariedStepSize
 	
 	void applyMutation(Individual offspring,int generation)
 	{
-		int max = initialCount - generation / 50;		
+//		int max = initialCount - generation / 50;		
+		int max = 10;		
+
 		int count = Utility.randomIntInclusive(max);
 		
-		System.out.println("gen : " + generation + " max : " + max+" count : "+count);		
+		//System.out.println("gen : " + generation + " max : " + max+" count : "+count);		
 
 		
 		for(int i=0;i<count;i++)

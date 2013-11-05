@@ -864,7 +864,7 @@ public class Individual
 
 	public static double distance(ProblemInstance problemInstance, Individual first,Individual second)
 	{
-		boolean print=true;
+		boolean print=false;
 
 		if(print)
 		{

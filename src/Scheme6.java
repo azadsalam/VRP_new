@@ -8,9 +8,9 @@ import javax.rmi.CORBA.Util;
 public class Scheme6 implements GeneticAlgorithm
 {
 	//Algorithm parameters
-	int POPULATION_SIZE = 400; 
-	int NUMBER_OF_OFFSPRING = 400;   
-	int NUMBER_OF_GENERATION = 1000;	
+	int POPULATION_SIZE = 1000; 
+	int NUMBER_OF_OFFSPRING = 500;   
+	int NUMBER_OF_GENERATION = 3000;	
 	double loadPenaltyFactor = 10;
 	double routeTimePenaltyFactor = 1;
 
@@ -58,7 +58,7 @@ public class Scheme6 implements GeneticAlgorithm
 		survivalSelectionOperator = new FUSS(); 
 
 		localSearch = new FirstChoiceHillClimbing();
-		localImprovement = new LocalImprovementBasedOnFuss(loadPenaltyFactor, routeTimePenaltyFactor, localSearch, POPULATION_SIZE);	
+		localImprovement = new LocalImprovementBasedOnFussandElititst(loadPenaltyFactor, routeTimePenaltyFactor, localSearch, POPULATION_SIZE);	
 	}
 
 	public Individual run() 
@@ -71,7 +71,12 @@ public class Scheme6 implements GeneticAlgorithm
 		TotalCostCalculator.calculateCostofPopulation(population,0, POPULATION_SIZE, loadPenaltyFactor, routeTimePenaltyFactor) ;
 		
 		
-		int unImprovedGeneration=0;
+		int continuosInjection=0; 
+		//int unImprovedGeneration=0;
+		
+		double previousBest=-1;
+		double bestBeforeInjection=-1;
+		
 		for( generation=0;generation<NUMBER_OF_GENERATION;generation++)
 		{
 			//For collecting min,max,avg
@@ -129,50 +134,86 @@ public class Scheme6 implements GeneticAlgorithm
 			
 			TotalCostCalculator.calculateCostofPopulation(parentOffspringTotalPopulation, 0, POPULATION_SIZE, loadPenaltyFactor, routeTimePenaltyFactor);
 			
-			//Preserving the best individual + FUSS approach, the n portion of best individuals always make to next generation
+			//Preserving the k% best individual + FUSS approach, the n portion of best individuals always make to next generation
 			Utility.sort(parentOffspringTotalPopulation);
 
+			int elitistRatio = POPULATION_SIZE * 10 /100 ;
+			
 			population[0] = parentOffspringTotalPopulation[0];
 			
+			int index2=1;
+			int index1=1;
 			
-			Individual total[] = new Individual[POPULATION_SIZE+NUMBER_OF_OFFSPRING-1];
-			System.arraycopy(parentOffspringTotalPopulation, 1, total, 0, total.length);
+			while(index1 < elitistRatio)
+			{
+				double d = Individual.distance(problemInstance, parentOffspringTotalPopulation[index2],population[index1-1]);
+				if(d==0)
+				{
+					
+				}
+				else
+				{
+					population[index1] = parentOffspringTotalPopulation[index2];
+					index1++;
+				}
+				
+				index2++;
+			}
+			
+			
+			Individual total[] = new Individual[POPULATION_SIZE+NUMBER_OF_OFFSPRING-elitistRatio];
+			System.arraycopy(parentOffspringTotalPopulation, elitistRatio, total, 0, total.length);
 			
 			survivalSelectionOperator.initialise(total, true);
-			for( i=1;i<POPULATION_SIZE;i++)
+			for( i=elitistRatio;i<POPULATION_SIZE;i++)
 			{
 				population[i]= survivalSelectionOperator.getIndividual(total);
 			}
 			
 			
-			unImprovedGeneration++;
 			
-			if(unImprovedGeneration>=10)
+			/*
+			if(unImprovedGeneration>=5)
 			{
 				unImprovedGeneration=0;
 				
-				Utility.sort(parentOffspringTotalPopulation);
 				int sizeParentOffspring=parentOffspringTotalPopulation.length;
-				int margin=2*sizeParentOffspring/3;
+				int margin=sizeParentOffspring/4;
+					
+				
+				Utility.sort(parentOffspringTotalPopulation);
+				
+				if(bestBeforeInjection == -1)
+				{
+					bestBeforeInjection = population[0].costWithPenalty;
+				}
+				else if(population[0].costWithPenalty == bestBeforeInjection)
+				{
+					//margin = 1;
+				}
+				
+				
 				ProblemInstance pInstance=population[0].problemInstance;
 				for(int noInject=margin;noInject<sizeParentOffspring;noInject++)
 				{
 					Individual newIndividual=new Individual(pInstance);
 					newIndividual.initialise();
 					
-					double p = Utility.randomDouble(0, 1);
-					if(p<=0.5)localSearch.improve(newIndividual, loadPenaltyFactor, routeTimePenaltyFactor);
+					//double p = Utility.randomDouble(0, 1);
+					//if(p<=0.5)localSearch.improve(newIndividual, loadPenaltyFactor, routeTimePenaltyFactor);
 					
 					parentOffspringTotalPopulation[noInject]=newIndividual;
 				}
 				TotalCostCalculator.calculateCostofPopulation(parentOffspringTotalPopulation, 0,parentOffspringTotalPopulation.length, loadPenaltyFactor, routeTimePenaltyFactor) ;
 			}
+			*/
 			/************************ End of population Injection Block **************************/
 
 			
+			Utility.sort(population);	
+			System.out.println(generation + " : "+population[0].costWithPenalty);
 			
 			
-			Utility.sort(population);
 			
 		}
 

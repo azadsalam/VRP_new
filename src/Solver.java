@@ -8,7 +8,7 @@ import javax.swing.plaf.metal.MetalIconFactory.FileIcon16;
 public class Solver 
 {
 	String inputFileName = "MDVRP/in1.txt";
-	String outputFileName = "MDVRP/out1_scheme5.txt";
+	String outputFileName = "MDVRP/out1_scheme7.txt";
 	int runSize=5;
 	boolean singleRun = true;
 	
@@ -70,7 +70,7 @@ public class Solver
 		
 		//problemInstance.print();
 		
-		GeneticAlgorithm ga = new Scheme5(problemInstance);		
+		GeneticAlgorithm ga = new Scheme6(problemInstance);		
 		if(writeToExcel) 
 		{
 			Solver.exportToCsv.init(ga.getNumberOfGeeration()+1);	
@@ -148,7 +148,6 @@ public class Solver
 				
 		}
 		avg = sum/feasibleCount;
-		
 		
 		System.out.format("Min : %f Avg : %f  Max : %f Feasible : %d \n",min,avg,max,feasibleCount);
 	}
