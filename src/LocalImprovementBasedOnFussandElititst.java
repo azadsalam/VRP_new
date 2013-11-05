@@ -7,7 +7,7 @@ public class LocalImprovementBasedOnFussandElititst extends LocalImprovement
 		super(loadPenaltyFactor, routeTimePenaltyFactor, localSearch, populationSize);
 		// TODO Auto-generated constructor stub
 		
-		count = populationSize/2;
+		count = populationSize/4;
 	}
 
 	SelectionOperator selectionOperator;
@@ -22,8 +22,8 @@ public class LocalImprovementBasedOnFussandElititst extends LocalImprovement
 	@Override
 	public void run(Individual[] population) 
 	{
-		//15% elitist
-		elitistCount = population.length  * 15 / 100;
+		//5% elitist
+		elitistCount = population.length  * 10 / 100;
 		count = population.length / 3;
 		
 		selectionOperator = new FUSS();

@@ -9,7 +9,7 @@ public class SelectionTestAlgo  implements GeneticAlgorithm
 	PrintWriter out; 
 	
 	int POPULATION_SIZE = 10;
-	int NUMBER_OF_OFFSPRING = 10;
+	int NUMBER_OF_OFFSPRING = 5;
 	int NUMBER_OF_GENERATION = 1;
 	
 	ProblemInstance problemInstance;
@@ -64,8 +64,13 @@ public class SelectionTestAlgo  implements GeneticAlgorithm
 		for( i=0;i<POPULATION_SIZE;i++) System.out.print(population[i].costWithPenalty + " ");
 		System.out.print("\n");
 
+		for( i=0;i<POPULATION_SIZE;i++) System.out.print(population[i].distance + " ");
+		System.out.print("\n");
+
 		
-		SelectionOperator so = new RoutletteWheelSelection();
+		SelectionOperator so = new DUSS1();
+		so.setProblemInsctance(problemInstance);
+		
 		for(int generation=0;generation<1;generation++)
 		{
 			//sort function uses selection sort, replace with some O(n lg n) sort algthm
@@ -74,8 +79,20 @@ public class SelectionTestAlgo  implements GeneticAlgorithm
 			
 			//initialiseRouletteWheelSelection(generation);
 			so.initialise(population,true);
-			
 
+			for( i=0;i<POPULATION_SIZE;i++) System.out.print(population[i].costWithPenalty + " ");
+			System.out.print("\n");
+
+			for( i=0;i<POPULATION_SIZE;i++) System.out.print(population[i].distance + " ");
+			System.out.print("\n");
+
+
+			for( i=0;i<NUMBER_OF_OFFSPRING;i++)
+			{
+					System.out.println("dis : "+ so.getIndividual(population).distance);
+			}
+			/*
+			
 			//Select a parent and apply genetic operator
 			for( i=0;i<NUMBER_OF_OFFSPRING;i++)
 			{
@@ -87,7 +104,6 @@ public class SelectionTestAlgo  implements GeneticAlgorithm
 			for( i=0;i<NUMBER_OF_OFFSPRING;i++) System.out.print(cst[i] + " ");
 			System.out.print("\n");
 
-			
 			so.initialise(population,false);
 			
 
@@ -101,8 +117,8 @@ public class SelectionTestAlgo  implements GeneticAlgorithm
 
 			for( i=0;i<NUMBER_OF_OFFSPRING;i++) System.out.print(cst[i] + " ");
 			System.out.print("\n");
-
-			
+	
+			*/
 		}
 
 		return population[0];
@@ -174,43 +190,8 @@ public class SelectionTestAlgo  implements GeneticAlgorithm
 		return POPULATION_SIZE-1;
 	}
 
-	// for now not applying periodAssignment Mutation operator
-	// for now working with only MDVRP ->  period = 1
-	void applyMutation(Individual offspring)
-	{
-		int selectedMutationOperator = selectMutationOperator();
-		
-		if(selectedMutationOperator==0)
-		{
-			int ran = Utility.randomIntInclusive(problemInstance.periodCount-1);
-			offspring.mutateRoutePartition(ran);
-		}
-		else if (selectedMutationOperator == 1)
-		{
-			int period = Utility.randomIntInclusive(problemInstance.periodCount-1);
-			offspring.mutatePermutation(period);//for now single period
-		}
-		else if (selectedMutationOperator == 2)
-		{
-			//int client = Utility.randomIntInclusive(problemInstance.customerCount-1);
-			//offspring.mutatePeriodAssignment(client);
-			
-			int period = Utility.randomIntInclusive(problemInstance.periodCount-1);
-			offspring.mutateRoutePartition(period);
-			offspring.mutatePermutation(period);//for now single period			
-		}
-		else if (selectedMutationOperator == 3){}
-		
-	}
+	
 
-
-	//0 -> route partition
-	//1 ->	permutation
-	//2 -> route partition + permutation
-	int selectMutationOperator()
-	{
-		return Utility.randomIntInclusive(2);
-	}
 
 	void initialisePopulation()
 	{
@@ -224,8 +205,8 @@ public class SelectionTestAlgo  implements GeneticAlgorithm
 		}
 	}
 
-	@Override
-	public int getNumberOfGeeration() {
+	public int getNumberOfGeeration()
+	{
 		// TODO Auto-generated method stub
 		return NUMBER_OF_GENERATION;
 	}

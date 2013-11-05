@@ -1,11 +1,12 @@
 import java.io.PrintWriter;
 import java.util.Arrays;
 import java.util.Scanner;
+import java.util.Vector;
 
 import javax.rmi.CORBA.Util;
 
 
-public class Scheme8 implements GeneticAlgorithm
+public class Scheme8_ implements GeneticAlgorithm
 {
 	//Algorithm parameters
 	int POPULATION_SIZE = 500; 
@@ -37,7 +38,7 @@ public class Scheme8 implements GeneticAlgorithm
 	
 
 	
-	public Scheme8(ProblemInstance problemInstance) 
+	public Scheme8_(ProblemInstance problemInstance) 
 	{
 		// TODO Auto-generated constructor stub
 		this.problemInstance = problemInstance;
@@ -148,11 +149,61 @@ public class Scheme8 implements GeneticAlgorithm
 			
 			TotalCostCalculator.calculateCostofPopulation(parentOffspringTotalPopulation, 0, POPULATION_SIZE, loadPenaltyFactor, routeTimePenaltyFactor);
 			
-			//Preserving the k% best individual + FUSS approach, the n portion of best individuals always make to next generation
-			Utility.sort(parentOffspringTotalPopulation);
 
-			int elitistRatio = POPULATION_SIZE * 10 /100 ;
+			/* REMOVE DUPLICATE */			
+			Utility.sort(parentOffspringTotalPopulation);
+		
+			Vector<Integer> initList = new Vector<Integer>();
+			for(i=1;i<parentOffspringTotalPopulation.length;i++)
+			{
+				double d = Individual.distance(problemInstance, parentOffspringTotalPopulation[i], parentOffspringTotalPopulation[i-1]);
+				if(d==0)
+				{
+					initList.add(new Integer(i));
+				}
+			}
 			
+			if(!initList.isEmpty())
+			{
+				
+				out.println("gene : "+generation+" NO. of duplicates: " + initList.size());
+				for(i=0;i<initList.size();i++)
+				{
+					//out.println("PREV : ");
+					//parentOffspringTotalPopulation[initList.get(i)-1].print();
+					
+					//out.println("DUplicate : ");
+					//parentOffspringTotalPopulation[initList.get(i)].print();
+					
+					
+					parentOffspringTotalPopulation[initList.get(i)] = new Individual(problemInstance);
+					parentOffspringTotalPopulation[initList.get(i)].initialise();
+					
+					//out.println("New  : ");
+					//parentOffspringTotalPopulation[initList.get(i)].print();
+					
+				}
+				
+				out.println("\n\n");
+				
+				
+			}
+			/* REMOVE DUPLICATE END*/
+
+			
+			
+			//Preserving the k% best individual + injection + FUSS approach, the n portion of best individuals always make to next generation
+			Utility.sort(parentOffspringTotalPopulation);
+			
+			
+			int elitistRatio = POPULATION_SIZE * 10 /100 ;
+			for(i=0;i<elitistRatio;i++)
+			{
+				population[i]=parentOffspringTotalPopulation[i];
+			}
+			//System.out.println("elitist : "+elitistRatio);
+			
+			/*
 			population[0] = parentOffspringTotalPopulation[0];
 			
 			int index2=1;
@@ -161,10 +212,7 @@ public class Scheme8 implements GeneticAlgorithm
 			while(index1 < elitistRatio)
 			{
 				double d = Individual.distance(problemInstance, parentOffspringTotalPopulation[index2],population[index1-1]);
-				if(d==0)
-				{
-					
-				}
+				if(d==0){	}
 				else
 				{
 					population[index1] = parentOffspringTotalPopulation[index2];
@@ -173,20 +221,36 @@ public class Scheme8 implements GeneticAlgorithm
 				
 				index2++;
 			}
+			*/
+			int injectionSize=0;
+						
+			/*
+			if(unImprovedGeneration>20)
+			{
+				injectionSize = POPULATION_SIZE *20 /100;
+				unImprovedGeneration=0;
+			}
+			*/
+						
+			for(i=elitistRatio;i<elitistRatio+injectionSize;i++)
+			{
+				population[i] = new Individual(problemInstance);
+				population[i].initialise();
+			}
 			
-			
-			Individual total[] = new Individual[POPULATION_SIZE+NUMBER_OF_OFFSPRING-elitistRatio];
+			Individual total[] = new Individual[POPULATION_SIZE+NUMBER_OF_OFFSPRING-elitistRatio-injectionSize];
 			System.arraycopy(parentOffspringTotalPopulation, elitistRatio, total, 0, total.length);
 			
 			survivalSelectionOperator.initialise(total, true);
-			for( i=elitistRatio;i<POPULATION_SIZE;i++)
+
+			for( i=elitistRatio+injectionSize;i<POPULATION_SIZE;i++)
 			{
 				population[i]= survivalSelectionOperator.getIndividual(total);
 			}
 			
 						
-			Utility.sort(population);	
 			TotalCostCalculator.calculateCostofPopulation(population, 0, POPULATION_SIZE, loadPenaltyFactor, routeTimePenaltyFactor);
+			Utility.sort(population);	
 			
 			System.out.println("Generation : " + generation+" Best : "+ population[0].costWithPenalty);
 			
@@ -194,7 +258,6 @@ public class Scheme8 implements GeneticAlgorithm
 			{
 				unImprovedGeneration=0;
 				previousBest=population[0].costWithPenalty;
-
 			}
 			else
 			{
@@ -203,6 +266,15 @@ public class Scheme8 implements GeneticAlgorithm
 				//System.out.println("UnImproved gen : "+unImprovedGeneration+" previousBest : "+previousBest);
 			}
 			
+			/*
+			if(injectionSize>0)
+			{
+				System.out.println("injection Size : "+injectionSize);
+				break;
+			}
+*/
+		//	if(generation==50)
+		//	break;
 		}
 
 

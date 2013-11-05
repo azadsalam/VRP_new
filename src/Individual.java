@@ -17,12 +17,14 @@ public class Individual
 	boolean isFeasible;
 	boolean feasibilitySet;
 
+	
 	double loadViolation[][];
 	double totalLoadViolation;
 
 	//double totalRouteTime;
 	
 	double totalRouteTimeViolation;
+	double distance = -1;
 	
 	ProblemInstance problemInstance;
 	

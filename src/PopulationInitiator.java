@@ -1,4 +1,3 @@
-
 public class PopulationInitiator 
 {
 	static void initialisePopulation(Individual[] population,int populationSize,ProblemInstance problemInstance)
