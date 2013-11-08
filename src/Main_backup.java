@@ -4,7 +4,7 @@ import java.io.PrintWriter;
 import java.io.UnsupportedEncodingException;
 import java.util.Scanner;
 
-public class Main 
+public class Main_backup 
 {
 	
 	/**
@@ -13,23 +13,10 @@ public class Main
 	 */
 	public static void main(String[] args) throws FileNotFoundException 
 	{
-	//	System.out.println("Saikat!");
 		
-		final Solver solver = new Solver();
+		Solver solver = new Solver();
 		solver.initialise();
-		Thread thread1=new Thread() {			
-			@Override
-			public void run() {
-				solver.solve();	
-				
-			}
-		};
-		//Thread thread2=new visualize();
-		
-		thread1.start();
-		//thread2.start();
-		
-		
+		solver.solve();	
 	}
 
 }

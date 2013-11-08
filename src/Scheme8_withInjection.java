@@ -1,3 +1,5 @@
+import java.io.File;
+import java.io.FileNotFoundException;
 import java.io.PrintWriter;
 import java.util.Arrays;
 import java.util.Scanner;
@@ -70,7 +72,7 @@ public class Scheme8_withInjection implements GeneticAlgorithm
 
 		PopulationInitiator.initialisePopulation(population, POPULATION_SIZE, problemInstance);
 		TotalCostCalculator.calculateCostofPopulation(population,0, POPULATION_SIZE, loadPenaltyFactor, routeTimePenaltyFactor) ;
-		
+		PrintWriter intermeDiateCSV=null;
 		
 		int continuosInjection=0; 
 		int unImprovedGeneration=0;
@@ -287,7 +289,37 @@ public class Scheme8_withInjection implements GeneticAlgorithm
 
 		//	if(generation==50)
 		//	break;
+			/*
+			try {
+				File file=new File("src/interM.csv");
+				if(file.canWrite()){
+					intermeDiateCSV = new PrintWriter(file);
+					//System.out.println("\n\naise!!!\n");
+					for(int gNo=0;gNo<POPULATION_SIZE;gNo++){
+						intermeDiateCSV.println(population[gNo].costWithPenalty);
+					}
+					intermeDiateCSV.close();
+				}
+				else{
+					System.out.println("File Still Possessed by GUI!!");
+				}
+			} catch (FileNotFoundException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+			try {
+				Thread.sleep(1500);
+			} catch (InterruptedException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+		*/
+		
 		}
+		
+		
+		
+		
 
 
 		TotalCostCalculator.calculateCostofPopulation(population,0,POPULATION_SIZE, loadPenaltyFactor, routeTimePenaltyFactor);
