@@ -13,7 +13,7 @@ public class Scheme8_with_Archive implements GeneticAlgorithm
 	//Algorithm parameters
 	int POPULATION_SIZE = 500; 
 	int NUMBER_OF_OFFSPRING = 500;   
-	int NUMBER_OF_GENERATION = 5000;	
+	int NUMBER_OF_GENERATION = 2500;	
 	double loadPenaltyFactor = 10;
 	double routeTimePenaltyFactor = 1;
 
@@ -86,7 +86,7 @@ public class Scheme8_with_Archive implements GeneticAlgorithm
 		double previousBest=population[0].costWithPenalty;
 //		double bestBeforeInjection=-1;
 		
-		for( generation=0;generation<NUMBER_OF_GENERATION && failure < 5;generation++)
+		for( generation=0;generation<NUMBER_OF_GENERATION && failure < 13;generation++)
 		{
 			//For collecting min,max,avg
 			Solver.gatherExcelData(population, POPULATION_SIZE, generation);
@@ -216,22 +216,22 @@ public class Scheme8_with_Archive implements GeneticAlgorithm
 				injectionSize = POPULATION_SIZE * 10 /100;
 			}
 			
-			else if(unImprovedGeneration == 20)
+			else if(unImprovedGeneration == 15)
 			{
 				injectionSize = POPULATION_SIZE * 25 /100;
 			}
 			
-			else if(unImprovedGeneration == 30)
+			else if(unImprovedGeneration == 22)
 			{
 				injectionSize = POPULATION_SIZE * 50 /100;
 			}
 			
-			else if(unImprovedGeneration == 40)
+			else if(unImprovedGeneration == 30)
 			{
 				injectionSize = POPULATION_SIZE * 75 /100;
 			}
 			
-			else if(unImprovedGeneration > 50)
+			else if(unImprovedGeneration > 40)
 			{
 				injectionSize = 0 ;
 				unImprovedGeneration = 0;
@@ -371,7 +371,15 @@ public class Scheme8_with_Archive implements GeneticAlgorithm
 
 		TotalCostCalculator.calculateCostofPopulation(population,0,POPULATION_SIZE, loadPenaltyFactor, routeTimePenaltyFactor);
 		Utility.sort(population);
+		Utility.sort(archive);
+		
+		System.out.println("FINAL ARCHIVE Size : "+archive.size());
+		for(i=0;i<archive.size();i++)
+			System.out.print(archive.get(i).costWithPenalty+" ");
+		System.out.println();
+
 		Solver.gatherExcelData(population, POPULATION_SIZE, generation);
+		
 		
 		if(Solver.outputToFile)
 		{

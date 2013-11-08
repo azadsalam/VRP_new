@@ -1,4 +1,5 @@
 import java.util.Random;
+import java.util.Vector;
 
 public class Utility 
 {
@@ -55,6 +56,27 @@ public class Utility
 					temp = array[i];
 					array[i] =array[j];
 					array[j] = temp;
+				}
+			}
+		}
+
+	}
+	
+	public static void sort(Vector<Individual> vec)
+	{
+		Individual temp;
+		//FOR NOW DONE SELECTION SORT
+		//AFTERWARDS REPLACE IT WITH QUICK SORT OR SOME OTHER O(n logn) sort
+		for(int i=0;i<vec.size();i++)
+		{
+			for(int j=i+1;j<vec.size();j++)
+			{
+				if(vec.get(i).costWithPenalty > vec.get(j).costWithPenalty)
+				{
+					temp = vec.get(i);
+					vec.set(i, vec.get(j));
+					vec.set(j, temp);
+
 				}
 			}
 		}
