@@ -70,7 +70,7 @@ public class Solver
 		
 		//problemInstance.print();
 		
-		GeneticAlgorithm ga = new Scheme8_withInjection(problemInstance);		
+		GeneticAlgorithm ga = new Scheme8_with_Archive(problemInstance);		
 		if(writeToExcel) 
 		{
 			Solver.exportToCsv.init(ga.getNumberOfGeeration()+1);	

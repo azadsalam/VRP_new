@@ -8,7 +8,7 @@ import java.util.Vector;
 import javax.rmi.CORBA.Util;
 
 
-public class Scheme8_withInjection implements GeneticAlgorithm
+public class Scheme8_with_Archive implements GeneticAlgorithm
 {
 	//Algorithm parameters
 	int POPULATION_SIZE = 500; 
@@ -38,11 +38,9 @@ public class Scheme8_withInjection implements GeneticAlgorithm
 	//Temprary Variables
 	Individual parent1,parent2;
 	
+	Vector<Individual> archive;
 	
-	//Vector<Individual> archive;
-
-	
-	public Scheme8_withInjection(ProblemInstance problemInstance) 
+	public Scheme8_with_Archive(ProblemInstance problemInstance) 
 	{
 		// TODO Auto-generated constructor stub
 		this.problemInstance = problemInstance;
@@ -65,7 +63,7 @@ public class Scheme8_withInjection implements GeneticAlgorithm
 		localSearch = new FirstChoiceHillClimbing();
 		localImprovement = new LocalImprovementBasedOnFussandElititst(loadPenaltyFactor, routeTimePenaltyFactor, localSearch, POPULATION_SIZE);	
 	
-		//archive = new Vector<Individual>();
+		archive = new Vector<Individual>();
 	}
 
 	public Individual run() 
@@ -101,9 +99,10 @@ public class Scheme8_withInjection implements GeneticAlgorithm
 			
 			int noOfPrincess;
 			
+			// FOR NOW NO EXTRA KHATIR ;-) 
 			if(unImprovedGeneration<=5000)
 			{
-				noOfPrincess = 2;
+				noOfPrincess = 0;
 			}
 			else
 			{
@@ -217,33 +216,52 @@ public class Scheme8_withInjection implements GeneticAlgorithm
 				injectionSize = POPULATION_SIZE * 10 /100;
 			}
 			
-			else if(unImprovedGeneration == 25)
+			else if(unImprovedGeneration == 20)
 			{
 				injectionSize = POPULATION_SIZE * 25 /100;
 			}
 			
-			else if(unImprovedGeneration == 50)
+			else if(unImprovedGeneration == 30)
 			{
 				injectionSize = POPULATION_SIZE * 50 /100;
 			}
 			
-			else if(unImprovedGeneration == 120)
+			else if(unImprovedGeneration == 40)
 			{
 				injectionSize = POPULATION_SIZE * 75 /100;
 			}
 			
-			else if(unImprovedGeneration > 200)
+			else if(unImprovedGeneration > 50)
 			{
-				injectionSize = POPULATION_SIZE * 90 / 100 ;
+				injectionSize = 0 ;
 				unImprovedGeneration = 0;
 				
-				if(lastFailureBest == population[0].costWithPenalty)
+				
+				for(i=0;i<elitistRatio;i++)
 				{
-					failure++;
-					System.out.println("Failure : "+failure);
+					archive.add(population[i]);
+					population[i] = new Individual(problemInstance);
+					population[i].initialise();
+				
 				}
 				
-				lastFailureBest = population[0].costWithPenalty;
+				previousBest = population[i].costWithPenalty;
+				
+				TotalCostCalculator.calculateCostofPopulation(population, 0, elitistRatio, loadPenaltyFactor, routeTimePenaltyFactor);
+				
+				System.out.println("ARCHIVE Size : "+archive.size());
+				for(i=0;i<archive.size();i++)
+					System.out.print(archive.get(i).costWithPenalty+" ");
+				System.out.println();
+				
+				System.out.println("INJECTED PEOPLE ");
+				
+				for(i=0;i<elitistRatio;i++)
+					System.out.print(population[i].costWithPenalty+" ");
+				System.out.println();
+
+				
+
 			}
 			
 				
@@ -263,10 +281,35 @@ public class Scheme8_withInjection implements GeneticAlgorithm
 				population[i]= survivalSelectionOperator.getIndividual(total);
 			}
 			
+			
+			if(archive.size()>(POPULATION_SIZE/3))
+			{	
+				failure++;
+				for(i=0;i<archive.size();i++)
+					population[i] = archive.get(i);
+				
+				
+				for(i=archive.size();i<POPULATION_SIZE;i++)
+				{
+					population[i] = new Individual(problemInstance);
+					population[i].initialise();
+				}	
+				
+				archive.clear();
+				
+				System.out.println("NEW POPULATION : ");
+				TotalCostCalculator.calculateCostofPopulation(population, 0, POPULATION_SIZE, loadPenaltyFactor, routeTimePenaltyFactor);
+				Utility.sort(population);
+				
+				for(i=0;i<POPULATION_SIZE;i++)
+					System.out.print(population[i].costWithPenalty+" ");
+				System.out.println();
+
+			}
+			
 						
 			TotalCostCalculator.calculateCostofPopulation(population, 0, POPULATION_SIZE, loadPenaltyFactor, routeTimePenaltyFactor);
 			Utility.sort(population);	
-			
 			
 			
 			if( population[0].costWithPenalty < previousBest)
