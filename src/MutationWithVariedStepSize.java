@@ -5,7 +5,7 @@ public class MutationWithVariedStepSize
 	void applyMutation(Individual offspring,int generation)
 	{
 //		int max = initialCount - generation / 50;		
-		int max = 5;		
+		int max = 15;		
 
 		int count = Utility.randomIntInclusive(max);
 		

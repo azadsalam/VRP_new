@@ -7,8 +7,8 @@ import javax.swing.plaf.metal.MetalIconFactory.FileIcon16;
 
 public class Solver 
 {
-	String inputFileName = "PVRP/p01.txt";
-	String outputFileName = "PVRP/p01_scheme6_newRoutePart.txt";
+	String inputFileName = "MDPVRP/pr03.txt";
+	String outputFileName = "MDPVRP/pr03_scheme6_newRoutePart.txt";
 	int runSize=10;
 	boolean singleRun = true;
 	
