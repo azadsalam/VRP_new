@@ -102,6 +102,7 @@ public class Individual
 		// given that routePartition[i-1]+1 <= routePartition[i]
 
 		//bool found;
+		
 		for(int period=0;period<problemInstance.periodCount;period++)
 		{
 			allocated = 0;
@@ -115,6 +116,7 @@ public class Individual
 			}
 			routePartition[period][problemInstance.vehicleCount-1] = problemInstance.customerCount-1;
 		}
+		
 		
 		calculateCostAndPenalty();
 
@@ -258,6 +260,7 @@ public class Individual
 		feasibilitySet = true;
 		
 	} 
+
 
 	//calcuate fitness for each period for each vehicle
 	// route for vehicle i is  [ routePartition[i-1]+1 , routePartition[i] ]
@@ -454,7 +457,7 @@ public class Individual
 		
 	}
 	
-	
+	/*
 	// swaps even if neither of the customers get visited that day
 	//  updates cost and penalty
 	void mutatePermutationUC(int period)
@@ -479,9 +482,143 @@ public class Individual
 		// FITNESS CAN BE UPDATED HERE
 	}
 	
+	
+		// updates cost and penalty
+	void mutatePermutationWithinSingleRouteUC()
+	{
+		boolean success = false;
+		do
+		{
+			int period = Utility.randomIntInclusive(problemInstance.periodCount-1);
+			int vehicle = Utility.randomIntInclusive(problemInstance.vehicleCount-1);
+			success = mutatePermutationWithinSingleRoute(period, vehicle);
+		}while(success==false);
+		calculateCostAndPenalty();
+	}
+	
+	
+		// updates cost and penalty
+	void mutatePermutationOfDifferentRouteUC()
+	{	
+		if(problemInstance.vehicleCount<2)return;
+		
+		boolean success = false;
+		do
+		{
+			int period = Utility.randomIntInclusive(problemInstance.periodCount-1);
+			int vehicle1 = Utility.randomIntInclusive(problemInstance.vehicleCount-1);
+			int vehicle2 = Utility.randomIntInclusive(problemInstance.vehicleCount-1);
+			if(vehicle1==vehicle2)continue;
+			success = mutatePermutationOfDifferentRoute(period, vehicle1,vehicle2);
+		}while(success==false);
+		
+		calculateCostAndPenalty();
+	}
+
+	// updates cost and penalty
+	void mutateRoutePartitionUC()
+	{
+		//nothing to do if only one vehicle
+		if(problemInstance.vehicleCount == 1) return ;
+		
+		int period = Utility.randomIntInclusive(problemInstance.periodCount-1);
+		mutateRoutePartition(period);
+		
+		calculateCostAndPenalty();
+	}
+
+	// updates cost + penalty
+	// if sobgula client er frequency = period hoy tahole, period assignment mutation er kono effect nai
+	void mutatePeriodAssignmentUC()
+	{
+		boolean success;
+		int clientNo;
+		int total = problemInstance.customerCount;
+		do
+		{
+			clientNo = Utility.randomIntInclusive(problemInstance.customerCount-1);
+			success = mutatePeriodAssignment(clientNo);
+			total--;
+		}while(success==false && total>0);
+		
+		calculateCostAndPenalty();
+	}
+	
+	*/
 	/** swaps even if neither of the customers get visited that day
 	<br> do NOT updates cost and penalty
 	*/
+
+	
+	
+	void mutatePermutationWithInsertion()
+	{
+		int period = Utility.randomIntInclusive(problemInstance.periodCount-1);
+		boolean success;
+		do
+		{
+			success = mutatePermutationWithInsertion(period);
+		}while(success==false);
+	}
+	
+	boolean mutatePermutationWithInsertion(int period)
+	{
+		int left = Utility.randomIntInclusive(0,problemInstance.customerCount-1);
+		int right = Utility.randomIntInclusive(0,problemInstance.customerCount-1);
+		
+		if(left==right) return false;
+		if(left > right)
+		{
+			int tmp = left;
+			left = right;
+			right = tmp;
+		}
+		
+		int clockwise  =  Utility.randomIntInclusive(1);
+		
+		//for(int j =0;j<problemInstance.customerCount;j++)
+		//	System.out.print(" "+permutation[period][j]);
+		//System.out.println("");
+		
+		//clockwise - left goes right , all the rest go left
+		if(clockwise==1)
+		{
+			int saved = permutation[period][left];
+			for(int i=left+1;i<=right;i++)
+			{
+				permutation[period][i-1]=permutation[period][i];
+			}
+			permutation[period][right] = saved;
+			//System.out.println("period : "+period+" "+left+" -> "+right+" "+" all go left");
+		}
+		else //amticlockwise - right goes left, all other go right
+		{
+			int saved = permutation[period][right];
+			
+			for(int i = right-1;i>=left;i--)
+			{
+				permutation[period][i+1] = permutation[period][i];
+			}
+			permutation[period][left]=saved;
+			//System.out.println("period : "+period+" "+left+" -> "+right+" "+" all go right");
+
+		}
+		
+		//for(int j =0;j<problemInstance.customerCount;j++)
+		//	System.out.print(" "+permutation[period][j]);
+		//System.out.println("\n\n");
+		
+		return true;
+	}
+
+	
+	
+	void mutatePermutation()
+	{
+		int period = Utility.randomIntInclusive(problemInstance.periodCount-1);
+		mutatePermutation(period);
+	}
+	
 	void mutatePermutation(int period)
 	{
 		int first = Utility.randomIntInclusive(problemInstance.customerCount-1);
@@ -499,21 +636,8 @@ public class Individual
 		int temp = permutation[period][first];
 		permutation[period][first] = permutation[period][second];
 		permutation[period][second] = temp;
-
 	}
 	
-	// updates cost and penalty
-	void mutatePermutationWithinSingleRouteUC()
-	{
-		boolean success = false;
-		do
-		{
-			int period = Utility.randomIntInclusive(problemInstance.periodCount-1);
-			int vehicle = Utility.randomIntInclusive(problemInstance.vehicleCount-1);
-			success = mutatePermutationWithinSingleRoute(period, vehicle);
-		}while(success==false);
-		calculateCostAndPenalty();
-	}
 	
 	//DO NOT updates cost and penalty
 	void mutatePermutationWithinSingleRoute()
@@ -557,23 +681,6 @@ public class Individual
 		
 	}
 	
-	// updates cost and penalty
-	void mutatePermutationOfDifferentRouteUC()
-	{	
-		if(problemInstance.vehicleCount<2)return;
-		
-		boolean success = false;
-		do
-		{
-			int period = Utility.randomIntInclusive(problemInstance.periodCount-1);
-			int vehicle1 = Utility.randomIntInclusive(problemInstance.vehicleCount-1);
-			int vehicle2 = Utility.randomIntInclusive(problemInstance.vehicleCount-1);
-			if(vehicle1==vehicle2)continue;
-			success = mutatePermutationOfDifferentRoute(period, vehicle1,vehicle2);
-		}while(success==false);
-		
-		calculateCostAndPenalty();
-	}
 	
 	/** DO NOT updates cost and penalty
 	*/
@@ -628,17 +735,8 @@ public class Individual
 		
 	}
 
-	// updates cost and penalty
-	void mutateRoutePartitionUC()
-	{
-		//nothing to do if only one vehicle
-		if(problemInstance.vehicleCount == 1) return ;
-		
-		int period = Utility.randomIntInclusive(problemInstance.periodCount-1);
-		mutateRoutePartition(period);
-		
-		calculateCostAndPenalty();
-	}
+	
+	
 	
 	/** do not updates cost and penalty
 	*/
@@ -653,6 +751,8 @@ public class Individual
 
 	}
 	
+
+/*
 	//moves some red line
 	//no effect if only one vehicle
 	private void mutateRoutePartition(int period)
@@ -662,7 +762,6 @@ public class Individual
 
 		//pick a red line/seperator
 		//generate random number in [0,vehicleCount-1)
-
 
 		int distance,increment;
 
@@ -695,24 +794,49 @@ public class Individual
 
 	}
 
-
-	// updates cost + penalty
-	// if sobgula client er frequency = period hoy tahole, period assignment mutation er kono effect nai
-	void mutatePeriodAssignmentUC()
-	{
-		boolean success;
-		int clientNo;
-		int total = problemInstance.customerCount;
-		do
-		{
-			clientNo = Utility.randomIntInclusive(problemInstance.customerCount-1);
-			success = mutatePeriodAssignment(clientNo);
-			total--;
-		}while(success==false && total>0);
-		
-		calculateCostAndPenalty();
-	}
+*/
 	
+	//moves some red line / route partition line
+    // only single step left or right
+	//NEW ONE 
+	private void mutateRoutePartition(int period)
+	{
+		//nothing to do if only one vehicle
+		if(problemInstance.vehicleCount == 1) return ;
+
+		//pick a red line/seperator
+		//generate random number in [0,vehicleCount-1)
+
+		int distance,increment;
+
+		while(true)
+		{
+			int seperatorIndex = Utility.randomIntInclusive(problemInstance.vehicleCount-2);
+			int dir = Utility.randomIntInclusive(1); // 0-> left , 1-> right
+			if(dir==0)//move the seperator left
+			{
+				if(seperatorIndex==0) distance = routePartition[period][0] ;
+				else distance = routePartition[period][seperatorIndex] - routePartition[period][seperatorIndex-1];
+				// if the line can not merge with the previous one ,
+				// difference = routePartition[seperatorIndex] - 1 - routePartition[seperatorIndex-1]
+
+				// increment should be in [1,distance]
+				if(distance==0)continue;
+				increment = 1;
+				routePartition[period][seperatorIndex] -= increment;
+				return;
+			}
+			else	//move the seperator right
+			{
+				distance = routePartition[period][seperatorIndex+1] - routePartition[period][seperatorIndex] ;
+				if(distance==0)continue;
+				increment = 1 ;
+				routePartition[period][seperatorIndex] += increment;
+				return;
+			}
+		}
+
+	}
 	/** do not updates cost + penalty
 	// if sobgula client er frequency = period hoy tahole, period assignment mutation er kono effect nai
 	*/
@@ -755,6 +879,8 @@ public class Individual
 
 		return true;
 	}
+	
+	
 	
 	/** 
 	 * 

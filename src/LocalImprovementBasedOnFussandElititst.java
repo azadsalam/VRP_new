@@ -23,7 +23,7 @@ public class LocalImprovementBasedOnFussandElititst extends LocalImprovement
 	public void run(Individual[] population) 
 	{
 		//5% elitist
-		elitistCount = population.length  * 10 / 100;
+		elitistCount = population.length  * 5 / 100;
 		count = population.length / 3;
 		
 		selectionOperator = new FUSS();

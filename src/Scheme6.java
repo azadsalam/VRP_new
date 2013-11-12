@@ -8,11 +8,11 @@ import javax.rmi.CORBA.Util;
 public class Scheme6 implements GeneticAlgorithm
 {
 	//Algorithm parameters
-	int POPULATION_SIZE = 1000; 
+	int POPULATION_SIZE = 500; 
 	int NUMBER_OF_OFFSPRING = 500;   
-	int NUMBER_OF_GENERATION = 3000;	
+	int NUMBER_OF_GENERATION = 300;	
 	double loadPenaltyFactor = 10;
-	double routeTimePenaltyFactor = 1;
+	double routeTimePenaltyFactor = 10;
 
 	
 	//Algorithm data structures

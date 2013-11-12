@@ -13,14 +13,14 @@ public class FirstChoiceHillClimbing extends LocalSearch {
 		Individual node,neighbour;
 		node = new Individual(initialNode);
 		
-		while(retry<20)
+		while(retry<15)
 		{			
 			neighbour = new Individual(node);
 			applyMutation(neighbour);
 			TotalCostCalculator.calculateCost(neighbour, loadPenaltyFactor, routeTimePenaltyFactor);
 			
 			//better
-			if(neighbour.costWithPenalty < node.costWithPenalty)
+			if(neighbour.costWithPenalty <= node.costWithPenalty)
 			{
 				node = neighbour;
 				retry=0;
@@ -38,7 +38,10 @@ public class FirstChoiceHillClimbing extends LocalSearch {
 	
 	void applyMutation(Individual offspring)
 	{
-		int selectedMutationOperator = Utility.randomIntInclusive(3);
+		
+		int rand = 3;
+		
+		int selectedMutationOperator = Utility.randomIntInclusive(rand);
 		
 		if(selectedMutationOperator==0)
 		{
@@ -46,16 +49,24 @@ public class FirstChoiceHillClimbing extends LocalSearch {
 		}
 		else if (selectedMutationOperator == 1)
 		{
-			offspring.mutatePermutationWithinSingleRoute();
+			if(offspring.problemInstance.periodCount==1)
+			{
+				offspring.mutatePermutation();	
+			}
+			else
+			{
+				offspring.mutatePeriodAssignment();
+			}
 		}
-		else if (selectedMutationOperator == 2)
+		else if (selectedMutationOperator ==2)
 		{
-			offspring.mutatePermutationOfDifferentRoute();
+			offspring.mutatePermutation();
 		}
-		else if (selectedMutationOperator == 3)
+		else if (selectedMutationOperator ==3)
 		{
-			offspring.mutatePeriodAssignment();
+			offspring.mutatePermutationWithInsertion();
 		}
 		
+	
 	}
 }

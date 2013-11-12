@@ -63,6 +63,11 @@ public class TestAlgo  implements GeneticAlgorithm
 		
 		for(int generation=0;generation<1;generation++)
 		{
+			for( i=0;i<POPULATION_SIZE;i++)
+			{
+				population[i].mutatePermutationWithInsertion();
+				population[i].print();
+			}
 
 		}
 
@@ -83,7 +88,7 @@ public class TestAlgo  implements GeneticAlgorithm
 		}
 	}
 
-	@Override
+	
 	public int getNumberOfGeeration() {
 		// TODO Auto-generated method stub
 		return NUMBER_OF_GENERATION;

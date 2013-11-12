@@ -7,9 +7,9 @@ import javax.swing.plaf.metal.MetalIconFactory.FileIcon16;
 
 public class Solver 
 {
-	String inputFileName = "MDPVRP/pr01.txt";
-	String outputFileName = "MDPVRP/out1_scheme8.txt";
-	int runSize=5;
+	String inputFileName = "PVRP/p02.txt";
+	String outputFileName = "PVRP/p02_scheme6_newOP.txt";
+	int runSize=10;
 	boolean singleRun = true;
 	
 	File inputFile,outputFile;	
@@ -70,7 +70,7 @@ public class Solver
 		
 		//problemInstance.print();
 		
-		GeneticAlgorithm ga = new Scheme8_with_Archive(problemInstance);		
+		GeneticAlgorithm ga = new Scheme6(problemInstance);		
 		if(writeToExcel) 
 		{
 			Solver.exportToCsv.init(ga.getNumberOfGeeration()+1);	
@@ -82,9 +82,7 @@ public class Solver
 		if(generateAggregatedReport)
 			generateAggregatedReport(ga);
 		
-		
 		output.close();
-		
 	}
 	
 	

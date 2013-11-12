@@ -11,9 +11,9 @@ import javax.rmi.CORBA.Util;
 public class Scheme8_with_Archive implements GeneticAlgorithm
 {
 	//Algorithm parameters
-	int POPULATION_SIZE = 500; 
-	int NUMBER_OF_OFFSPRING = 500;   
-	int NUMBER_OF_GENERATION = 2500;	
+	int POPULATION_SIZE = 3000; 
+	int NUMBER_OF_OFFSPRING = 1500;   
+	int NUMBER_OF_GENERATION = 1000;	
 	double loadPenaltyFactor = 10;
 	double routeTimePenaltyFactor = 1;
 
