@@ -103,6 +103,7 @@ public class Individual
 
 		//bool found;
 		
+		/*
 		for(int period=0;period<problemInstance.periodCount;period++)
 		{
 			allocated = 0;
@@ -116,7 +117,24 @@ public class Individual
 			}
 			routePartition[period][problemInstance.vehicleCount-1] = problemInstance.customerCount-1;
 		}
+		*/
 		
+		for(int period=0;period<problemInstance.periodCount;period++)
+		{
+			allocated = 0;
+			int avgStepSize = problemInstance.customerCount / problemInstance.vehicleCount;
+					
+			while(allocated != problemInstance.vehicleCount-1)
+			{
+				random = Utility.randomIntInclusive(problemInstance.customerCount-1);
+	
+				routePartition[period][allocated]=random;
+				sort(period,random,allocated);
+				allocated++;
+			}
+			routePartition[period][problemInstance.vehicleCount-1] = problemInstance.customerCount-1;
+		}
+
 		
 		calculateCostAndPenalty();
 
