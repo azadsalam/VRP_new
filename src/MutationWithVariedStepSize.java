@@ -11,8 +11,8 @@ public class MutationWithVariedStepSize
 		
 		//System.out.println("gen : " + generation + " max : " + max+" count : "+count);		
 
-		int rand = 3;
-		if(offspring.problemInstance.periodCount==1)rand=2;
+		int rand = 4;
+		if(offspring.problemInstance.periodCount==1)rand=3;
 		
 		for(int i=0;i<count;i++)
 		{
@@ -32,10 +32,12 @@ public class MutationWithVariedStepSize
 			}
 			else if (selectedMutationOperator == 3)
 			{
+				offspring.mutateRoutePartitionWithRandomStepSize();
+			}
+			else if (selectedMutationOperator == 4)
+			{
 				offspring.mutatePeriodAssignment();
 			}
-			
-			
 		}
 		
 		offspring.calculateCostAndPenalty();

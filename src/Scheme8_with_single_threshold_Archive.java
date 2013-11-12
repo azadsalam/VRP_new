@@ -101,7 +101,7 @@ public class Scheme8_with_single_threshold_Archive implements GeneticAlgorithm
 			int noOfPrincess;
 			
 			// FOR NOW NO EXTRA KHATIR ;-) 
-			noOfPrincess = 0;
+			noOfPrincess = 2;
 			
 			
 			i=0;

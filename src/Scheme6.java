@@ -10,7 +10,7 @@ public class Scheme6 implements GeneticAlgorithm
 	//Algorithm parameters
 	int POPULATION_SIZE = 500; 
 	int NUMBER_OF_OFFSPRING = 500;   
-	int NUMBER_OF_GENERATION = 300;	
+	int NUMBER_OF_GENERATION = 600;	
 	double loadPenaltyFactor = 10;
 	double routeTimePenaltyFactor = 10;
 

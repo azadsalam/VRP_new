@@ -1,4 +1,5 @@
 import java.io.PrintWriter;
+import java.util.Random;
 import java.util.Scanner;
 
 
@@ -119,17 +120,28 @@ public class Individual
 		}
 		*/
 		
+
+		int avgStepSize = problemInstance.customerCount / problemInstance.vehicleCount;
+		int deviation = avgStepSize / 3;
+
+		//problemInstance.out.println("Step Size : "+avgStepSize+" Deviation : "+deviation);
+		
 		for(int period=0;period<problemInstance.periodCount;period++)
 		{
 			allocated = 0;
-			int avgStepSize = problemInstance.customerCount / problemInstance.vehicleCount;
 					
 			while(allocated != problemInstance.vehicleCount-1)
 			{
-				random = Utility.randomIntInclusive(problemInstance.customerCount-1);
-	
-				routePartition[period][allocated]=random;
-				sort(period,random,allocated);
+				int minus  = Utility.randomIntInclusive(1);
+				int base = avgStepSize * (allocated+1);
+				random = Utility.randomIntInclusive(deviation);
+				
+				int partition = base;
+				if(minus==1) partition = base - random;
+				else partition = base + random;
+				
+				routePartition[period][allocated]=partition;
+				sort(period,partition,allocated);
 				allocated++;
 			}
 			routePartition[period][problemInstance.vehicleCount-1] = problemInstance.customerCount-1;
@@ -579,7 +591,7 @@ public class Individual
 		}while(success==false);
 	}
 	
-	boolean mutatePermutationWithInsertion(int period)
+	private boolean mutatePermutationWithInsertion(int period)
 	{
 		int left = Utility.randomIntInclusive(0,problemInstance.customerCount-1);
 		int right = Utility.randomIntInclusive(0,problemInstance.customerCount-1);
@@ -637,7 +649,7 @@ public class Individual
 		mutatePermutation(period);
 	}
 	
-	void mutatePermutation(int period)
+	private void mutatePermutation(int period)
 	{
 		int first = Utility.randomIntInclusive(problemInstance.customerCount-1);
 
@@ -754,6 +766,56 @@ public class Individual
 	}
 
 	
+
+	/** do not updates cost and penalty
+	*/
+	void mutateRoutePartitionWithRandomStepSize()
+	{
+		//nothing to do if only one vehicle
+		if(problemInstance.vehicleCount == 1) return ;
+		
+		int period = Utility.randomIntInclusive(problemInstance.periodCount-1);
+		mutateRoutePartitionWithRandomStepSize(period);
+		
+	}
+	
+	//moves some red line / route partition line
+    // only single step left or right
+	//NEW ONE 
+	private void mutateRoutePartitionWithRandomStepSize(int period)
+	{
+		int distance,increment;
+
+		while(true)
+		{
+			int seperatorIndex = Utility.randomIntInclusive(problemInstance.vehicleCount-2);
+			int dir = Utility.randomIntInclusive(1); // 0-> left , 1-> right
+			if(dir==0)//move the seperator left
+			{
+				if(seperatorIndex==0) distance = routePartition[period][0] ;
+				else distance = routePartition[period][seperatorIndex] - routePartition[period][seperatorIndex-1];
+				if(distance==0)continue;
+				
+				int max  = distance/3;						
+				increment = Utility.randomIntInclusive(max);
+				
+				routePartition[period][seperatorIndex] -= increment;
+				return;
+			}
+			else	//move the seperator right
+			{
+				distance = routePartition[period][seperatorIndex+1] - routePartition[period][seperatorIndex] ;
+				if(distance==0)continue;
+				int max  = distance/3;						
+				increment = Utility.randomIntInclusive(max);
+				routePartition[period][seperatorIndex] += increment;
+				return;
+			}
+		}
+
+	}
+	
+
 	
 	
 	/** do not updates cost and penalty
@@ -855,6 +917,8 @@ public class Individual
 		}
 
 	}
+	
+
 	/** do not updates cost + penalty
 	// if sobgula client er frequency = period hoy tahole, period assignment mutation er kono effect nai
 	*/

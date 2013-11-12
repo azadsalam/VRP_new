@@ -39,7 +39,7 @@ public class FirstChoiceHillClimbing extends LocalSearch {
 	void applyMutation(Individual offspring)
 	{
 		
-		int rand = 3;
+		int rand = 4;
 		
 		int selectedMutationOperator = Utility.randomIntInclusive(rand);
 		
@@ -65,6 +65,11 @@ public class FirstChoiceHillClimbing extends LocalSearch {
 		else if (selectedMutationOperator ==3)
 		{
 			offspring.mutatePermutationWithInsertion();
+		}
+		
+		else if (selectedMutationOperator ==4)
+		{
+			offspring.mutateRoutePartitionWithRandomStepSize();
 		}
 		
 	
