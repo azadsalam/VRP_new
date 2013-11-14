@@ -1,9 +1,12 @@
+import java.util.Arrays;
+import java.util.Comparator;
 import java.util.Random;
 import java.util.Vector;
 
 public class Utility 
 {
 	static Random randomGenerator = new Random(System.currentTimeMillis());
+	static MyComparator mc = new MyComparator();
 	//returns a random numbor between [m,n] 
 	
 	public static int randomIntInclusive(int m,int n)
@@ -44,24 +47,25 @@ public class Utility
 	
 	public static void sort(Individual[] array,int length)
 	{
-		Individual temp;
-		//FOR NOW DONE SELECTION SORT
-		//AFTERWARDS REPLACE IT WITH QUICK SORT OR SOME OTHER O(n logn) sort
-		for(int i=0;i<length;i++)
-		{
-			for(int j=i+1;j<length;j++)
-			{
-				if(array[i].costWithPenalty > array[j].costWithPenalty)
-				{
-					temp = array[i];
-					array[i] =array[j];
-					array[j] = temp;
-				}
-			}
-		}
 
+		Arrays.sort(array, 0, length,mc);
 	}
 	
+	public static class MyComparator implements Comparator<Individual>
+	{
+
+		public int compare(Individual o1, Individual o2) {
+			// TODO Auto-generated method stub
+			if(o1.costWithPenalty < o2.costWithPenalty)
+				return -1;
+			else if(o1.costWithPenalty > o2.costWithPenalty)
+				return 1;
+			
+			return 0;
+		}
+		
+	}
+
 	public static void sort(Vector<Individual> vec)
 	{
 		Individual temp;

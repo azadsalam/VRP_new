@@ -1,6 +1,7 @@
 import java.io.PrintWriter;
 import java.lang.reflect.Array;
 import java.util.Arrays;
+import java.util.Comparator;
 import java.util.Scanner;
 
 
@@ -66,15 +67,25 @@ public class TestAlgo  implements GeneticAlgorithm
 		{
 			for( i=0;i<POPULATION_SIZE;i++)
 			{
-				//population[i].mutatePermutationWithInsertion();
-				//population[i].print();
+				System.out.print(" "+population[i].costWithPenalty);
 			}
+			System.out.println("\n After sort : ");
 
+			Utility.sort(population, POPULATION_SIZE);
+			for( i=0;i<POPULATION_SIZE;i++)
+			{
+				System.out.print(" "+population[i].costWithPenalty);
+			}
+			System.out.println("");
 		}
 
 		return population[0];
 
 	}
+	
+	
+	
+
 	
 	
 	void initialisePopulation()
