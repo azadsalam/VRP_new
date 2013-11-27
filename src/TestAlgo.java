@@ -65,16 +65,21 @@ public class TestAlgo  implements GeneticAlgorithm
 		
 		for(int generation=0;generation<1;generation++)
 		{
-			for( i=0;i<POPULATION_SIZE;i++)
+			for( i=0;i<POPULATION_SIZE-1;i++)
 			{
-				System.out.print(" "+population[i].costWithPenalty);
-			}
-			System.out.println("\n After sort : ");
-
-			Utility.sort(population, POPULATION_SIZE);
-			for( i=0;i<POPULATION_SIZE;i++)
-			{
-				System.out.print(" "+population[i].costWithPenalty);
+				parent1 = population[i];
+				parent2 = population[i+1];
+				
+				Individual offspring1 = new Individual(problemInstance);
+				Individual offspring2 = new Individual(problemInstance);
+				
+				Individual.crossOver_Uniform(problemInstance, parent1, parent2, offspring1, offspring2);	
+				
+				out.println("HERE GOES::");
+				parent1.miniPrint();
+				parent2.miniPrint();
+				offspring1.miniPrint();
+				offspring2.miniPrint();
 			}
 			System.out.println("");
 		}
@@ -96,7 +101,7 @@ public class TestAlgo  implements GeneticAlgorithm
 			population[i] = new Individual(problemInstance);
 			population[i].initialise();
 			//out.println("Printing individual "+ i +" : \n");
-			population[i].print();
+			//population[i].print();
 		}
 	}
 

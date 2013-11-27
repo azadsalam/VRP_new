@@ -47,7 +47,6 @@ public class Utility
 	
 	public static void sort(Individual[] array,int length)
 	{
-
 		Arrays.sort(array, 0, length,mc);
 	}
 	

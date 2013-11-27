@@ -31,6 +31,7 @@ public class FirstChoiceHillClimbing extends LocalSearch {
 			}
 		}
 		
+		
 		initialNode.copyIndividual(node);
 		
 	}

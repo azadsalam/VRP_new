@@ -1,16 +1,17 @@
 import java.io.PrintWriter;
 import java.util.Arrays;
 import java.util.Scanner;
+import java.util.Vector;
 
 import javax.rmi.CORBA.Util;
 
 
-public class Scheme6 implements GeneticAlgorithm
+public class Scheme6_withDuplicateRemoval implements GeneticAlgorithm
 {
 	//Algorithm parameters
-	int POPULATION_SIZE = 200; 
-	int NUMBER_OF_OFFSPRING = 200;   
-	int NUMBER_OF_GENERATION = 400;
+	int POPULATION_SIZE = 100; 
+	int NUMBER_OF_OFFSPRING = 100;   
+	int NUMBER_OF_GENERATION = 100;
 	double loadPenaltyFactor = 50;
 	double routeTimePenaltyFactor = 10;
 
@@ -36,7 +37,7 @@ public class Scheme6 implements GeneticAlgorithm
 	
 
 	
-	public Scheme6(ProblemInstance problemInstance) 
+	public Scheme6_withDuplicateRemoval(ProblemInstance problemInstance) 
 	{
 		// TODO Auto-generated constructor stub
 		this.problemInstance = problemInstance;
@@ -56,7 +57,7 @@ public class Scheme6 implements GeneticAlgorithm
 	    fussSelection = new FUSS();
 		survivalSelectionOperator = new FUSS(); 
 
-		localSearch = new FirstChoiceHillClimbing();
+		localSearch = new SimulatedAnnealing();
 		localImprovement = new LocalImprovementBasedOnFussandElititst(loadPenaltyFactor, routeTimePenaltyFactor, localSearch, POPULATION_SIZE);	
 	}
 
@@ -127,7 +128,52 @@ public class Scheme6 implements GeneticAlgorithm
 
 			TotalCostCalculator.calculateCostofPopulation(offspringPopulation, 0,NUMBER_OF_OFFSPRING, loadPenaltyFactor, routeTimePenaltyFactor) ;
 			Utility.concatPopulation(parentOffspringTotalPopulation, population, offspringPopulation);
+	
 			
+			/*---------------REMOVE GENOTYPE DUPLICATES---------------*/			
+			Utility.sort(parentOffspringTotalPopulation);
+			
+			Vector<Integer> initList = new Vector<Integer>();
+			for(i=1;i<parentOffspringTotalPopulation.length;i++)
+			{
+				if((parentOffspringTotalPopulation[i].costWithPenalty-parentOffspringTotalPopulation[i-1].costWithPenalty)==0)
+				{
+					double d = Individual.distance(problemInstance, parentOffspringTotalPopulation[i], parentOffspringTotalPopulation[i-1]);
+					if(d==0)
+					{
+						System.out.println("DUPLICATE FOUND. cost - "+parentOffspringTotalPopulation[i].costWithPenalty+" "+" and "+parentOffspringTotalPopulation[i-1].costWithPenalty+" distance : "+d);
+						initList.add(new Integer(i));
+					}
+				}
+			}
+			
+			if(!initList.isEmpty())
+			{
+				
+				out.println("gene : "+generation+" NO. of duplicates: " + initList.size());
+				for(i=0;i<initList.size();i++)
+				{
+					//out.println("PREV : ");
+					//parentOffspringTotalPopulation[initList.get(i)-1].print();
+					
+					//out.println("DUplicate : ");
+					//parentOffspringTotalPopulation[initList.get(i)].print();
+					
+					
+					parentOffspringTotalPopulation[initList.get(i)] = new Individual(problemInstance);
+					parentOffspringTotalPopulation[initList.get(i)].initialise();
+					
+					//out.println("New  : ");
+					//parentOffspringTotalPopulation[initList.get(i)].print();
+					
+				}
+				
+				out.println("\n\n");
+				
+				
+			}
+
+			/*--------------------------------------------------------*/
 			localImprovement.initialise(parentOffspringTotalPopulation);
 			localImprovement.run(parentOffspringTotalPopulation);
 			
@@ -171,43 +217,6 @@ public class Scheme6 implements GeneticAlgorithm
 			
 			
 			
-			/*
-			if(unImprovedGeneration>=5)
-			{
-				unImprovedGeneration=0;
-				
-				int sizeParentOffspring=parentOffspringTotalPopulation.length;
-				int margin=sizeParentOffspring/4;
-					
-				
-				Utility.sort(parentOffspringTotalPopulation);
-				
-				if(bestBeforeInjection == -1)
-				{
-					bestBeforeInjection = population[0].costWithPenalty;
-				}
-				else if(population[0].costWithPenalty == bestBeforeInjection)
-				{
-					//margin = 1;
-				}
-				
-				
-				ProblemInstance pInstance=population[0].problemInstance;
-				for(int noInject=margin;noInject<sizeParentOffspring;noInject++)
-				{
-					Individual newIndividual=new Individual(pInstance);
-					newIndividual.initialise();
-					
-					//double p = Utility.randomDouble(0, 1);
-					//if(p<=0.5)localSearch.improve(newIndividual, loadPenaltyFactor, routeTimePenaltyFactor);
-					
-					parentOffspringTotalPopulation[noInject]=newIndividual;
-				}
-				TotalCostCalculator.calculateCostofPopulation(parentOffspringTotalPopulation, 0,parentOffspringTotalPopulation.length, loadPenaltyFactor, routeTimePenaltyFactor) ;
-			}
-			*/
-			/************************ End of population Injection Block **************************/
-
 			
 			Utility.sort(population);	
 			System.out.println(generation + " : "+population[0].costWithPenalty);

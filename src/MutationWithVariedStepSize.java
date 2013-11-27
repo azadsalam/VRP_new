@@ -12,7 +12,7 @@ public class MutationWithVariedStepSize
 		//System.out.println("gen : " + generation + " max : " + max+" count : "+count);		
 
 		int rand = 4;
-		if(offspring.problemInstance.periodCount==1)rand=3;
+		if(offspring.problemInstance.periodCount==1)rand--;
 		
 		for(int i=0;i<count;i++)
 		{
@@ -20,21 +20,22 @@ public class MutationWithVariedStepSize
 			
 			if(selectedMutationOperator==0)
 			{
-				offspring.mutateRoutePartition();
+				offspring.mutateRoutePartitionWithRandomStepSize();
 			}
 			else if (selectedMutationOperator == 1)
 			{
-				offspring.mutatePermutation();
+				offspring.mutatePermutationMultipleTimes(offspring.problemInstance.periodCount/3);
 			}
 			else if (selectedMutationOperator == 2)
 			{
-				offspring.mutatePermutationWithInsertion();
+				//offspring.mutatePermutationWithInsertion();
+				offspring.mutatePermutationWithRotation();
 			}
 			else if (selectedMutationOperator == 3)
 			{
-				offspring.mutateRoutePartitionWithRandomStepSize();
+				offspring.mutatePermutationWithAdjacentSwap();
 			}
-			else if (selectedMutationOperator == 4)
+			else 
 			{
 				offspring.mutatePeriodAssignment();
 			}

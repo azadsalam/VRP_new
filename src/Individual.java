@@ -1,4 +1,5 @@
 import java.io.PrintWriter;
+import java.util.HashMap;
 import java.util.Random;
 import java.util.Scanner;
 
@@ -456,6 +457,8 @@ public class Individual
 			}
 			out.println();
 		}
+		
+		/*
 
 		out.print("Permutation : \n");
 		for( i=0; i<problemInstance.periodCount;i++)
@@ -484,7 +487,7 @@ public class Individual
 		out.println("Cost : " + cost);
 		out.println("Cost with penalty : "+costWithPenalty);
 		out.println("\n");
-		
+		*/
 	}
 	
 	/*
@@ -640,13 +643,270 @@ public class Individual
 		
 		return true;
 	}
+	
+	
+	void mutatePermutationWithReversal()
+	{
+		int period = Utility.randomIntInclusive(problemInstance.periodCount-1);
+		boolean success;
+		do
+		{
+			success = mutatePermutationWithReversal(period);
+		}while(success==false);
+	}
+	
+	private boolean mutatePermutationWithReversal(int period)
+	{
+		int left = Utility.randomIntInclusive(0,problemInstance.customerCount-1);
+		int right = Utility.randomIntInclusive(0,problemInstance.customerCount-1);
+		
+		if(left==right) return false;
+		if(left > right)
+		{
+			int tmp = left;
+			left = right;
+			right = tmp;
+		}
+		
+		int rotations = Utility.randomIntInclusive(1,((right-left+1)/2));
+		
+		int rotateLeft  =  Utility.randomIntInclusive(1);
+		
+		/*
+		System.out.println("APPLIED :D :D :D");
+		String rt = (rotateLeft==1)?"Left rotate":"right rotate";
+		System.out.println("period : "+period+" "+rt+" [ "+left+" , "+right+" ] "+" rotations :  "+rotations+"\n\n");
+		for(int j =0;j<problemInstance.customerCount;j++)
+		{	
+			if(j==left)System.out.print(" |");
+			System.out.print(" "+permutation[period][j]);
+			if(j==right)System.out.print(" |");
+		}
+		System.out.println("");
+		
+		*/
+		for(int r=0;r<rotations;r++)
+		{	
+			//left rotate - left goes right , all the rest go left
+			if(rotateLeft==1)
+			{
+				int saved = permutation[period][left];
+				for(int i=left+1;i<=right;i++)
+				{
+					permutation[period][i-1]=permutation[period][i];
+				}
+				permutation[period][right] = saved;
+				//System.out.println("period : "+period+" "+left+" -> "+right+" "+" all go left");
+			}
+			else //amticlockwise - right goes left, all other go right
+			{
+				int saved = permutation[period][right];
+				
+				for(int i = right-1;i>=left;i--)
+				{
+					permutation[period][i+1] = permutation[period][i];
+				}
+				permutation[period][left]=saved;
+				//System.out.println("period : "+period+" "+left+" -> "+right+" "+" all go right");
+	
+			}
+		}
+		
+/*
+		for(int j =0;j<problemInstance.customerCount;j++)
+		{	
+			if(j==left)System.out.print(" |");
+			System.out.print(" "+permutation[period][j]);
+			if(j==right)System.out.print(" |");
+		}
+		System.out.println("\n\n");
+		*/
+		return true;
+	}
+
 
 	
+	void mutatePermutationWithRotation()
+	{
+		int period = Utility.randomIntInclusive(problemInstance.periodCount-1);
+		boolean success;
+		do
+		{
+			success = mutatePermutationWithRotation(period);
+		}while(success==false);
 	
+	}
+	
+	
+	private boolean mutatePermutationWithRotation(int period)
+	{
+		int left = Utility.randomIntInclusive(0,problemInstance.customerCount-1);
+		int right = Utility.randomIntInclusive(0,problemInstance.customerCount-1);
+		
+		if(left==right) return false;
+		if(left > right)
+		{
+			int tmp = left;
+			left = right;
+			right = tmp;
+		}
+		
+		int rotations = Utility.randomIntInclusive(1,((right-left+1)/2));
+		
+		int rotateLeft  =  Utility.randomIntInclusive(1);
+		
+		/*
+		System.out.println("APPLIED :D :D :D");
+		String rt = (rotateLeft==1)?"Left rotate":"right rotate";
+		System.out.println("period : "+period+" "+rt+" [ "+left+" , "+right+" ] "+" rotations :  "+rotations+"\n\n");
+		for(int j =0;j<problemInstance.customerCount;j++)
+		{	
+			if(j==left)System.out.print(" |");
+			System.out.print(" "+permutation[period][j]);
+			if(j==right)System.out.print(" |");
+		}
+		System.out.println("");
+		
+		*/
+		for(int r=0;r<rotations;r++)
+		{	
+			//left rotate - left goes right , all the rest go left
+			if(rotateLeft==1)
+			{
+				int saved = permutation[period][left];
+				for(int i=left+1;i<=right;i++)
+				{
+					permutation[period][i-1]=permutation[period][i];
+				}
+				permutation[period][right] = saved;
+				//System.out.println("period : "+period+" "+left+" -> "+right+" "+" all go left");
+			}
+			else //amticlockwise - right goes left, all other go right
+			{
+				int saved = permutation[period][right];
+				
+				for(int i = right-1;i>=left;i--)
+				{
+					permutation[period][i+1] = permutation[period][i];
+				}
+				permutation[period][left]=saved;
+				//System.out.println("period : "+period+" "+left+" -> "+right+" "+" all go right");
+	
+			}
+		}
+		
+/*
+		for(int j =0;j<problemInstance.customerCount;j++)
+		{	
+			if(j==left)System.out.print(" |");
+			System.out.print(" "+permutation[period][j]);
+			if(j==right)System.out.print(" |");
+		}
+		System.out.println("\n\n");
+		*/
+		return true;
+	}
+
+	void mutatePermutationWithAdjacentSwap()
+	{
+		int period = Utility.randomIntInclusive(problemInstance.periodCount-1);
+		boolean success;
+		do
+		{
+			success = mutatePermutationWithAdjacentSwap(period);
+		}while(success==false);
+	}
+
+	
+	private boolean mutatePermutationWithAdjacentSwap(int period)
+	{
+		int left = Utility.randomIntInclusive(0,problemInstance.customerCount-1);
+		int right = Utility.randomIntInclusive(0,problemInstance.customerCount-1);
+		
+		if(left==right) return false;
+		if(left > right)
+		{
+			int tmp = left;
+			left = right;
+			right = tmp;
+		}
+				
+		int direction  =  Utility.randomIntInclusive(1);
+		
+		/*
+		System.out.println("APPLIED :D :D :D");
+		String rt = (direction==1)?"Left ":"right ";
+		System.out.println("period : "+period+" "+rt+" [ "+left+" , "+right+" ] "+"  \n\n");
+		for(int j =0;j<problemInstance.customerCount;j++)
+		{	
+			if(j==left)System.out.print(" |");
+			System.out.print(" "+permutation[period][j]);
+			if(j==right)System.out.print(" |");
+		}
+		System.out.println("");
+		
+		*/
+		
+		int coin ;	
+		//from left to right 
+		if(direction==1)
+		{
+			int saved;
+			for(int i=left;i<right;i++)
+			{
+				coin = Utility.randomIntInclusive(1);
+				if(coin==0)
+				{
+						saved = permutation[period][i];
+						permutation[period][i]=permutation[period][i+1];
+						permutation[period][i+1] = saved;
+				}
+			}
+			
+		}
+		else // right to left
+		{
+			for(int i=right-1;i>=left;i--)
+			{
+				int saved;
+				coin = Utility.randomIntInclusive(1);
+				if(coin==0)
+				{
+						saved = permutation[period][i];
+						permutation[period][i]=permutation[period][i+1];
+						permutation[period][i+1] = saved;
+				}
+			}
+			
+		}
+	
+		
+/*
+		for(int j =0;j<problemInstance.customerCount;j++)
+		{	
+			if(j==left)System.out.print(" |");
+			System.out.print(" "+permutation[period][j]);
+			if(j==right)System.out.print(" |");
+		}
+		System.out.println("\n\n");
+		*/
+		return true;
+	}
+
+
 	void mutatePermutation()
 	{
 		int period = Utility.randomIntInclusive(problemInstance.periodCount-1);
 		mutatePermutation(period);
+	}
+	
+	void mutatePermutationMultipleTimes(int count)
+	{
+		for(int i=0; i<count ;i++)
+		{
+			int period = Utility.randomIntInclusive(problemInstance.periodCount-1);
+			mutatePermutation(period);
+		}
 	}
 	
 	private void mutatePermutation(int period)
@@ -670,6 +930,90 @@ public class Individual
 	
 	
 	//DO NOT updates cost and penalty
+	
+	void mutatePermutationWithRotationWithinSingleRoute(int count)
+	{
+		boolean success = false;
+		for(int i=0;i<count;i++)
+		{
+			do
+			{
+				int period = Utility.randomIntInclusive(problemInstance.periodCount-1);
+				int vehicle = Utility.randomIntInclusive(problemInstance.vehicleCount-1);
+				success = mutatePermutationWithRotationWithinSingleRoute(period, vehicle);
+			}while(success==false);
+		}
+	}
+	
+	private boolean mutatePermutationWithRotationWithinSingleRoute(int period,int vehicle)
+	{
+		
+		int left,right;
+		
+		if(vehicle == 0) left = 0;
+		else left = routePartition[period][vehicle-1]+1;
+
+		right = routePartition[period][vehicle];
+
+		if(right<=left) return false;
+		
+		
+		int rotations = Utility.randomIntInclusive(1,((right-left+1)/2));
+		
+		int rotateLeft  =  Utility.randomIntInclusive(1);
+		
+		/*
+		System.out.println("APPLIED :D :D :D");
+		String rt = (rotateLeft==1)?" Left rotate":" Right rotate";
+		System.out.println("period : "+period+" "+" vehicle "+vehicle+rt+" [ "+left+" , "+right+" ] "+" rotations :  "+rotations+"\n\n");
+		for(int j =0;j<problemInstance.customerCount;j++)
+		{	
+			if(j==left)System.out.print(" |");
+			System.out.print(" "+permutation[period][j]);
+			if(j==right)System.out.print(" |");
+		}
+		System.out.println("");
+		*/
+		
+		for(int r=0;r<rotations;r++)
+		{	
+			//left rotate - left goes right , all the rest go left
+			if(rotateLeft==1)
+			{
+				int saved = permutation[period][left];
+				for(int i=left+1;i<=right;i++)
+				{
+					permutation[period][i-1]=permutation[period][i];
+				}
+				permutation[period][right] = saved;
+				//System.out.println("period : "+period+" "+left+" -> "+right+" "+" all go left");
+			}
+			else //amticlockwise - right goes left, all other go right
+			{
+				int saved = permutation[period][right];
+				
+				for(int i = right-1;i>=left;i--)
+				{
+					permutation[period][i+1] = permutation[period][i];
+				}
+				permutation[period][left]=saved;
+				//System.out.println("period : "+period+" "+left+" -> "+right+" "+" all go right");
+	
+			}
+		}
+		
+/*
+		for(int j =0;j<problemInstance.customerCount;j++)
+		{	
+			if(j==left)System.out.print(" |");
+			System.out.print(" "+permutation[period][j]);
+			if(j==right)System.out.print(" |");
+		}
+		System.out.println("\n\n");
+		*/
+		return true;
+	}
+
 	void mutatePermutationWithinSingleRoute()
 	{
 		boolean success = false;
@@ -680,6 +1024,7 @@ public class Individual
 			success = mutatePermutationWithinSingleRoute(period, vehicle);
 		}while(success==false);
 	}
+
 	
 	//returns true if permutation successful
 	private boolean mutatePermutationWithinSingleRoute(int period,int vehicle)
@@ -962,7 +1307,102 @@ public class Individual
 		return true;
 	}
 	
+
+	private static  void uniformCrossoverForPeriodAssignment(Individual child1,Individual child2, Individual parent1, Individual parent2,ProblemInstance problemInstance)
+	{
+		int coin;
+		int i;
+		
+		Individual temp1,temp2;
+		for(i=0;i<problemInstance.customerCount;i++)
+		{
+			coin = Utility.randomIntInclusive(1);
+			
+			if(coin==0)
+			{
+				temp1=child1;
+				temp2=child2;
+			}
+			else
+			{
+				temp1=child2;
+				temp2=child1;
+			}	
+			
+			//problemInstance.out.println("Customer "+i+ " coin : "+coin);
+			
+			
+			for(int period = 0; period<problemInstance.periodCount; period++)
+			{
+				//if(parent1==null)System.out.print("nul");
+				temp1.periodAssignment[period][i] = parent1.periodAssignment[period][i];
+				temp2.periodAssignment[period][i] = parent2.periodAssignment[period][i];
+			}
+		}
+		
+	}
+
+	static void crossOver_Uniform_VPMX_sortedCrissCross(ProblemInstance problemInstance,Individual parent1,Individual parent2,Individual child1,Individual child2)
+	{
+		//with 50% probability swap parents
+		int ran = Utility.randomIntInclusive(1);
+		if(ran ==1)
+		{
+			Individual temp = parent1;
+			parent1 = parent2;
+			parent2 = temp;
+		}
+		
+		// UNIFORM CROSSOVER FOR PeriodAssignment
+		uniformCrossoverForPeriodAssignment(child1,child2,parent1, parent2,problemInstance);
+		
+		
+		//child 1 gets permutation of first n period from parent 1
+		
+		VPMX(child1, child2, parent1, parent2, problemInstance);
+		
+		
+		// crossover route partition
+		sortedCrisscrossCrossoverForRoutePartition(child1, child2, parent1, parent2, problemInstance);
+		
+		
+		//update cost and penalty
+		child1.calculateCostAndPenalty();
+		child2.calculateCostAndPenalty();
+		
+		//System.out.println(" "+n);
+	}
+
 	
+	static void sortedCrisscrossCrossoverForRoutePartition(Individual child1,Individual child2, Individual parent1, Individual parent2,ProblemInstance problemInstance)
+	{
+		for(int period=0;period<problemInstance.periodCount;period++)
+		{
+			int temp[] = new int[problemInstance.vehicleCount*2];
+			int i;
+			for(i=0;i<problemInstance.vehicleCount;i++) temp[i] = parent1.routePartition[period][i];
+			for(i=0;i<problemInstance.vehicleCount;i++) temp[i+problemInstance.vehicleCount] = parent2.routePartition[period][i];
+			
+			
+			for(i=0;i<problemInstance.vehicleCount*2;i++)
+			{
+				for(int j=i+1;j<problemInstance.vehicleCount*2;j++)
+				{
+					if(temp[i]>temp[j])
+					{
+						int tmp = temp[i];
+						temp[i] = temp[j];
+						temp[j]=tmp;
+					}
+				}
+			}
+			
+			for( i=0;i<problemInstance.vehicleCount;i++) child1.routePartition[period][i] = temp[2*i];
+			for( i=0;i<problemInstance.vehicleCount;i++) child2.routePartition[period][i] = temp[2*i+1];
+			
+		}
+		
+	}
 	
 	/** 
 	 * 
@@ -1151,4 +1591,201 @@ public class Individual
 		return distance;
 	}
 	
+	
+	static void crossOverWithVPMX(ProblemInstance problemInstance,Individual parent1,Individual parent2,Individual child1,Individual child2)
+	{
+		int ran = Utility.randomIntInclusive(1);
+		if(ran ==1)
+		{
+			Individual temp = parent1;
+			parent1 = parent2;
+			parent2 = temp;
+		}
+		
+		
+		//child 1 gets first n customers assignment from parent 1 and rest from parent 2
+		//child 2 gets first n customers assignment from parent 2 and rest from parent 1
+		int n = Utility.randomIntInclusive(problemInstance.customerCount);
+		
+		
+		copyPeriodAssignmentFromParents(child1, parent1, parent2, n ,problemInstance);
+		copyPeriodAssignmentFromParents(child2, parent2, parent1, n ,problemInstance);
+		
+		//child 1 gets permutation of first n period from parent 1
+		n = Utility.randomIntInclusive(problemInstance.periodCount);
+		
+		VPMX(child1,child2,parent1,parent2,problemInstance);
+		
+		
+		// crossover route partition
+		
+		for(int period=0;period<problemInstance.periodCount;period++)
+		{
+			int temp[] = new int[problemInstance.vehicleCount*2];
+			int i;
+			for(i=0;i<problemInstance.vehicleCount;i++) temp[i] = parent1.routePartition[period][i];
+			for(i=0;i<problemInstance.vehicleCount;i++) temp[i+problemInstance.vehicleCount] = parent2.routePartition[period][i];
+			
+			
+			for(i=0;i<problemInstance.vehicleCount*2;i++)
+			{
+				for(int j=i+1;j<problemInstance.vehicleCount*2;j++)
+				{
+					if(temp[i]>temp[j])
+					{
+						int tmp = temp[i];
+						temp[i] = temp[j];
+						temp[j]=tmp;
+					}
+				}
+			}
+			
+			for( i=0;i<problemInstance.vehicleCount;i++) child1.routePartition[period][i] = temp[2*i];
+			for( i=0;i<problemInstance.vehicleCount;i++) child2.routePartition[period][i] = temp[2*i+1];
+			
+		}
+		
+		child1.calculateCostAndPenalty();
+		child2.calculateCostAndPenalty();
+	}
+	private static void VPMX(Individual child1, Individual child2,
+			Individual parent1, Individual parent2,
+			ProblemInstance problemInstance2) {
+		int count=problemInstance2.customerCount;
+		
+		// TODO Auto-generated method stub
+		for(int i=0;i<problemInstance2.periodCount;i++)
+		{
+			
+			int start1=Utility.randomIntInclusive(0, count-2);
+			int end1=Utility.randomIntInclusive(start1+1, count-1);
+			int diff=end1-start1;
+			
+			int start2=Utility.randomIntInclusive(0, count-1-diff);
+			int end2=start2+diff;
+			
+			for(int s=0;s<start1;s++) child1.permutation[i][s]=parent1.permutation[i][s];
+			for(int e=end1+1;e<count;e++) child1.permutation[i][e]=parent1.permutation[i][e];
+			for(int m=start1;m<=end1;m++)  child1.permutation[i][m]=parent2.permutation[i][start2+m-start1] ;
+			
+			for(int s=0;s<start2;s++) child2.permutation[i][s]=parent2.permutation[i][s];
+			for(int e=end2+1;e<count;e++) child2.permutation[i][e]=parent2.permutation[i][e];
+			for(int m=start2;m<=end2;m++)  child2.permutation[i][m]=parent1.permutation[i][start1+m-start2] ;
+			/*System.out.println();
+			for(int i=0;i<count;i++){
+				System.out.print(child1[i]+" ");
+			}
+			System.out.println();
+			for(int i=0;i<count;i++){
+				System.out.print(child2[i]+" ");
+			}*/
+			
+			HashMap<Integer, Integer> OneToTwo=new HashMap<Integer,Integer>();
+			HashMap<Integer, Integer> TwoToOne=new HashMap<Integer,Integer>();
+			
+			for(int it=0;it<=(end1-start1);it++){
+				OneToTwo.put(parent1.permutation[i][start1+it], parent2.permutation[i][start2+it]);
+				TwoToOne.put(parent2.permutation[i][start2+it], parent1.permutation[i][start1+it]);
+			}
+			int []rest1=new int[count-(end1-start1+1)];
+			int iter=0;
+			for(int it=0;it<start1;it++){
+				rest1[iter++]=parent1.permutation[i][it];
+			}
+			for(int it=end1+1;it<count;it++){
+				rest1[iter++]=parent1.permutation[i][it];
+			}
+			
+			int []rest2=new int[count-(end2-start2+1)];
+			iter=0;
+			for(int it=0;it<start2;it++){
+				rest2[iter++]=parent2.permutation[i][it];
+			}
+			for(int it=end2+1;it<count;it++){
+				rest2[iter++]=parent2.permutation[i][it];
+			}
+			
+			for(int it=0;it<rest1.length;it++){
+				OneToTwo.put(rest1[it], rest2[it]);
+				TwoToOne.put(rest2[it], rest1[it]);
+			}
+			
+			/*Set<Integer>set=OneToTwo.keySet();
+			for (Iterator iterator = set.iterator(); iterator.hasNext();) {
+				Integer integer = (Integer) iterator.next();
+				System.out.print("\n"+integer+"->"+OneToTwo.get(integer));
+				
+			}
+			System.out.println();
+			set=TwoToOne.keySet();
+			for (Iterator iterator = set.iterator(); iterator.hasNext();) {
+				Integer integer = (Integer) iterator.next();
+				System.out.print("\n"+integer+"->"+TwoToOne.get(integer));
+				
+			}*/
+			
+			/********************** child 1 check kortesi *******************************/
+			int notSafeStart=start1;
+			int notSafeEnd=end1;
+			while(notSafeStart<=notSafeEnd){
+				int num_retry=0;
+				boolean retired=false;
+				while(checkConflict(child1,i,notSafeStart,notSafeEnd,count)){
+					num_retry++;
+					if(num_retry==count){
+						//System.out.println("Breaked!!");
+						retired=true;
+						break;
+					}
+					int p=child1.permutation[i][notSafeStart];
+					child1.permutation[i][notSafeStart]=OneToTwo.get(p);
+				}
+				if(retired) break;
+				notSafeStart++;
+			}
+			/***********************************************************************/
+			
+			/********************** child 2 check kortesi *******************************/
+			notSafeStart=start2;
+			notSafeEnd=end2;
+			while(notSafeStart<=notSafeEnd){
+				int num_retry=0;
+				boolean retired=false;
+				while(checkConflict(child2,i,notSafeStart,notSafeEnd,count)){
+					num_retry++;
+					if(num_retry==count){
+						retired=true;
+						break;
+					}
+					int p=child2.permutation[i][notSafeStart];
+					child2.permutation[i][notSafeStart]=TwoToOne.get(p);
+				}
+				if(retired) break;
+				notSafeStart++;
+			}
+			/***********************************************************************/
+			
+			
+		}
+	}
+
+
+	private static boolean checkConflict(Individual child1,int period, int notSafeStart,
+			int notSafeEnd, int count) {
+		// TODO Auto-generated method stub
+		
+			int p=child1.permutation[period][notSafeStart];
+			for(int it=0;it<notSafeStart;it++){
+				if(child1.permutation[period][it]==p){
+					return true;
+				}
+			}
+			for(int it=notSafeEnd+1;it<count;it++){
+				if(child1.permutation[period][it]==p){
+					return true;
+				}
+			}
+			return false;
+
+	}
 }
