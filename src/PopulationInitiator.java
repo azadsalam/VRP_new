@@ -6,7 +6,7 @@ public class PopulationInitiator
 		for(int i=0; i<populationSize; i++)
 		{
 			population[i] = new Individual(problemInstance);
-			population[i].initialise();
+			population[i].initialise2();
 			//out.println("Printing individual "+ i +" : \n");
 			//population[i].miniPrint();
 		}

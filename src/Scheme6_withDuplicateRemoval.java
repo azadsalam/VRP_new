@@ -9,8 +9,8 @@ import javax.rmi.CORBA.Util;
 public class Scheme6_withDuplicateRemoval implements GeneticAlgorithm
 {
 	//Algorithm parameters
-	int POPULATION_SIZE = 100; 
-	int NUMBER_OF_OFFSPRING = 100;   
+	int POPULATION_SIZE = 500; 
+	int NUMBER_OF_OFFSPRING = 500;   
 	int NUMBER_OF_GENERATION = 100;
 	double loadPenaltyFactor = 50;
 	double routeTimePenaltyFactor = 10;
@@ -44,7 +44,7 @@ public class Scheme6_withDuplicateRemoval implements GeneticAlgorithm
 		out = problemInstance.out;
 
 
-		mutationWithVariedStepSize = new MutationWithVariedStepSize();
+		mutationWithVariedStepSize = new MutationWithVariedStepSize(NUMBER_OF_GENERATION);
 		
 		
 		//Change here if needed

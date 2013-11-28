@@ -153,6 +153,205 @@ public class Individual
 
 	}
 	
+
+	public void initialise2() 
+	{
+		// TODO Auto-generated method stub
+
+		int i,j;
+		int coin;
+		for( i=0;i<problemInstance.periodCount;i++)
+		{
+			// initially every permutation is identity permutation or reverse identity 
+			coin = Utility.randomIntInclusive(1);
+			if(coin==0)
+			{
+				for( j=0;j<problemInstance.customerCount;j++)
+				{
+					permutation[i][j] = j;
+				}
+			}
+			else
+			{
+				for( j=0;j<problemInstance.customerCount;j++)
+				{
+					permutation[i][j] = problemInstance.customerCount-1-j;
+				}
+			}
+		}
+		
+		// NOW INITIALISE WITH VALUES
+
+		//initialize period assignment
+
+		int freq,allocated,random,tmp;
+
+		//Randomly allocate period to clients equal to their frequencies
+		for(int client=0; client < problemInstance.customerCount; client++)
+		{
+			freq = problemInstance.frequencyAllocation[client];
+			allocated=0;
+
+			while(allocated!=freq)
+			{
+				random = Utility.randomIntInclusive(problemInstance.periodCount-1);
+				
+				if(periodAssignment[random][client]==false)
+				{
+					periodAssignment[random][client]=true;
+					allocated++;
+				}
+			}
+		}
+		
+		
+		
+		
+		//initialize permutation map
+		for(int period=0; period < problemInstance.periodCount;period++)
+		{
+			
+			coin = Utility.randomIntInclusive(1);
+
+
+			
+			if(coin==0) // apply randomization
+			{	
+				int boundary = Utility.randomIntInclusive(problemInstance.customerCount-1);
+				
+				//problemInstance.out.println("Boundary : "+boundary);
+				
+				int coin2 = Utility.randomIntInclusive(1);
+				int coin3;
+				
+				String st;
+				//st = (coin2==0)?" Left to right":" right to left";
+				//problemInstance.out.println("1st segment :"+st);
+				
+				if(coin2==0)//left to right for 1st segment
+				{
+					for(i=0;i<boundary;i++)
+					{
+						coin3 = Utility.randomIntInclusive(1);
+						
+						if(coin3==0)
+						{
+							tmp = permutation[period][i];
+							permutation[period][i] = permutation[period][i+1];
+							permutation[period][i+1] = tmp;
+						}
+					}
+				}
+				else //right to left
+				{	
+					for(i=boundary-1;i>=0;i--)
+					{
+						coin3 = Utility.randomIntInclusive(1);
+						
+						if(coin3==0)
+						{
+							tmp = permutation[period][i];
+							permutation[period][i] = permutation[period][i+1];
+							permutation[period][i+1] = tmp;
+						}
+					}
+					
+				}
+				
+				coin2 = Utility.randomIntInclusive(1);
+				
+				//st = (coin2==0)?" Left to right":" right to left";
+				//problemInstance.out.println("2nt segment :"+st);
+				
+				if(coin2==0)//left to right for 2ndt segment
+				{
+					for(i=boundary;i<problemInstance.customerCount-1;i++)
+					{
+						coin3 = Utility.randomIntInclusive(1);
+						
+						if(coin3==0)
+						{
+							tmp = permutation[period][i];
+							permutation[period][i] = permutation[period][i+1];
+							permutation[period][i+1] = tmp;
+						}
+					}
+				}
+				else //right to left
+				{	
+					for(i=problemInstance.customerCount-2;i>=boundary;i--)
+					{
+						coin3 = Utility.randomIntInclusive(1);
+						
+						if(coin3==0)
+						{
+							tmp = permutation[period][i];
+							permutation[period][i] = permutation[period][i+1];
+							permutation[period][i+1] = tmp;
+						}
+					}
+					
+				}
+
+				
+			}
+		
+			else
+			{
+				//apply knuths shuffle
+				for( i = problemInstance.customerCount -1 ;i>0 ;i-- )
+				{
+					j = Utility.randomIntInclusive(i);
+					
+					if(i==j)continue;
+	
+					tmp = permutation[period][i];
+					permutation[period][i] = permutation[period][j];
+					permutation[period][j] = tmp;
+				}
+			}
+		}
+		
+		//NEED TO GENERATE #vehicle-1 (not distinct - distinct) random numbers in increasing order from [0,#customer - 1]
+		// DEVICE some faster and smarter algorithm
+
+		// route for vehicle i is  [ routePartition[i-1]+1 , routePartition[i] ]
+		// given that routePartition[i-1]+1 <= routePartition[i]
+
+		
+
+		int avgStepSize = problemInstance.customerCount / problemInstance.vehicleCount;
+		int deviation = avgStepSize / 3;
+
+		//problemInstance.out.println("Step Size : "+avgStepSize+" Deviation : "+deviation);
+		
+		for(int period=0;period<problemInstance.periodCount;period++)
+		{
+			allocated = 0;
+					
+			while(allocated != problemInstance.vehicleCount-1)
+			{
+				int minus  = Utility.randomIntInclusive(1);
+				int base = avgStepSize * (allocated+1);
+				random = Utility.randomIntInclusive(deviation);
+				
+				int partition = base;
+				if(minus==1) partition = base - random;
+				else partition = base + random;
+				
+				routePartition[period][allocated]=partition;
+				sort(period,partition,allocated);
+				allocated++;
+			}
+			routePartition[period][problemInstance.vehicleCount-1] = problemInstance.customerCount-1;
+		}
+
+		
+		calculateCostAndPenalty();
+
+	}
+	
+
 	public Individual(ProblemInstance problemInstance)
 	{
 		this.problemInstance = problemInstance;

@@ -125,7 +125,7 @@ class SimulatedAnnealing  extends LocalSearch
 		void applyMutation(Individual offspring)
 		{
 			
-			int rand = 4;
+			int rand = 5;
 			if(offspring.problemInstance.periodCount==1) rand--;
 			
 			int selectedMutationOperator = Utility.randomIntInclusive(rand);
@@ -146,6 +146,10 @@ class SimulatedAnnealing  extends LocalSearch
 			else if (selectedMutationOperator ==3)
 			{
 				offspring.mutatePermutationWithAdjacentSwap();
+			}
+			else if (selectedMutationOperator ==4)
+			{
+				offspring.mutatePermutationWithRotationWithinSingleRoute(1);
 			}
 			else
 			{
@@ -174,7 +178,7 @@ class Scheduler {
         {
                 this.k = 20;
                 this.lam = 0.045;
-                this.limit = 400;
+                this.limit = 500;
         }
 
         public double getTemp(int t) {
