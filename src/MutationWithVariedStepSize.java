@@ -37,15 +37,14 @@ public class MutationWithVariedStepSize
 			else if (selectedMutationOperator == 1)
 			{
 				
-				int c;
-				
+				int c;				
 				if(generationCount == 0) c = maxPeriodLim;
 				else 
 				{
 					c = (int)(((double)(maxPeriodLim-1)/(1- generationCount)) * generation + maxPeriodLim);
 					//System.out.println("gen : "+generation+" count : "+c);
 				}
-				offspring.mutatePermutationMultipleTimes(c);
+				offspring.mutatePermutationMultipleTimesBySwappingAnyTwo(c);
 			}
 			else if (selectedMutationOperator == 2)
 			{

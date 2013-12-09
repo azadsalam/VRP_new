@@ -9,8 +9,8 @@ import javax.rmi.CORBA.Util;
 public class Scheme6_withDuplicateRemoval implements GeneticAlgorithm
 {
 	//Algorithm parameters
-	int POPULATION_SIZE = 500; 
-	int NUMBER_OF_OFFSPRING = 500;   
+	int POPULATION_SIZE = 100; 
+	int NUMBER_OF_OFFSPRING = 100;   
 	int NUMBER_OF_GENERATION = 100;
 	double loadPenaltyFactor = 50;
 	double routeTimePenaltyFactor = 10;
@@ -21,7 +21,7 @@ public class Scheme6_withDuplicateRemoval implements GeneticAlgorithm
 	Individual parentOffspringTotalPopulation[];
 
 	//Operators
-	MutationWithVariedStepSize mutationWithVariedStepSize;
+	Mutation mutation;
     SelectionOperator rouletteWheelSelection;
     SelectionOperator fussSelection;
     SelectionOperator survivalSelectionOperator;
@@ -44,8 +44,7 @@ public class Scheme6_withDuplicateRemoval implements GeneticAlgorithm
 		out = problemInstance.out;
 
 
-		mutationWithVariedStepSize = new MutationWithVariedStepSize(NUMBER_OF_GENERATION);
-		
+		mutation = new Mutation();
 		
 		//Change here if needed
 		population = new Individual[POPULATION_SIZE];
@@ -55,7 +54,7 @@ public class Scheme6_withDuplicateRemoval implements GeneticAlgorithm
 		//Add additional code here
 		rouletteWheelSelection = new RoutletteWheelSelection();
 	    fussSelection = new FUSS();
-		survivalSelectionOperator = new FUSS(); 
+		survivalSelectionOperator = new RoutletteWheelSelection(); 
 
 		localSearch = new SimulatedAnnealing();
 		localImprovement = new LocalImprovementBasedOnFussandElititst(loadPenaltyFactor, routeTimePenaltyFactor, localSearch, POPULATION_SIZE);	
@@ -77,6 +76,9 @@ public class Scheme6_withDuplicateRemoval implements GeneticAlgorithm
 		double previousBest=-1;
 		double bestBeforeInjection=-1;
 		
+		Individual watched = population[0];
+		Plotter plotter= new Plotter(watched, "pr01");
+		plotter.plot();
 		for( generation=0;generation<NUMBER_OF_GENERATION;generation++)
 		{
 			//For collecting min,max,avg
@@ -99,8 +101,8 @@ public class Scheme6_withDuplicateRemoval implements GeneticAlgorithm
 			
 			Individual.crossOver_Uniform_VPMX_sortedCrissCross(problemInstance, parent1, parent2, offspring1, offspring2);	
 			
-			mutationWithVariedStepSize.applyMutation(offspring1,generation);
-			mutationWithVariedStepSize.applyMutation(offspring2,generation);
+			mutation.applyMutation(offspring1,generation);
+			mutation.applyMutation(offspring2,generation);
 			
 			offspringPopulation[i] = offspring1;
 			i++;
@@ -117,8 +119,8 @@ public class Scheme6_withDuplicateRemoval implements GeneticAlgorithm
 			
 				Individual.crossOver_Uniform_VPMX_sortedCrissCross(problemInstance, parent1, parent2, offspring1, offspring2);	
 				
-				mutationWithVariedStepSize.applyMutation(offspring1,generation);
-				mutationWithVariedStepSize.applyMutation(offspring2,generation);
+				mutation.applyMutation(offspring1,generation);
+				mutation.applyMutation(offspring2,generation);
 				
 				offspringPopulation[i] = offspring1;
 				i++;
@@ -161,7 +163,7 @@ public class Scheme6_withDuplicateRemoval implements GeneticAlgorithm
 					
 					
 					parentOffspringTotalPopulation[initList.get(i)] = new Individual(problemInstance);
-					parentOffspringTotalPopulation[initList.get(i)].initialise();
+					parentOffspringTotalPopulation[initList.get(i)].initialise3();
 					
 					//out.println("New  : ");
 					//parentOffspringTotalPopulation[initList.get(i)].print();
@@ -186,6 +188,9 @@ public class Scheme6_withDuplicateRemoval implements GeneticAlgorithm
 			
 			population[0] = parentOffspringTotalPopulation[0];
 			
+			
+			
+			
 			int index2=1;
 			int index1=1;
 			
@@ -204,8 +209,12 @@ public class Scheme6_withDuplicateRemoval implements GeneticAlgorithm
 				
 				index2++;
 			}
+
+		
+			plotter.rePlot(watched);
+		
 			
-			
+
 			Individual total[] = new Individual[POPULATION_SIZE+NUMBER_OF_OFFSPRING-elitistRatio];
 			System.arraycopy(parentOffspringTotalPopulation, elitistRatio, total, 0, total.length);
 			

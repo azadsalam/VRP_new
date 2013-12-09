@@ -13,31 +13,35 @@ public class Mutation
 	*/
 	
 	
-	void applyMutation(Individual offspring)
+	void applyMutation(Individual offspring,int generation)
 	{
-		int selectedMutationOperator = Utility.randomIntInclusive(4);
+		int rand = 4;
+		if(offspring.problemInstance.periodCount==1)rand--;
+		
+		int selectedMutationOperator = Utility.randomIntInclusive(rand);
 		
 		if(selectedMutationOperator==0)
 		{
-			offspring.mutateRoutePartition();
+			offspring.mutatePermutationWithinSingleRouteBySwapping();
 		}
 		else if (selectedMutationOperator == 1)
-		{
-			offspring.mutatePermutationWithinSingleRoute();
+		{			
+			offspring.mutatePermutationOfDifferentRouteBySwapping();
 		}
 		else if (selectedMutationOperator == 2)
 		{
-			offspring.mutatePermutationOfDifferentRoute();
+			offspring.mutatePermutationWithInsertion();
 		}
 		else if (selectedMutationOperator == 3)
 		{
+			offspring.mutateRoutePartitionWithRandomStepSize();
+		}
+		else 
+		{
 			offspring.mutatePeriodAssignment();
 		}
-		else
-		{
-			
-		}
 		
+		offspring.calculateCostAndPenalty();
 		
 	}
 

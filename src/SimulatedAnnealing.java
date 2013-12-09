@@ -125,6 +125,35 @@ class SimulatedAnnealing  extends LocalSearch
 		void applyMutation(Individual offspring)
 		{
 			
+			int rand = 4;
+			if(offspring.problemInstance.periodCount==1)rand--;
+			
+			int selectedMutationOperator = Utility.randomIntInclusive(rand);
+			
+			if(selectedMutationOperator==0)
+			{
+				offspring.mutatePermutationWithinSingleRouteBySwapping();
+			}
+			else if (selectedMutationOperator == 1)
+			{			
+				offspring.mutatePermutationOfDifferentRouteBySwapping();
+			}
+			else if (selectedMutationOperator == 2)
+			{
+				offspring.mutatePermutationWithInsertion();
+			}
+			else if (selectedMutationOperator == 3)
+			{
+				offspring.mutateRoutePartitionWithRandomStepSize();
+			}
+			else 
+			{
+				offspring.mutatePeriodAssignment();
+			}
+			
+			offspring.calculateCostAndPenalty();
+
+			/*
 			int rand = 5;
 			if(offspring.problemInstance.periodCount==1) rand--;
 			
@@ -155,6 +184,8 @@ class SimulatedAnnealing  extends LocalSearch
 			{
 				offspring.mutatePeriodAssignment();
 			}		
+			
+			*/
 		}
 }
 
